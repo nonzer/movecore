@@ -13,6 +13,6 @@ class QuarterController extends Controller
         QuarterService::destroy($id);
 
         connectify('success', 'Opération Réussie', 'Suppression du quartier effectué');
-        return redirect()->route('arrondissement.index');
+        return redirect()->route('quarter.index');
     }
 }

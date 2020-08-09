@@ -13,6 +13,6 @@ class RoleController extends Controller
         RoleService::destroy($id);
 
         connectify('success', 'Opération Réussie', 'Suppression de rôle effectué');
-        return redirect()->route('arrondissement.index');
+        return redirect()->route('role.index');
     }
 }

@@ -58,13 +58,13 @@ Route::layout('layouts.master')->group(function () {
 
     /*Role*/
     Route::livewire('/roles', 'stromae.role.list-role')->name('role.index');
-    Route::livewire('/roles/add-role', 'stromae.role.create')->name('role.create');
-    Route::livewire('/roles/edit-role/{id}', 'stromae.role.edit')->name('role.edit');
+    Route::livewire('/roles/add-role', 'stromae.role.create-role')->name('role.create');
+    Route::livewire('/roles/edit-role/{id}', 'stromae.role.edit-role')->name('role.edit');
 
     /*Gaz*/
     Route::livewire('/gaz', 'stromae.gaz.list-gaz')->name('gaz.index');
-    Route::livewire('/gaz/add-gaz', 'stromae.gaz.create')->name('gaz.create');
-    Route::livewire('/gaz/edit-gaz/{id}', 'stromae.gaz.edit')->name('gaz.edit');
+    Route::livewire('/gaz/add-gaz', 'stromae.gaz.create-gaz')->name('gaz.create');
+    Route::livewire('/gaz/edit-gaz/{id}', 'stromae.gaz.edit-gaz')->name('gaz.edit');
 });
 
 

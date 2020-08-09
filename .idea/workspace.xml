@@ -2,28 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Arrondissement.php" afterPath="$PROJECT_DIR$/app/Arrondissement.php" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" afterPath="$PROJECT_DIR$/app/Category.php" />
-      <change beforePath="$PROJECT_DIR$/app/City.php" afterPath="$PROJECT_DIR$/app/City.php" />
-      <change beforePath="$PROJECT_DIR$/app/Country.php" afterPath="$PROJECT_DIR$/app/Country.php" />
-      <change beforePath="$PROJECT_DIR$/app/Customer.php" afterPath="$PROJECT_DIR$/app/Customer.php" />
-      <change beforePath="$PROJECT_DIR$/app/Gaz.php" afterPath="$PROJECT_DIR$/app/Gaz.php" />
-      <change beforePath="$PROJECT_DIR$/app/Quarter.php" afterPath="$PROJECT_DIR$/app/Quarter.php" />
-      <change beforePath="$PROJECT_DIR$/app/Relauch.php" afterPath="$PROJECT_DIR$/app/Relauch.php" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" afterPath="$PROJECT_DIR$/app/Role.php" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/doc project/move_core_DB.mwb" afterPath="$PROJECT_DIR$/doc project/move_core_DB.mwb" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" afterPath="$PROJECT_DIR$/resources/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" afterPath="$PROJECT_DIR$/resources/sass/app.scss" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/CreateRole.php" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/CreateRole.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/EditRole.php" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/EditRole.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/role/create-role.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/role/create-role.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/role/edit-role.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/role/edit-role.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" afterPath="$PROJECT_DIR$/webpack.mix.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +37,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="46" column="69" lean-forward="false" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+            <state relative-caret-position="486">
+              <caret line="61" column="68" lean-forward="false" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
               <folding>
                 <element signature="e#7#43#0#PHP" expanded="true" />
               </folding>
@@ -49,43 +46,138 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Create.php">
+      <file leaf-file-name="CreateRole.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/CreateRole.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditRole.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/EditRole.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <element signature="e#60#73#0#PHP" expanded="true" />
+                <marker date="1596922280773" expanded="true" signature="9:32" ph="..." />
+                <marker date="1596922280773" expanded="true" signature="445:477" ph="..." />
+                <marker date="1596922280773" expanded="true" signature="1757:1767" ph="..." />
+                <marker date="1596922280773" expanded="true" signature="2395:2405" ph="..." />
+                <marker date="1596922280773" expanded="true" signature="2641:2665" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-city.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/city/create-city.blade.php">
+      <file leaf-file-name="create-role.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/create-role.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="53" column="87" lean-forward="false" selection-start-line="53" selection-start-column="87" selection-end-line="53" selection-end-column="87" />
+            <state relative-caret-position="-208">
+              <caret line="37" column="57" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
               <folding>
-                <marker date="1596931012759" expanded="true" signature="9:30" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="445:477" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="1678:1688" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="2316:2326" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="2760:2782" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="2845:2859" ph="..." />
-                <marker date="1596931012759" expanded="true" signature="2865:2881" ph="..." />
+                <marker date="1596960497429" expanded="true" signature="9:29" ph="..." />
+                <marker date="1596960497429" expanded="true" signature="442:474" ph="..." />
+                <marker date="1596960497429" expanded="true" signature="1671:1681" ph="..." />
+                <marker date="1596960497429" expanded="true" signature="2351:2361" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateCity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/City/CreateCity.php">
+      <file leaf-file-name="edit-role.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/edit-role.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="78">
+              <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
               <folding>
-                <element signature="e#50#66#0#PHP" expanded="true" />
+                <marker date="1596961279912" expanded="true" signature="9:35" ph="..." />
+                <marker date="1596961279912" expanded="true" signature="448:480" ph="..." />
+                <marker date="1596961279912" expanded="true" signature="1671:1681" ph="..." />
+                <marker date="1596961279912" expanded="true" signature="2339:2349" ph="..." />
+                <marker date="1596961279912" expanded="true" signature="2585:2606" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-gaz.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+              <folding>
+                <marker date="1596961297572" expanded="true" signature="9:41" ph="..." />
+                <marker date="1596961297572" expanded="true" signature="453:485" ph="..." />
+                <marker date="1596961297572" expanded="true" signature="1697:1707" ph="..." />
+                <marker date="1596961297572" expanded="true" signature="2330:2340" ph="..." />
+                <marker date="1596961297572" expanded="true" signature="2576:2596" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-gaz.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11">
+              <caret line="48" column="86" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <marker date="1596958922663" expanded="true" signature="9:35" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="448:480" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="1020:1041" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="1309:1328" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="1881:1897" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="1889:1893" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="2048:2069" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="2127:2165" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="2281:2310" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="2504:2514" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="2646:2656" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="3013:3025" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="4181:4213" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="4308:4316" ph="..." />
+                <marker date="1596958922663" expanded="true" signature="5813:5834" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-role.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="50" column="71" lean-forward="false" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+              <folding>
+                <marker date="1596961121913" expanded="true" signature="9:29" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="443:475" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="1010:1032" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="1290:1307" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="1866:1881" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="1872:1877" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2032:2054" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2112:2115" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2112:2132" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2248:2279" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2473:2484" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2616:2627" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="2984:2997" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="4154:4188" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="4182:4188" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="4283:4291" ph="..." />
+                <marker date="1596961121913" expanded="true" signature="5788:5810" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,13 +188,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$country</find>
+      <find>$gaz</find>
     </findStrings>
     <replaceStrings>
-      <replace>$city</replace>
       <replace>$quarter</replace>
       <replace>role</replace>
-      <replace>$role</replace>
       <replace>$arrondissement</replace>
+      <replace>$city</replace>
+      <replace>$gaz</replace>
+      <replace>$role</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -131,22 +225,34 @@
         <option value="$PROJECT_DIR$/app/service/stromae/GazService.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/ArrondissementController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/Create.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Edit.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Create.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/create.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/CreateCity.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/stromae/city/create-city.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/CreateCity.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/role/create-role.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/CreateRole.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/EditRole.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/role/edit-role.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php" />
       </list>
     </option>
   </component>
@@ -278,7 +384,7 @@
         <observation name="false" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="false" value="96,0" />
+        <observation name="false" value="119,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:liftShorterClasses">
@@ -286,7 +392,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:middleMatching">
@@ -295,7 +401,7 @@
         <observation name="true" value="2,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="false" value="96,0" />
+        <observation name="false" value="119,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:nonGeneric">
@@ -303,7 +409,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_inResolveScope">
@@ -313,9 +419,9 @@
         <observation name="true" value="43,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="false" value="23,0" />
-        <observation name="true" value="43,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="false" value="30,0" />
+        <observation name="true" value="56,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_openedInEditor">
@@ -325,9 +431,9 @@
         <observation name="true" value="36,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="false" value="43,0" />
-        <observation name="true" value="23,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="false" value="56,0" />
+        <observation name="true" value="30,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameDirectory">
@@ -337,9 +443,9 @@
         <observation name="true" value="41,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="false" value="34,0" />
-        <observation name="true" value="32,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="false" value="42,0" />
+        <observation name="true" value="44,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameLogicalRoot">
@@ -349,9 +455,9 @@
         <observation name="true" value="37,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="false" value="23,0" />
-        <observation name="true" value="43,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="false" value="30,0" />
+        <observation name="true" value="56,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sdkOrLibrary">
@@ -360,8 +466,8 @@
         <observation name="false" value="87,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="false" value="66,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="false" value="86,0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:templates">
@@ -369,7 +475,7 @@
         <observation name="false" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="false" value="96,0" />
+        <observation name="false" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:accessible">
@@ -377,7 +483,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:expectedType">
@@ -385,7 +491,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:kind">
@@ -393,7 +499,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:prox_groovyReferenceListWeigher">
@@ -401,7 +507,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:prox_javaInheritance">
@@ -409,7 +515,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:prox_referenceList">
@@ -417,7 +523,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="categorialFeature:recursion">
@@ -425,7 +531,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="completionFinishedType">
@@ -435,9 +541,9 @@
         <observation name="typedSelect" value="53,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="cancelled" value="640,0" />
-        <observation name="explicitSelect" value="66,0" />
-        <observation name="typedSelect" value="30,0" />
+        <observation name="cancelled" value="1041,0" />
+        <observation name="explicitSelect" value="80,0" />
+        <observation name="typedSelect" value="39,0" />
       </dailyData>
     </factor>
     <factor id="completionType">
@@ -445,7 +551,7 @@
         <observation name="BASIC" value="278,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="BASIC" value="135,0" />
+        <observation name="BASIC" value="195,0" />
       </dailyData>
     </factor>
     <factor id="completionUsage">
@@ -453,7 +559,7 @@
         <observation name="count" value="903,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="count" value="736,0" />
+        <observation name="count" value="1160,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -466,7 +572,7 @@
       </dailyData>
       <dailyData date="9-8-2020">
         <observation name="average" value="0,0" />
-        <observation name="count" value="191,0" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="0,0" />
         <observation name="min" value="0,0" />
         <observation name="variance" value="0,0" />
@@ -482,7 +588,7 @@
       </dailyData>
       <dailyData date="9-8-2020">
         <observation name="average" value="0,0" />
-        <observation name="count" value="191,0" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="0,0" />
         <observation name="min" value="0,0" />
         <observation name="variance" value="0,0" />
@@ -493,7 +599,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:nameEnd">
@@ -501,7 +607,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:position">
@@ -513,11 +619,11 @@
         <observation name="variance" value="0,700264" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="0,219895" />
-        <observation name="count" value="191,0" />
+        <observation name="average" value="0,194093" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="4,0" />
         <observation name="min" value="0,0" />
-        <observation name="variance" value="0,246092" />
+        <observation name="variance" value="0,230515" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prefix">
@@ -529,11 +635,11 @@
         <observation name="variance" value="75257,429071" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="-1245,701571" />
-        <observation name="count" value="191,0" />
+        <observation name="average" value="-1253,624473" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="0,0" />
         <observation name="min" value="-1963,0" />
-        <observation name="variance" value="61446,221589" />
+        <observation name="variance" value="63834,282318" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:priority">
@@ -545,11 +651,11 @@
         <observation name="variance" value="�" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="0,041885" />
-        <observation name="count" value="191,0" />
+        <observation name="average" value="0,042194" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="1,0" />
         <observation name="min" value="0,0" />
-        <observation name="variance" value="0,043398" />
+        <observation name="variance" value="0,043063" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_explicitlyImported">
@@ -557,7 +663,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_knownElement">
@@ -565,7 +671,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_sameModule">
@@ -578,12 +684,12 @@
         <observation name="variance" value="0,768675" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="30,0" />
-        <observation name="average" value="1,648855" />
-        <observation name="count" value="131,0" />
+        <observation name="UNDEFINED" value="33,0" />
+        <observation name="average" value="1,684211" />
+        <observation name="count" value="171,0" />
         <observation name="max" value="2,0" />
         <observation name="min" value="0,0" />
-        <observation name="variance" value="0,561774" />
+        <observation name="variance" value="0,537772" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_samePsiMember">
@@ -591,7 +697,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:query_length">
@@ -604,7 +710,7 @@
       </dailyData>
       <dailyData date="9-8-2020">
         <observation name="average" value="0,0" />
-        <observation name="count" value="191,0" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="0,0" />
         <observation name="min" value="0,0" />
         <observation name="variance" value="0,0" />
@@ -619,11 +725,11 @@
         <observation name="variance" value="8,030765" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="6,560209" />
-        <observation name="count" value="191,0" />
+        <observation name="average" value="6,527426" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="21,0" />
         <observation name="min" value="1,0" />
-        <observation name="variance" value="11,286825" />
+        <observation name="variance" value="11,075342" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:sameWords">
@@ -631,7 +737,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:shorter">
@@ -639,7 +745,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:simple">
@@ -647,7 +753,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:sorter">
@@ -660,7 +766,7 @@
       </dailyData>
       <dailyData date="9-8-2020">
         <observation name="average" value="1,0" />
-        <observation name="count" value="191,0" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="1,0" />
         <observation name="min" value="1,0" />
         <observation name="variance" value="0,0" />
@@ -671,7 +777,7 @@
         <observation name="UNDEFINED" value="162,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="UNDEFINED" value="96,0" />
+        <observation name="UNDEFINED" value="119,0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:stats">
@@ -683,11 +789,11 @@
         <observation name="variance" value="21649298,565518" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="5587,151832" />
-        <observation name="count" value="191,0" />
+        <observation name="average" value="5513,71308" />
+        <observation name="count" value="237,0" />
         <observation name="max" value="10000,0" />
         <observation name="min" value="0,0" />
-        <observation name="variance" value="19957614,695089" />
+        <observation name="variance" value="20452139,579872" />
       </dailyData>
     </factor>
     <factor id="itemPosition">
@@ -700,8 +806,8 @@
         <observation name="8" value="1,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="0" value="52,0" />
-        <observation name="1" value="9,0" />
+        <observation name="0" value="64,0" />
+        <observation name="1" value="11,0" />
         <observation name="2" value="4,0" />
         <observation name="4" value="1,0" />
       </dailyData>
@@ -712,7 +818,7 @@
         <observation name="withMnemonics" value="1,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="total" value="49,0" />
+        <observation name="total" value="61,0" />
         <observation name="withMnemonics" value="0,0" />
       </dailyData>
     </factor>
@@ -732,13 +838,14 @@
       </dailyData>
       <dailyData date="9-8-2020">
         <observation name="0" value="2,0" />
-        <observation name="1" value="15,0" />
-        <observation name="2" value="15,0" />
-        <observation name="3" value="13,0" />
-        <observation name="4" value="6,0" />
-        <observation name="5" value="8,0" />
+        <observation name="1" value="17,0" />
+        <observation name="2" value="19,0" />
+        <observation name="3" value="15,0" />
+        <observation name="4" value="9,0" />
+        <observation name="5" value="10,0" />
         <observation name="6" value="3,0" />
         <observation name="7" value="4,0" />
+        <observation name="8" value="1,0" />
       </dailyData>
     </factor>
     <factor id="timeBetweenTyping">
@@ -747,8 +854,8 @@
         <observation name="count" value="509,0" />
       </dailyData>
       <dailyData date="9-8-2020">
-        <observation name="average" value="269,537255" />
-        <observation name="count" value="255,0" />
+        <observation name="average" value="275,296482" />
+        <observation name="count" value="398,0" />
       </dailyData>
     </factor>
   </component>
@@ -792,6 +899,21 @@
               <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -809,7 +931,7 @@
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="City" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Country" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
@@ -829,7 +951,35 @@
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
               <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
@@ -845,24 +995,6 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="arrondissement" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="city" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
@@ -872,6 +1004,24 @@
               <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="country" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gaz" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="livewire" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="stromae" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="role" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
@@ -922,26 +1072,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596883250808</updated>
-      <workItem from="1596883265861" duration="21755000" />
+      <workItem from="1596883265861" duration="35553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21755000" />
+    <option name="totallyTimeSpent" value="35553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1323752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5030257" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -958,6 +1109,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Definition Relation Eloquent&#10;Import package laravel/ui&#10;modification schéma conceptuel&#10;definition vues authentification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Definition Relation Eloquent&#10;Import package laravel/ui&#10;modification schéma conceptuel&#10;definition vues authentification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,49 +1158,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="75" lean-forward="false" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
-          <folding>
-            <marker date="1596922280773" expanded="true" signature="9:32" ph="..." />
-            <marker date="1596922280773" expanded="true" signature="445:477" ph="..." />
-            <marker date="1596922280773" expanded="true" signature="1757:1767" ph="..." />
-            <marker date="1596922280773" expanded="true" signature="2395:2405" ph="..." />
-            <marker date="1596922280773" expanded="true" signature="2641:2665" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/master/pages/UI/modals.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="949" column="18" lean-forward="true" selection-start-line="947" selection-start-column="12" selection-end-line="949" selection-end-column="18" />
           <folding>
             <element signature="n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="29" column="137" lean-forward="false" selection-start-line="29" selection-start-column="137" selection-end-line="29" selection-end-column="137" />
-          <folding>
-            <marker date="1596925327773" expanded="true" signature="9:29" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="443:475" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="1004:1029" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="1287:1308" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="1896:1918" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="2081:2106" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="2168:2196" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="2320:2357" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="2555:2569" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="2705:2719" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="3092:3108" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="4309:4349" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="4448:4456" ph="..." />
-            <marker date="1596925327773" expanded="true" signature="6005:6030" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1135,38 +1253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="83" lean-forward="false" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -1183,32 +1269,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="e#53#92#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#49#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1223,59 +1289,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/Edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/Create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#60#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="52" column="115" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <marker date="1596920456151" expanded="true" signature="9:29" ph="..." />
-            <marker date="1596920456151" expanded="true" signature="442:474" ph="..." />
-            <marker date="1596920456151" expanded="true" signature="1682:1692" ph="..." />
-            <marker date="1596920456151" expanded="true" signature="2332:2342" ph="..." />
+            <element signature="e#60#83#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1297,40 +1316,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Create.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#60#73#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="46" column="69" lean-forward="false" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        <state relative-caret-position="408">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
-            <element signature="e#7#43#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/City/CreateCity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#66#0#PHP" expanded="true" />
+            <element signature="e#3246#3253#1#HTML" expanded="false" />
+            <marker date="1596942555688" expanded="true" signature="9:31" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="445:477" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="1009:1031" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="1289:1307" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="1867:1883" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="1874:1880" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2034:2056" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2114:2139" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2255:2286" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2480:2491" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2623:2634" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="2991:3004" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="4165:4199" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="4192:4199" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="4294:4302" ph="..." />
+            <marker date="1596942555688" expanded="true" signature="5799:5821" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/city/create-city.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="53" column="87" lean-forward="false" selection-start-line="53" selection-start-column="87" selection-end-line="53" selection-end-column="87" />
+        <state relative-caret-position="374">
+          <caret line="53" column="66" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="66" />
           <folding>
             <marker date="1596931012759" expanded="true" signature="9:30" ph="..." />
             <marker date="1596931012759" expanded="true" signature="445:477" ph="..." />
@@ -1339,6 +1362,336 @@
             <marker date="1596931012759" expanded="true" signature="2760:2782" ph="..." />
             <marker date="1596931012759" expanded="true" signature="2845:2859" ph="..." />
             <marker date="1596931012759" expanded="true" signature="2865:2881" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/City/CreateCity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="e#50#66#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/Create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#60#73#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/Create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="707" column="9" lean-forward="false" selection-start-line="707" selection-start-column="9" selection-end-line="707" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="29" column="137" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <marker date="1596925327773" expanded="true" signature="9:29" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="443:475" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="1004:1029" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="1287:1308" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="1896:1918" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="2081:2106" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="2168:2196" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="2320:2357" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="2555:2569" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="2705:2719" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="3092:3108" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="4309:4349" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="4448:4456" ph="..." />
+            <marker date="1596925327773" expanded="true" signature="6005:6030" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="52" column="115" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <marker date="1596920456151" expanded="true" signature="9:29" ph="..." />
+            <marker date="1596920456151" expanded="true" signature="442:474" ph="..." />
+            <marker date="1596920456151" expanded="true" signature="1682:1692" ph="..." />
+            <marker date="1596920456151" expanded="true" signature="2332:2342" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="61" column="68" lean-forward="false" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
+          <folding>
+            <element signature="e#7#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="62" column="51" lean-forward="true" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="57" />
+          <folding>
+            <marker date="1596960160610" expanded="true" signature="1708:1719" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="2025:2036" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="2332:2345" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="2641:2654" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="3048:3068" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="3090:3100" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="3443:3467" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="3752:3773" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="3795:3806" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4077:4108" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4130:4151" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4430:4454" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4476:4489" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4824:4845" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="4867:4878" ph="..." />
+            <marker date="1596960160610" expanded="true" signature="5198:5213" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="168" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <marker date="1596957462595" expanded="true" signature="9:38" ph="..." />
+            <marker date="1596957462595" expanded="true" signature="450:482" ph="..." />
+            <marker date="1596957462595" expanded="true" signature="1692:1702" ph="..." />
+            <marker date="1596957462595" expanded="true" signature="2325:2335" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="48" column="86" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <marker date="1596958922663" expanded="true" signature="9:35" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="448:480" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="1020:1041" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="1309:1328" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="1881:1897" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="1889:1893" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="2048:2069" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="2127:2165" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="2281:2310" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="2504:2514" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="2646:2656" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="3013:3025" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="4181:4213" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="4308:4316" ph="..." />
+            <marker date="1596958922663" expanded="true" signature="5813:5834" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="50" column="71" lean-forward="false" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+          <folding>
+            <marker date="1596961121913" expanded="true" signature="9:29" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="443:475" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="1010:1032" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="1290:1307" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="1866:1881" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="1872:1877" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2032:2054" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2112:2115" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2112:2132" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2248:2279" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2473:2484" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2616:2627" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="2984:2997" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="4154:4188" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="4182:4188" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="4283:4291" ph="..." />
+            <marker date="1596961121913" expanded="true" signature="5788:5810" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/CreateRole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/EditRole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/country/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <marker date="1596922280773" expanded="true" signature="9:32" ph="..." />
+            <marker date="1596922280773" expanded="true" signature="445:477" ph="..." />
+            <marker date="1596922280773" expanded="true" signature="1757:1767" ph="..." />
+            <marker date="1596922280773" expanded="true" signature="2395:2405" ph="..." />
+            <marker date="1596922280773" expanded="true" signature="2641:2665" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/create-role.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="37" column="57" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+          <folding>
+            <marker date="1596960497429" expanded="true" signature="9:29" ph="..." />
+            <marker date="1596960497429" expanded="true" signature="442:474" ph="..." />
+            <marker date="1596960497429" expanded="true" signature="1671:1681" ph="..." />
+            <marker date="1596960497429" expanded="true" signature="2351:2361" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/role/edit-role.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+          <folding>
+            <marker date="1596961279912" expanded="true" signature="9:35" ph="..." />
+            <marker date="1596961279912" expanded="true" signature="448:480" ph="..." />
+            <marker date="1596961279912" expanded="true" signature="1671:1681" ph="..." />
+            <marker date="1596961279912" expanded="true" signature="2339:2349" ph="..." />
+            <marker date="1596961279912" expanded="true" signature="2585:2606" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+          <folding>
+            <marker date="1596961297572" expanded="true" signature="9:41" ph="..." />
+            <marker date="1596961297572" expanded="true" signature="453:485" ph="..." />
+            <marker date="1596961297572" expanded="true" signature="1697:1707" ph="..." />
+            <marker date="1596961297572" expanded="true" signature="2330:2340" ph="..." />
+            <marker date="1596961297572" expanded="true" signature="2576:2596" ph="..." />
           </folding>
         </state>
       </provider>

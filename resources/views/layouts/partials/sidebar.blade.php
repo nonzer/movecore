@@ -70,7 +70,7 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{$gaz ?? ''}}">
+                            <a href="{{ route('gaz.index') }}" class="nav-link {{$gaz ?? ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Bouteilles de gaz</p>
                             </a>
@@ -78,26 +78,26 @@
                         <div class="dropdown-divider"></div>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('country.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Pays</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{$city ?? ''}}">
+                            <a href="{{ route('city.index') }}" class="nav-link {{$city ?? ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Villes</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{$arrondissement ?? ''}}">
+                            <a href="{{ route('arrondissement.index') }}" class="nav-link {{$arrondissement ?? ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Arrondissements</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{$quater ?? ''}}">
+                            <a href="{{ route('quarter.index') }}" class="nav-link {{$quater ?? ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Quartiers</p>
                             </a>
@@ -105,7 +105,7 @@
                         <div class="dropdown-divider"></div>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{$role ?? ''}}">
+                            <a href="{{ route('role.index') }}" class="nav-link {{$role ?? ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Roles</p>
                             </a>

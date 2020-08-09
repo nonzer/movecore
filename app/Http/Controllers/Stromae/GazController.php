@@ -13,6 +13,6 @@ class GazController extends Controller
         GazService::destroy($id);
 
         connectify('success', 'Opération Réussie', 'Suppression de la marque de gaz effectué');
-        return redirect()->route('arrondissement.index');
+        return redirect()->route('gaz.index');
     }
 }
