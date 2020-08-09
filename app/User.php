@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $timestamps = false;
+
 //    /**
 //     * The attributes that are mass assignable.
 //     *
@@ -40,4 +42,12 @@ class User extends Authenticatable
 //    ];
 
     protected $table = 'personals';
+
+    public function role(){
+        return belongsTo('App\Role', 'roles_id');
+    }
+
+    public function orders(){
+        return hasMany('App\Order', 'personals_id');
+    }
 }
