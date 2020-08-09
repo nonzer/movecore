@@ -15,7 +15,7 @@ class Order extends Model
     protected $primaryKey = ['customer_id', 'gaz_id'];
 
     public function customer(){
-    	return belongsTo('App\Customer', 'customer_id');
+    	return $this->belongsTo('App\Customer', 'customer_id');
     }
 
     public function gaz(){

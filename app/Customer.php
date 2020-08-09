@@ -11,15 +11,15 @@ class Customer extends Model
     protected $guarded = [];
 
     public function quarter(){
-    	return belongsTo('App\Quarter', 'quaters_id');
+    	return $this->belongsTo('App\Quarter', 'quaters_id');
     }
 
     public function category(){
-    	return belongsTo('App\Category', 'category_customers_id');
+    	return $this->belongsTo('App\Category', 'category_customers_id');
     }
 
     public function gaz(){
-    	return belongsToMany('App\Gaz');
+    	return $this->belongsToMany('App\Gaz');
     }
 
     public function orders(){

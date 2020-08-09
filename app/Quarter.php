@@ -13,10 +13,10 @@ class Quarter extends Model
     protected $table = "quaters";
 
     public function arrondissement(){
-    	return belongsTo('App\Arrondissement', 'arrondissements_id');
+    	return $this->belongsTo('App\Arrondissement', 'arrondissements_id');
     }
 
     public function customers(){
-    	return hasMany('App\Customer', 'quaters_id');
+    	return $this->hasMany('App\Customer', 'quaters_id');
     }
 }

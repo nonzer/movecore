@@ -53,8 +53,8 @@ Route::layout('layouts.master')->group(function () {
 
     /*Quarter*/
     Route::livewire('/quarters', 'stromae.quarter.list-quarter')->name('quarter.index');
-    Route::livewire('/quarters/add-quarter', 'stromae.quarter.create')->name('quarter.create');
-    Route::livewire('/quarters/edit-quarter/{id}', 'stromae.quarter.edit')->name('quarter.edit');
+    Route::livewire('/quarters/add-quarter', 'stromae.quarter.create-quarter')->name('quarter.create');
+    Route::livewire('/quarters/edit-quarter/{id}', 'stromae.quarter.edit-quarter')->name('quarter.edit');
 
     /*Role*/
     Route::livewire('/roles', 'stromae.role.list-role')->name('role.index');

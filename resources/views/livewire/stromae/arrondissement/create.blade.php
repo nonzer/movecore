@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom pays...">
+                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom arrondissement...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -52,6 +52,7 @@
                                 <div class="form-group">
                                     <label class="col-form-label" for="city">Ville</label>
                                     <select wire:model="city_id" class="form-control @error('city_id')is-invalid @enderror" id="city">
+                                        <option value="">Sélectionner une ville</option>
                                         @forelse($cities as $city)
                                             <option value="{{ $city->id }}">{{ $city->name }}</option>
                                         @empty

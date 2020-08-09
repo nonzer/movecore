@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom ville...">
+                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer un nom ville...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -51,13 +51,19 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="country">Pays</label>
-                                    <select wire:model="country_id" class="form-control" id="country">
+                                    <select wire:model="country_id" class="form-control @error('country_id')is-invalid @enderror" id="country">
+                                        <option value="">Sélectionner un pays</option>
                                         @forelse($countries as $country)
                                             <option value="{{ $country->id }}">{{ $country->name }}</option>
                                         @empty
                                             <option disabled="disabled">Aucun pays disponible </option>
                                         @endforelse
                                     </select>
+                                    @error('country_id')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group">

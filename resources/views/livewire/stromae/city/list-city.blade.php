@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Pays</h1>
+                    <h1 class="m-0 text-dark">Villes</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste villes</h3>
-                            <a href="{{ route('city.create') }}" class="float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un pays</a>
+                            <a href="{{ route('city.create') }}" class="float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter une ville</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -38,6 +38,7 @@
                                         <th>#</th>
                                         <th>Nom</th>
                                         <th>Abbréviation</th>
+                                        <th>Pays</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -47,6 +48,7 @@
                                             <td></td>
                                             <td>{{ ucfirst($city->name) }}</td>
                                             <td>{{ strtoupper($city->slug) }}</td>
+                                            <td>{{ $city->country->slug }}</td>
                                             <td>
                                                 <a href="{{ route('city.edit', $city->id) }}" class="btn btn-default"><i class="fas fa-edit"></i> modifier</a>
                                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modal-{{ $city->id }}"><i class="fas fa-trash"></i> Supprimer</a>
@@ -90,7 +92,7 @@
 
                                     <p>
                                         Vous ne disposez pas d'information dans votre tableau.
-                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('city.create') }}">ajouter un pays</a>.
+                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('city.create') }}">ajouter une ville</a>.
                                     </p>
                                 </div>
                             @endif
