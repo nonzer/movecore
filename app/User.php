@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = "personals";
+
     public $timestamps = false;
 
 //    /**
@@ -41,13 +43,13 @@ class User extends Authenticatable
 //        'email_verified_at' => 'datetime',
 //    ];
 
-    protected $table = 'personals';
-
     public function role(){
-        return belongsTo('App\Role', 'roles_id');
+        return $this->belongsTo('App\Role', 'roles_id');
     }
 
     public function orders(){
-        return hasMany('App\Order', 'personals_id');
+        return $this->hasMany('App\Order', 'personals_id');
     }
+
+    //4WGNjoLEoCcDh6Ku
 }
