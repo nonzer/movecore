@@ -13,6 +13,6 @@ class Category extends Model
     protected $table = 'category_customers';
 
     public function customers(){
-    	return hasMany('App\Customer', 'category_customers_id');
+    	return $this->hasMany('App\Customer', 'category_customers_id');
     }
 }

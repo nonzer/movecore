@@ -20,14 +20,14 @@ class Create extends Component
     public function store(){
         $data = $this->validate([
             'name' => 'required|string|min:3',
-            'slug' => 'required|string|max:3',
+            'slug' => 'required|string|max:15',
             'city_id' => 'required|numeric'
         ]);
 
         //dd($data);
         ArrondissementService::store($data);
 
-        connectify('success', 'Opération Réussie', 'Votre pays a bien été enregistrer');
+        connectify('success', 'Opération Réussie', 'Votre arrondissement a bien été enregistrer');
         return redirect()->route('arrondissement.index');
     }
 

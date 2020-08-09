@@ -7,10 +7,10 @@ use Livewire\Component;
 
 class ListGaz extends Component
 {
-    public $gaz;
+    public $all_gaz;
 
     public function mount(){
-        $this->gaz = GazService::list();
+        $this->all_gaz = GazService::list();
     }
 
     public function render()

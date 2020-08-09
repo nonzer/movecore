@@ -11,6 +11,6 @@ class Relauch extends Model
     protected $guarded = [];
 
     public function order(){
-    	return belongsTo('App\Order');
+    	return $this->belongsTo('App\Order');
     }
 }

@@ -11,7 +11,7 @@ class City extends Model
     protected $guarded = [];
 
     public function country(){
-    	return belongsTo('App\Country', 'countries_id');
+    	return $this->belongsTo('App\Country', 'countries_id');
     }
 
     public function arrondissements(){

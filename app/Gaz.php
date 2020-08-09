@@ -13,10 +13,10 @@ class Gaz extends Model
     protected $table = 'gaz';
 
     public function customers(){
-    	return belongsToMany('App\Customer', 'customer_gaz');
+    	return $this->belongsToMany('App\Customer', 'customer_gaz');
     }
 
     public function orders(){
-    	return hasMany('App\Order', 'gaz_id');
+    	return $this->hasMany('App\Order', 'gaz_id');
     }
 }
