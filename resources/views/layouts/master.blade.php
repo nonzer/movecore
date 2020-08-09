@@ -17,6 +17,7 @@
             margin-left: 30px;
         }
     </style>
+    @livewireStyles
     @stack('css')
     @notifyCss
 </head>
@@ -54,6 +55,8 @@
     <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+
+@livewireScripts
 
 <!-- jQuery -->
 <script src="/master/plugins/jquery/jquery.min.js"></script>
