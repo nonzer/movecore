@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('sample', function(){
     return view('sample');
 });
+
+
+/***
+ *      NKD ROUTES
+ */
+
+Route::get('/clients', 'Nkd\ClientController@index')->name('client.index');
+Route::get('/Ajouter-un-client', 'Nkd\ClientController@create')->name('client.create');
