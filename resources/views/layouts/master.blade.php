@@ -21,40 +21,43 @@
     @stack('css')
     @notifyCss
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition @if(Request::is('login')) login-page @else sidebar-mini layout-fixed @endif">
 
-<div class="wrapper">
-
-    <!-- Navbar -->
-        @include('layouts.partials.navbar')
+@if(Request::is('login'))
+    @yield('login-content')
+@else
+    <div class="wrapper">
+        <!-- Navbar -->
+    @include('layouts.partials.navbar')
     <!-- /.navbar -->
 
-    <!-- Main Sidebar Container -->
-        @include('layouts.partials.sidebar')
+        <!-- Main Sidebar Container -->
+    @include('layouts.partials.sidebar')
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+        <div class="content-wrapper">
 
 
-        <!-- Main content -->
+            <!-- Main content -->
         @yield('content')
         <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 1.0.0
         </div>
-    </footer>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+@endif
 
 @livewireScripts
 

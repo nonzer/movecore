@@ -24,7 +24,7 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <span class="font-weight-bold">Name Admin</span>
+                <span class="font-weight-bold">{{ Auth::user()->name }}</span>
                 <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -36,9 +36,12 @@
                     <i class="fas fa-sign-out-alt mr-2"></i> Fermer ma session
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
+                <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-power-off mr-2"></i> Déconnexion
                 </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </li>
 
