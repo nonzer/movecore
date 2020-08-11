@@ -11,7 +11,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('gaz') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -37,6 +37,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nom</th>
+                                        <th>Prix <small>(FCFA)</small></th>
                                         <th>Poids</th>
                                         <th>Actions</th>
                                     </tr>
@@ -46,6 +47,7 @@
                                         <tr>
                                             <td></td>
                                             <td>{{ ucfirst($gaz->name) }}</td>
+                                            <td>{{ number_format($gaz->price, 0, '.', ' ') }}</td>
                                             <td>{{ number_format($gaz->weight, 1).' Kg' }}</td>
                                             <td>
                                                 <a href="{{ route('gaz.edit', $gaz->id) }}" class="btn btn-default"><i class="fas fa-edit"></i> modifier</a>

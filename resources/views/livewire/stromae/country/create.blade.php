@@ -1,4 +1,4 @@
-@section('title','Ajout pays')
+@section('title','Ajouter un pays')
 
 <div>
     <!-- Content Header (Page header) -->
@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-country') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom pays...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom pays...">
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label" for="slug">Abbréviation</label>
-                                    <input wire:model="slug" type="text" class="form-control @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer une abbréviation ...">
+                                    <input wire:model.lazy="slug" type="text" class="form-control @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer une abbréviation ...">
                                     @error('slug')
                                         <div class="invalid-feedback">
                                             {{ $message }}

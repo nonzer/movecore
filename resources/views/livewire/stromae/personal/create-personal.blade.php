@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-personal') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom personnel...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom personnel...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -42,7 +42,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="tel">Numéro téléhpone</label>
-                                    <input wire:model="tel" type="text" class="form-control @error('tel')is-invalid @enderror" id="tel" placeholder="Entrer un numéro téléphone ...">
+                                    <input wire:model.lazy="tel" type="text" class="form-control @error('tel')is-invalid @enderror" id="tel" placeholder="Entrer un numéro téléphone ...">
                                     @error('tel')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -52,7 +52,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="b_date">Date anniversaire</label>
-                                    <input wire:model="birth_date" type="date" class="form-control @error('birth_date')is-invalid @enderror" id="b_date">
+                                    <input wire:model.lazy="birth_date" type="date" class="form-control @error('birth_date')is-invalid @enderror" id="b_date">
                                     @error('birth_date')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -62,7 +62,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="role">Rôle</label>
-                                    <select wire:model="role_id" class="form-control @error('role_id')is-invalid @enderror" id="role">
+                                    <select wire:model.lazy="role_id" class="form-control @error('role_id')is-invalid @enderror" id="role">
                                         <option value="">Attribuer un rôle au personnel</option>
                                         @forelse($roles as $role)
                                             <option value="{{ $role->id }}">{{ $role->name }}</option>
@@ -79,7 +79,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="login">Identifiant</label>
-                                    <input wire:model="login" type="text" class="form-control @error('login')is-invalid @enderror" id="login" placeholder="Entrer l'identifiant de connexion...">
+                                    <input wire:model.lazy="login" type="text" class="form-control @error('login')is-invalid @enderror" id="login" placeholder="Entrer l'identifiant de connexion...">
                                     @error('login')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -90,7 +90,7 @@
                                 <div class="form-group">
                                     <label class="col-form-label" for="mdp">Mot de passe <span class="h4 font-weight-bold ml-5">{{ $password }}</span></label>
                                     <div class="row ml-1">
-                                        <input wire:model="password" type="password" class="col-9 form-control @error('password')is-invalid @enderror" id="mdp" placeholder="Entrer mot de passe...">
+                                        <input wire:model.lazy="password" type="password" class="col-9 form-control @error('password')is-invalid @enderror" id="mdp" placeholder="Entrer mot de passe...">
                                         <a wire:click="password_key" class="btn btn-default col-2 ml-1">Générer un mot de passe</a>
                                     </div>
 

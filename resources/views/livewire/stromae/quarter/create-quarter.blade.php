@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-quarter') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom quartier...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom quartier...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -42,7 +42,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="arrondissement">Arrondissement</label>
-                                    <select wire:model="arrondissement_id" class="form-control @error('arrondissement_id')is-invalid @enderror" id="arrondissement">
+                                    <select wire:model.lazy="arrondissement_id" class="form-control @error('arrondissement_id')is-invalid @enderror" id="arrondissement">
                                         <option value="">Sélectionner un arrondissement</option>
                                         @forelse($arrondissements as $arrondissement)
                                             <option value="{{ $arrondissement->id }}">{{ $arrondissement->name }}</option>

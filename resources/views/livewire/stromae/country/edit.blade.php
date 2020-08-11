@@ -1,4 +1,4 @@
-@section('title','Modifier pays')
+@section('title','Modifier un pays')
 
 <div>
     <!-- Content Header (Page header) -->
@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('edit-country', $id_country) }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

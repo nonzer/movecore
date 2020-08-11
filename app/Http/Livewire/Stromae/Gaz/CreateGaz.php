@@ -9,11 +9,13 @@ class CreateGaz extends Component
 {
     public $weight;
     public $name;
+    public $price;
 
     public function store(){
         $data = $this->validate([
             'name' => 'required|string|min:3',
-            'weight' => 'required|numeric'
+            'weight' => 'required|numeric',
+            'price' => 'required|numeric'
         ]);
 
         //dd($data);

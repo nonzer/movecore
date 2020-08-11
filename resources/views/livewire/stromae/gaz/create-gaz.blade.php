@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-gaz') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom marque...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom marque...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -41,8 +41,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label" for="weight">Poids</label>
-                                    <input wire:model="weight" type="text" class="form-control @error('weight')is-invalid @enderror" id="weight" placeholder="Entrer un poids ...">
+                                    <input wire:model.lazy="weight" type="text" class="form-control @error('weight')is-invalid @enderror" id="weight" placeholder="Entrer un poids ...">
                                     @error('weight')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-form-label" for="price">Prix</label>
+                                    <input wire:model.lazy="price" type="text" class="form-control @error('price')is-invalid @enderror" id="price" placeholder="Entrer un prix ...">
+                                    @error('price')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>

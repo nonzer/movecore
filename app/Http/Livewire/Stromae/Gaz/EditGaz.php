@@ -10,6 +10,7 @@ class EditGaz extends Component
 {
     public $name;
     public $weight;
+    public $price;
     public $id_gaz;
 
     public function mount($id){
@@ -18,13 +19,15 @@ class EditGaz extends Component
 
         $this->name = $gaz->name;
         $this->weight = $gaz->weight;
+        $this->price = $gaz->price;
         $this->id_gaz = $gaz->id;
     }
 
     public function update(){
         $data = $this->validate([
             'name' => 'required|string|min:3',
-            'weight' => 'required|numeric'
+            'weight' => 'required|numeric',
+            'price' => 'required|numeric'
         ]);
 
         GazService::update($this->id_gaz, $data);

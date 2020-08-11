@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function (){
 
         /*City*/
         Route::livewire('/cities', 'stromae.city.list-city')->name('city.index');
-        Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');
+        /*Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');*/
         Route::livewire('/cities/edit-city/{id}', 'stromae.city.edit-city')->name('city.edit');
 
         /*Arrondissement*/

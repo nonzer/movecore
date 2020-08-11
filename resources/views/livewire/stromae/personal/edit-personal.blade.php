@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('edit-personal', $id_personal) }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom personnel...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom personnel...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -42,7 +42,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="tel">Numéro téléhpone</label>
-                                    <input wire:model="tel" type="text" class="form-control @error('tel')is-invalid @enderror" id="tel" placeholder="Entrer un numéro téléphone ...">
+                                    <input wire:model.lazy="tel" type="text" class="form-control @error('tel')is-invalid @enderror" id="tel" placeholder="Entrer un numéro téléphone ...">
                                     @error('tel')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -52,7 +52,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="b_date">Date anniversaire</label>
-                                    <input wire:model="birth_date" type="date" class="form-control @error('birth_date')is-invalid @enderror" id="b_date">
+                                    <input wire:model.lazy="birth_date" type="date" class="form-control @error('birth_date')is-invalid @enderror" id="b_date">
                                     @error('birth_date')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -62,7 +62,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="role">Rôle</label>
-                                    <select wire:model="role_id" class="form-control @error('role_id')is-invalid @enderror" id="role">
+                                    <select wire:model.lazy="role_id" class="form-control @error('role_id')is-invalid @enderror" id="role">
                                         <option value="">Attribuer un rôle au personnel</option>
                                         @forelse($roles as $role)
                                             <option @if($role->id === $personal_role_id) selected @endif value="{{ $role->id }}">{{ $role->name }}</option>
