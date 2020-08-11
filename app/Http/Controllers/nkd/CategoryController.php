@@ -1,15 +1,12 @@
 <?php
 
-
-
-
 namespace App\Http\Controllers\Nkd;
 
-use App\Customer;
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +15,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Customer::all();
-        return view('nkd.client.clients',compact(['clients']));
+        $category= Category::all();
+        return view('nkd.category.index',compact(['category']));
     }
 
     /**
@@ -29,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('nkd.client.create');
+        //
     }
 
     /**
@@ -85,7 +82,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        Customer::whereId($id)->delete();
-        return redirect()->route('client.index');
+        Category::whereId($id)->delete();
+        return redirect()->route('category.index');
     }
 }

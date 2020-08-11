@@ -24,7 +24,7 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <span class="font-weight-bold">{{ Auth::user()->name }}</span>
+                <span class="font-weight-bold">{{ Auth::user()->name ??' Daniel kong'}}</span>
                 <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

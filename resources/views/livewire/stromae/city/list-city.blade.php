@@ -88,7 +88,7 @@
                                 </table>
                             @else
                                 <div class="error-content text-center">
-                                    <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Donnée non disponible.</h3>
+                                    <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Données non disponible.</h3>
 
                                     <p>
                                         Vous ne disposez pas d'information dans votre tableau.

@@ -16,6 +16,9 @@
         .nav .nav-treeview  {
             margin-left: 30px;
         }
+        .dropdown-divider{
+            opacity: 0.2
+        }
     </style>
     @livewireStyles
     @stack('css')
