@@ -31,18 +31,18 @@
         <!-- general form elements -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title"> <i class="fas fa-user-plus"></i> </h3>
+                <h3 class="card-title"> <i class="fas fa-user-cog"></i> </h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form wire:submit.prevent="save">
+            <form wire:submit.prevent="update">
                 <div class="card-body">
 
                     <div class="row ">
                         <div class="col-8">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nom et Prenom</label>
-                                <input type="text" wire:model.lazy="name"  class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" placeholder="Nom complet" value="{{old('name')}}">
+                                <input type="text" wire:model="name"  class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" placeholder="Nom complet" value="{{old('name') }}">
                                 @error('name')
                                 <div class="">
                                     <p class="text-sm text-danger">{{$message}}</p>
@@ -51,13 +51,12 @@
                             </div>
                         </div>
 
-
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="type_gaz">Gaz</label>
 
                                 <select name="type_gaz" id="" wire:model.lazy="type_gaz" class="form-control">
-                                    <option>Choisir...</option>
+                                    <option> Choisir... </option>
                                     @forelse($list_gaz as $t)
                                         <option value="{{$t->name}}">{{$t->name ." - ". $t->weight}} Kg</option>
                                     @empty
@@ -240,10 +239,17 @@
                         </div>
 
 
+
                         <div class="col-md-4">
-                            <div class="form-group">
+                            <div class="">
                                 <label for="exampleInputEmail1">CODE Maison</label>
-                                <input type="text" wire:model.lazy="code"  class="form-control @error('code') is-invalid @else is-warning @enderror" id="exampleInputEmail1" placeholder="Code" value="{{old('code')}}">
+                                <div class="input-group">
+                                    <input type="text" wire:model.lazy="code"  class="form-control @error('code') is-invalid @else is-warning @enderror @if($code) is-valid @endif" placeholder="Code" value="{{old('code')}}">
+                                    <span class="input-group-append">
+                                            <button class="btn btn-warning " wire:click="generate" type="button"><i class="fas fa-cogs"> </i> Générer un code</button>
+                                        </span>
+                                </div>
+
                                 @error('code')
                                 <div class="">
                                     <p class="text-sm text-danger">{{$message}}</p>
@@ -251,6 +257,8 @@
                                 @enderror
                             </div>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -258,11 +266,10 @@
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-success ">
-                        <i class="fas fa-spinner fa-spin" wire:loading wire:target="name"></i>
-                        <i class="fas fa-plus" wire:loading.remove wire:target="name"></i>
-                        Enregistrer
+                        <i class="fas fa-download" wire:loading.class="fas fa-spinner fa-spin" wire:target="name"></i>
+                        Enregistrer les modifications
                     </button>
-                    <button type="reset" class="btn btn-secondary "><i class="fas fa-recycle"></i> Reinitialiser </button>
+                    <button type="reset" class="btn btn-secondary "><i class="fas fa-recycle"></i> </button>
                 </div>
             </form>
 
@@ -291,7 +298,7 @@
                 })
             })
         </script>
-    @endpush
+@endpush
 
 
 

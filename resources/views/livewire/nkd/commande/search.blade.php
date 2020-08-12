@@ -23,13 +23,7 @@
                         <span class="text-secondary">Cliquez dessous sur <strong>code</strong>/<strong>tel</strong> puis Entrer le <strong>code/numéro</strong> et trouver une client pour lui ajouter une commande.</span>
                     </p>
                     <div class="input-group m-1 justify-content-center">
-{{--                        <label for=""> <i class="fas fa-code"></i>--}}
-{{--                            <input type="radio" name="search"  class="">--}}
-{{--                        </label>--}}
-{{--                        <label for=""><i class="fas fa-phone"></i>--}}
-{{--                            <input type="radio" name="search" class="">--}}
-{{--                        </label>--}}
-                        <div class="btn-group btn-group-toggle">
+                        <div class="btn-group btn-group-toggle border">
                             <label class="btn btn-sm @if($searchbycode) bg-success @endif ">
                                 <input type="radio" name="options" wire:model="searchbycode">code
                             </label>
@@ -52,13 +46,13 @@
                 <br>
             </div>
 
-
             @if(session()->has('sms') && !empty($value) )
                 <div class="row">
                     <div class="col-sm-12">
-                        <br>
-                        <div class="alert alert-secondary">
-                             {{ session('sms') }}</p>
+                        <div class="info-box align-items-center  justify-content-center ">
+                            <p>
+                                Aucun resultat pour '<strong>{{$value}}</strong>', ajouter un client <i class="fas fa-lg fa-arrow-right"></i>  <a href="{{Route('client.create')}}"> ici</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -66,14 +60,13 @@
 
             @if(!empty($resources))
                 <br>
-                <h6>Les ressources trouvées</h6>
-
+                <span>Les résultats trouvées</span>
                 @forelse($resources as $r)
 
                     <div class="row">
                         <div class="col-sm-12">
                             <a href="{{route('order.create',$r['id'])}}" class="linknkd text-decoration-none" style="cursor: pointer">
-                                <div class="card">
+                                <div class="info-box ">
                                     <div class="p-1">
                                         @if($searchbycode)
                                             <h6 class="card-title">{!!  str_replace($value,"<span style='color: #d30f34'>".$value."</span>" ,$r['code']??'' ) !!}</h6>

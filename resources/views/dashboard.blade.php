@@ -23,11 +23,8 @@
 
     <section class="content">
         @livewire('nkd.commande.search')
+
+        @livewire('nkd.chart.chart-client')
+
     </section>
 @endsection
-
-@push('css')
-@endpush
-
-@push('js')
-@endpush

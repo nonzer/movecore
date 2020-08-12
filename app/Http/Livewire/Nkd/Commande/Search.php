@@ -37,7 +37,7 @@ class Search extends Component
                 $this->response = SearchService::searchByCode($value);
 
             if(empty($this->response)){
-                session()->flash('sms',"Aucun resultat pour '$value' ");
+                session()->flash('sms',true);
             }
         }else{
             $this->response=null;

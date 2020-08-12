@@ -82,6 +82,11 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        $cat = Category::find($id);
+        if($cat->customers->count() > 0){
+            session()->flash('echec_delete',true);
+            return redirect()->back();
+        }
         Category::whereId($id)->delete();
         return redirect()->route('category.index');
     }

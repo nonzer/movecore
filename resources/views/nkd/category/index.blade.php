@@ -33,11 +33,18 @@
             <!-- /.card-header -->
             <div class="card-body">
 
-                @if(session()->get('success'))
+                @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         <h5><i class="icon fas fa-check"></i> Succès !</h5>
                         Réussite de l'enregistrement
+                    </div>
+                @endif
+                @if(session()->has('echec_delete'))
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-times"></i> Echec !</h5>
+                        Cette catégorie contient des utilisateurs, vous ne pouvez la supprimer!
                     </div>
                 @endif
 
@@ -65,8 +72,8 @@
                                    [
                                        'id'=> $c->id,
                                        'name'=> 'Categorie de Client',
-                                       "route"=> route('category.destroy', $c->id),
-                                       "sms"=> "Vouler-vous supprimer définitivement categorie de client ?"
+                                       'route'=> route('category.destroy', $c->id),
+                                       'sms'=> "Vouler-vous supprimer définitivement categorie de client ? Vous Allez perdre tout les Clients qui sont dans cette quategorie !",
                                    ])
                                 </td>
                             </tr>

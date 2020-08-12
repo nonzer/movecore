@@ -6,7 +6,7 @@ use App\Category;
 use App\Gaz;
 use App\Quarter;
 use App\City;
-use http\Env\Request;
+use App\service\nkd\ClientService;
 use Illuminate\Support\Str;
 use Livewire\Component;
 use App\Customer;
@@ -33,7 +33,6 @@ class Client extends Component
     public $list_gaz=[];
     public $type_client=[];
 
-
     public $category;
     public $sector;
     public $landmark;
@@ -48,19 +47,17 @@ class Client extends Component
         $this->type_client = Category::all();
     }
 
-    private function generateCode():string{
-
-        $quat = Quarter::whereId(2)->get();
-        $code = strtoupper(Str::limit('Douala',3,'')).''.Str::limit(random_int(0,1222),3,'');
-        return $code;
-    }
-
-    public function updatingLandmark(){
-        $this->code = $this->generateCode();
-    }
 
     public function updatedCity($value){
         $this->list_arrond = Arrondissement::where('cities_id', $value)->get();
+    }
+
+    public function generate()
+    {
+        if($this->quater_id!==null){
+            $quat= Quarter::find($this->quater_id);
+            $this->code = ClientService::generateCode($quat->slug, $this->quater_id);
+        }
     }
 
     public function updatedArrond($value)
@@ -69,37 +66,26 @@ class Client extends Component
     }
 
     public function updatedSexm(){
-        if($this->sexm){
-            $this->sexm ="on";
-            $this->sexf ="off";
+        if($this->sexm=="on"){
+            $this->sexf =null;
         }
     }
     public function updatedSexf(){
-        if($this->sexf){
-            $this->sexf ="on";
-            $this->sexm ="off";
+        if($this->sexf=="on"){
+            $this->sexm =null;
         }
     }
 
     public function save(){
 
-        $data = $this->validate([
-            'name'=> 'required|string|min:3',
-            'code'=> 'required|string',
-            'tel'=> 'required|numeric|min:9',
-            'birthday'=> 'string|min:3',
-
-            'quater_id'=> 'required',
-            'sector'=> 'required|string|min:3',
-            'landmark'=> 'required|string|min:3',
-            'particular_landmark'=> 'string|min:5',
-        ]);
+        $data = $this->validate(ClientService::ClientValidate());
 
         $client = new Customer();
 
         $client->name = $this->name;
         $client->code = $this->code;
         $client->tel = $this->tel;
+//        $client->quantity = $this->quantity;
         $client->birthday = $this->birthday;
         $client->type_gaz = $this->type_gaz;
         $client->sex = !empty($this->sexf)? 'F' : "H";

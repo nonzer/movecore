@@ -3,10 +3,9 @@
 
 
 
-if(!function_exists('generateCode')){
-    function generateCode(){
-
-        return 0;
+if(!function_exists('genre')){
+    function genre($customer){
+        return ($customer->sex === 'F')? 'Mme': 'Mr';
     }
 }
 

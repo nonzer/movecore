@@ -51,7 +51,7 @@
 
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label for="type_gaz">Gaz</label>
+                                    <label for="type_gaz">Gaz Habituel</label>
 
                                     <select name="type_gaz" id="" wire:model.lazy="type_gaz" class="form-control">
                                         <option>Choisir...</option>
@@ -117,7 +117,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                         </div>
 
@@ -238,9 +237,15 @@
 
 
                             <div class="col-md-4">
-                                <div class="form-group">
+                                <div class="">
                                     <label for="exampleInputEmail1">CODE Maison</label>
-                                    <input type="text" wire:model.lazy="code"  class="form-control @error('code') is-invalid @else is-warning @enderror" id="exampleInputEmail1" placeholder="Code" value="{{old('code')}}">
+                                    <div class="input-group">
+                                        <input type="text" wire:model.lazy="code"  class="form-control @error('code') is-invalid @else is-warning @enderror @if($code) is-valid @endif" placeholder="Code" value="{{old('code')}}">
+                                        <span class="input-group-append">
+                                            <button class="btn btn-warning " wire:click="generate" type="button"><i class="fas fa-cogs"> </i> Générer un code</button>
+                                        </span>
+                                    </div>
+
                                     @error('code')
                                     <div class="">
                                         <p class="text-sm text-danger">{{$message}}</p>
@@ -248,6 +253,7 @@
                                     @enderror
                                 </div>
                             </div>
+
                         </div>
 
                     </div>

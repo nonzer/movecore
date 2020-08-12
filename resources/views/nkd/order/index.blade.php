@@ -41,12 +41,12 @@
                             <th>Code</th>
                             <th>Client</th>
                             <th>Gaz</th>
-                            <th>Sexe</th>
-                            <th>Tel</th>
-                            <th>Secteur</th>
                             <th>Quartier</th>
-                            <th>Repère</th>
-                            <th>Repère Part.</th>
+                            <th>Tel</th>
+                            <th>Heure commande </th>
+                            <th>Heure livraison</th>
+                            <th>Délai</th>
+                            <th>Qté</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -56,13 +56,13 @@
                             <tr>
                                 <td><strong>{{$o->customer->code}}</strong></td>
                                 <td>{{$o->customer->name}}</td>
-                                <td>{{$o->gaz->name}}</td>
-                                <td>{{$o->customer->sex}}</td>
-                                <td>{{$o->customer->tel}}</td>
-                                <td>{{$o->customer->sector}}</td>
+                                <td>{{$o->gaz->name}} <span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
                                 <td>{{$o->customer->quarter->name}}</td>
-                                <td>{{$o->customer->landmark}}</td>
-                                <td>{{$o->customer->particular_landmark}}</td>
+                                <td>{{$o->customer->tel}}</td>
+                                <td>{{$o->time_order}}</td>
+                                <td>{{$o->time_deliver }}</td>
+                                <td>{{$o->deliver_delay}}</td>
+                                <td>{{$o->quantity}}</td>
                                 <td>
                                     <a class="btn btn-primary btn-xs" href="{{route('order.edit',$o->id)}}"><i class="fas fa-user-edit"></i></a>
                                     <a class="btn btn-danger btn-xs" href="" data-toggle="modal" data-target="#modal-{{ $o->id }}"><i class="fas fa-trash"></i></a>
@@ -89,7 +89,7 @@
 
                         <p>
                             Vous ne disposez pas d'information dans votre tableau.
-                            Ajouter un client en cliquant ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('order.search',$o->id) }}">ajouter une Commande</a>.
+                            Ajouter un client en cliquant ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('order.search') }}">ajouter une Commande</a>.
                         </p>
                     </div>
                 @endif

@@ -37,16 +37,16 @@
             <div class="card-body">
 
                 @if($clients->count() >0)
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table id="example1" class="table table-bordered table-responsive table-striped">
                         <thead>
                         <tr>
                             <th>Code</th>
                             <th>Nom</th>
                             <th>Gaz</th>
-                            <th>Sexe</th>
+                            <th>Catégorie</th>
                             <th>Tel</th>
-                            <th>Secteur</th>
                             <th>Quartier</th>
+                            <th>Secteur</th>
                             <th>Repère</th>
                             <th>Repère Part.</th>
                             <th>Action</th>
@@ -57,14 +57,14 @@
                         @forelse($clients as $c)
                         <tr>
                             <td><strong>{{$c->code}}</strong></td>
-                            <td>{{$c->name}}</td>
+                            <td> <span class="text-secondary">{{genre($c)}}</span> {{$c->name}}</td>
                             <td>{{$c->type_gaz}}</td>
-                            <td>{{$c->sex}}</td>
+                            <td>{{$c->category->name}}</td>
                             <td>{{$c->tel}}</td>
-                            <td>{{$c->sector}}</td>
                             <td>{{$c->quarter->name}}</td>
+                            <td>{{$c->sector}}</td>
                             <td>{{$c->landmark}}</td>
-                            <td>{{$c->particular_landmark}}</td>
+                            <td>{{Str::limit($c->particular_landmark,50)}}</td>
                             <td>
                                 <a class="btn btn-primary btn-xs" href="{{route('client.edit',$c->id)}}"><i class="fas fa-user-edit"></i></a>
                                 <a class="btn btn-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $c->id }}"><i class="fas fa-trash"></i></a>
@@ -116,7 +116,7 @@
     <script>
         $(function () {
             $("#example1").DataTable({
-                "responsive": true,
+                "responsive": false,
                 "autoWidth": true,
             });
             // $('#example2').DataTable({
