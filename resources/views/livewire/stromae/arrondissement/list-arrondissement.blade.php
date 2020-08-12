@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste arrondissements</h3>
-                            <a wire:click="show_add_form_arrondissement" class="text-white float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
+                            <a  class="text-white float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -136,7 +136,7 @@
 
                                     <p>
                                         Vous ne disposez pas d'information dans votre tableau.
-                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('arrondissement.create') }}">ajouter un arrondissement</a>.
+                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a class="text-primary" style="cursor: pointer" wire:click="show_add_form_arrondissement">ajouter un arrondissement</a>.
                                     </p>
                                 </div>
                             @endif

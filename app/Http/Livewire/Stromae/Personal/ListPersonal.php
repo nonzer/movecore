@@ -8,6 +8,7 @@ use Livewire\Component;
 class ListPersonal extends Component
 {
     public $personals;
+    public $personal = "active";
 
     public function mount(){
         $this->personals = PersonalService::list();

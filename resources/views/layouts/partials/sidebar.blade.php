@@ -154,6 +154,15 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{ route('customer_relation') }}" class="nav-link {{$customer_relation ?? ''}}">
+                        <i class="nav-icon fas fa-child"></i>
+                        <p>
+                            Relation client
+                        </p>
+                    </a>
+                </li>
+
 
             </ul>
         </nav>

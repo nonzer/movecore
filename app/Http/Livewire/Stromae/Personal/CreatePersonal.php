@@ -26,7 +26,7 @@ class CreatePersonal extends Component
             'name' => 'required|string|max:255',
             'login' => 'required|string|unique:personals|max:255',
             'password' => 'required|string',
-            'tel' => 'required|numeric',
+            'tel' => 'required|string',
             'birth_date' => 'required|date',
             'role_id' => 'required|numeric'
         ]);
