@@ -4,8 +4,6 @@
 @section('title','Home')
 @section('content')
 
-
-
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -24,12 +22,9 @@
     <!-- /.content-header -->
 
     <section class="content">
+        @livewire('nkd.commande.search')
+
+        @livewire('nkd.chart.chart-client')
 
     </section>
 @endsection
-
-@push('css')
-@endpush
-
-@push('js')
-@endpush

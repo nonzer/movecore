@@ -22,14 +22,54 @@ Route::get('sample', function(){
     return view('sample');
 });
 
+
+
+/***
+ *      NKD ROUTES
+ */
+
+Route::namespace('Nkd')->group(function(){
+    Route::get('/client/liste-des-clients', 'ClientController@index')->name('client.index');
+    Route::get('/commande/liste-des-commandes', 'CommandeController@index')->name('order.index');
+    Route::get('/category/category-des-clients', 'CategoryController@index')->name('category.index');
+
+    Route::delete('/client/Supprimer-un-clients/{id}', 'ClientController@destroy')->name('client.destroy');
+    Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy');
+    Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy');
+});
+
+Route::layout('layouts.master')->group(function(){
+
+   Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create');
+   Route::livewire('/Client/Editer-un-client/{id}', 'nkd.client.edit')->name('client.edit');
+
+   Route::livewire('/Commandes/Ajouter-une-commande', 'nkd.commande.search')->name('order.search');
+   Route::livewire('/Commandes/Ajouter-une-commande/{id}', 'nkd.commande.create')->name('order.create');
+   Route::livewire('/Commandes/Editer-une-commande/{id}', 'nkd.commande.edit')->name('order.edit');
+
+   Route::livewire('/Client/Ajouter-une-Categorie-de-client', 'nkd.category.create')->name('category.create');
+   Route::livewire('/Client/Editer-une-Categorie-de-client/{id}', 'nkd.category.edit')->name('category.edit');
+
+});
+
+
+/***
+ *      END NKD ROUTES
+ */
+
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::get('/tableau-de-bord', function (){
+    return view('dashboard');
+})->name('dashboard');
+
 Route::middleware('auth')->group(function (){
-    Route::get('/tableau-de-bord', function (){
-        return view('dashboard');
-    })->name('dashboard');
+//    Route::get('/tableau-de-bord', function (){
+//        return view('dashboard');
+//    })->name('dashboard');
 
     Route::namespace('Stromae')->group(function (){
         Route::delete('/countries/delete-country/{id}', 'CountryController@destroy')->name('country.destroy');

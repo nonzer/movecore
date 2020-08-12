@@ -16,6 +16,9 @@
         .nav .nav-treeview  {
             margin-left: 30px;
         }
+        .dropdown-divider{
+            opacity: 0.2
+        }
     </style>
     @notifyCss
     @livewireStyles
@@ -60,7 +63,6 @@
 @endif
 
 @livewireScripts
-
 <!-- jQuery -->
 <script src="/master/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

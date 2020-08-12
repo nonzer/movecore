@@ -10,10 +10,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="/master/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="{{ Auth::user()->name }} Image">
+                <img src="/master/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="{{ Auth::user()->name ??' Admin'}} Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="#" class="d-block">{{ Auth::user()->name ??' Admin'}}</a>
             </div>
         </div>
 
@@ -33,31 +33,69 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link {{$home ?? ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                     with font-awesome or any other icon font library :::: menu-open -->
+                <li class="nav-item ">
+                    <a href="{{route('dashboard')}}" class="nav-link {{$home ?? ''}}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i   >
                         <p>
                             Dashboard
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link {{$order?? ''}}">
+                <li class="nav-item {{$menu_order ?? ''}}">
+                    <a href="{{route('order.index')}}" class="nav-link {{$order?? ''}}">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Commandes
+                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('order.index') }}" class="nav-link {{$orderindex ?? ''}}">
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+                                <p>Commandes</p>
+                            </a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="nav-item">
+                            <a href="{{route('order.search')}}" class="nav-link {{$ordersearch ?? ''}}">
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+                                <p>Nouvelle Commande</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{$menu_client ?? ''}}" >
                     <a href="#" class="nav-link {{$client ?? ''}}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Clients
+                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('category.index') }}" class="nav-link {{$category ?? ''}}">
+                                <p>Categories</p>
+                            </a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+
+                        <li class="nav-item">
+                            <a href="{{ route('client.index') }}" class="nav-link {{$client_list ?? ''}}">
+                                <p>Tous les Clients</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </li>
+
+
 
                 <li class="nav-item">
                     <a href="#" class="nav-link {{$config ?? ''}}">
@@ -71,7 +109,6 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('gaz.index') }}" class="nav-link {{$gaz ?? ''}}">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Bouteilles de gaz</p>
                             </a>
                         </li>
@@ -79,26 +116,22 @@
 
                         <li class="nav-item">
                             <a href="{{ route('country.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Pays</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('city.index') }}" class="nav-link {{$city ?? ''}}">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Villes</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="{{ route('arrondissement.index') }}" class="nav-link {{$arrondissement ?? ''}}">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Arrondissements</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('quarter.index') }}" class="nav-link {{$quater ?? ''}}">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Quartiers</p>
                             </a>
                         </li>
@@ -106,12 +139,12 @@
 
                         <li class="nav-item">
                             <a href="{{ route('role.index') }}" class="nav-link {{$role ?? ''}}">
-                                <i class="far fa-circle nav-icon"></i>
                                 <p>Roles</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
                 <li class="nav-item">
                     <a href="{{ route('personal.index') }}" class="nav-link {{$personal ?? ''}}">
                         <i class="nav-icon fas fa-user-cog"></i>
