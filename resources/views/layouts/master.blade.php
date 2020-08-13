@@ -20,6 +20,8 @@
             opacity: 0.2
         }
     </style>
+
+
     @livewireStyles
     @stack('css')
     @notifyCss

@@ -14,12 +14,12 @@ const chartDoughnut  = function(data_label, data_value, title, id){
         data:{
             datasets: [{
                 data: data_value ,
-                backgroundColor: [
-                    'rgb(211,15,52)',
-                    'rgb(16,155,92)',
-                    'rgb(238,213,22)',
-                    'rgb(24,105,172)',
-                    'rgb(92,151,155)',
+                backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'
+                    // 'rgb(211,15,52)',
+                    // 'rgb(16,155,92)',
+                    // 'rgb(238,213,22)',
+                    // 'rgb(24,105,172)',
+                    // 'rgb(92,151,155)',
 
                 ],
             }],
@@ -30,6 +30,30 @@ const chartDoughnut  = function(data_label, data_value, title, id){
 }
 
 
+const chartPie  = function(data_label, data_value, title, id){
+
+    let ctxx = document.getElementById(id).getContext('2d');
+    var myDoughnutChart = new Chart(ctxx, {
+        type: 'pie',
+        data:{
+            datasets: [{
+                data: data_value ,
+                backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'
+                    // 'rgb(211,15,52)',
+                    // 'rgb(16,155,92)',
+                    // 'rgb(238,213,22)',
+                    // 'rgb(24,105,172)',
+                    // 'rgb(92,151,155)',
+
+                ],
+            }],
+            labels: data_label,
+        },
+        // options: options
+    });
+}
+
+// Line Chart
 const chartLine = function(data_label,data_value ,title , id){
 
     var ctx = document.getElementById(id).getContext('2d');
@@ -55,4 +79,66 @@ const chartLine = function(data_label,data_value ,title , id){
         ,
         // options: options
     });
+}
+
+
+// Bar chart
+const chartBar = function(data_label,  title, id, data_value, data_value2){
+    var ctx = document.getElementById(id).getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data_label,
+            datasets: [
+                {
+                    label: title,
+                    data: data_value,
+                    backgroundColor: [
+                        '#00c0ef',
+                        '#39d37f',
+                        '#d91f21',
+                        '#2b2b2b',
+                        '#1869ac',
+                        '#eed516',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                        // 'rgba(255, 221, 13, 0.1)',
+                    ],
+                    borderColor: [
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+                        // 'rgba(255, 221, 13, 1)',
+
+                    ],
+                    borderWidth: 1
+                },
+
+
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
 }

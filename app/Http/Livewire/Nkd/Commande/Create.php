@@ -55,7 +55,7 @@ class Create extends Component
             'time_order'=>'required|string',
             'date_order'=>'required|string',
             'quantity'=>'required|numeric',
-            'type_order'=>'required|in:L,AAU',
+            'type_order'=>'required|in:L,AAU,A/L',
             'status_order'=>'required|in:validated,passed,declined,in pending',
             'typegaz'=>'required',
         ]);
