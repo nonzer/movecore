@@ -23,6 +23,8 @@ class GazService
         $gaz->name = ucfirst($data['name']);
         $gaz->weight = $data['weight'];
         $gaz->price = $data['price'];
+        $gaz->price_buy = $data['price_buy'];
+        $gaz->qty_stock = $data['qty_stock'];
         $gaz->save();
 
         return true;
@@ -34,6 +36,8 @@ class GazService
         $gaz->name = ucfirst($data['name']);
         $gaz->weight = $data['weight'];
         $gaz->price = $data['price'];
+        $gaz->price_buy = $data['price_buy'];
+        $gaz->qty_stock = $data['qty_stock'];
         $gaz->save();
 
         return true;

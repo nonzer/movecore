@@ -21,6 +21,7 @@ class QuarterService
     {
         $quarter = new Quarter();
         $quarter->name = ucfirst($data['name']);
+        $quarter->slug = strtoupper($data['slug']);
         $quarter->arrondissements_id = $data['arrondissement_id'];
         $quarter->save();
 
@@ -31,6 +32,7 @@ class QuarterService
     {
         $quarter = Quarter::find($id);
         $quarter->name = ucfirst($data['name']);
+        $quarter->slug = strtoupper($data['slug']);
         $quarter->arrondissements_id = $data['arrondissement_id'];
         $quarter->save();
 

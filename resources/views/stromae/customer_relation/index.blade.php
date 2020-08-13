@@ -1,4 +1,4 @@
-php artisain serve@extends('layouts.master',['customer_relation'=>'active'])
+@extends('layouts.master',['customer_relation'=>'active'])
 
 
 @section('title','Gestion relation client')
@@ -50,7 +50,6 @@ php artisain serve@extends('layouts.master',['customer_relation'=>'active'])
                             <th>Delai livraison</th>
                             <th>Date relance</th>
                             <th>Rappel client</th>
-                            <th>Relance client</th>
                             <th>Observation</th>
                             <th>Statut commande</th>
                         </tr>
@@ -62,7 +61,12 @@ php artisain serve@extends('layouts.master',['customer_relation'=>'active'])
                                 <td><span class="p-1 badge badge-dark">{{ $o->customer->code }}</span></td>
                                 <td class="">{{ civilite($o->customer) }} <strong>{{ $o->customer->name }}</strong><br></td>
                                 <td>{{ $o->customer->tel }}</td>
-                                <td class="{{ birthday_status($o->customer->birthday) }} disabled">{{ $o->customer->birthday }}</td>
+                                <td class="">
+                                    <strong>{{ $o->customer->birthday }}</strong>
+                                    @if(birthday_status($o->customer->birthday))
+                                        <img class="float-right" src="/gift.svg" width="30px">
+                                    @endif
+                                </td>
                                 <td>{{ $o->customer->quarter->name }}</td>
                                 <td>{{ $o->gaz->name }}</td>
                                 <td>{{ $o->date_order }}</td>
@@ -71,19 +75,21 @@ php artisain serve@extends('layouts.master',['customer_relation'=>'active'])
                                 <td>{{ $o->time_deliver }}</td>
                                 <td>{{ $o->delivery_delay }}</td>
                                 <td>
-                                    <span class="badge badge-{{ timing(date_relance($o->date_order, $o->customer->category->period)) }}">
+                                    <span class="badge badge-{{ timing($o->relauch->date_reminder) }}">
+{{--
                                         {{ date_relance($o->date_order, $o->customer->category->period) }}
+--}}
+                                        {{ $o->relauch->date_reminder }}
                                     </span>
                                 </td>
                                 <td></td>
                                 <td>
-                                    @if(exist_relauch($o->relauch->statuts === "non relance"))
-                                        {{  }}
+                                    @if($o->relauch->status)
+                                        {{ $o->relauch->observation }}
                                     @else
-                                        <button class="btn btn-dark btn-sm btn-block">Relancer <span class="fas fa-tty"></span></button>
+                                        @livewire('stromae.observation-relance', ['id' => $o->id])
                                     @endif
                                 </td>
-                                <td></td>
                                 <td class="text-center">
                                     @if($o->status_order === "declined")
                                         <i class="fas fa-minus-square text-danger"></i>

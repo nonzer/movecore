@@ -50,14 +50,36 @@
                                     @enderror
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="col-form-label" for="price">Prix</label>
-                                    <input wire:model.lazy="price" type="text" class="form-control @error('price')is-invalid @enderror" id="price" placeholder="Entrer un prix ...">
-                                    @error('price')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
+                                <div class="row">
+                                    <div class="col-4 form-group">
+                                        <label class="col-form-label" for="price_buy">Prix d'achât</label>
+                                        <input wire:model.lazy="price_buy" type="text" class="form-control @error('price_buy')is-invalid @enderror" id="price_buy" placeholder="Entrer prix d'achât...">
+                                        @error('price_buy')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
-                                    @enderror
+
+                                    <div class="col-4 form-group">
+                                        <label class="col-form-label" for="price">Prix de vente</label>
+                                        <input wire:model.lazy="price" type="text" class="form-control @error('price')is-invalid @enderror" id="price" placeholder="Entrer prix de vente...">
+                                        @error('price')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-4 form-group">
+                                        <label class="col-form-label" for="qty_stock">Quantité stock</label>
+                                        <input wire:model.lazy="qty_stock" type="text" class="form-control @error('qty_stock')is-invalid @enderror" id="price" placeholder="Entrer la quantité stock...">
+                                        @error('qty_stock')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
                                 </div>
 
                                 <div class="form-group">

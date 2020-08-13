@@ -94,11 +94,11 @@ if (!function_exists('timing')){
 }
 
 if (!function_exists('birthday_status')){
-    function birthday_status($birthday):string {
-        $result = '';
+    function birthday_status($birthday):string{
+        $result = false;
 
         if (DateTime::createFromFormat('Y-m-d', $birthday)->format('M:d') === date('M:d'))
-            $result = 'bg-orange';
+            $result = true;
 
         return $result;
     }

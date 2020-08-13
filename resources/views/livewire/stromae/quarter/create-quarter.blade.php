@@ -41,6 +41,16 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="col-form-label" for="slug">Abbréviation</label>
+                                    <input wire:model.lazy="slug" type="text" class="form-control @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer l'abbréviation quartier...">
+                                    @error('slug')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-form-label" for="arrondissement">Arrondissement</label>
                                     <select wire:model.lazy="arrondissement_id" class="form-control @error('arrondissement_id')is-invalid @enderror" id="arrondissement">
                                         <option value="">Sélectionner un arrondissement</option>

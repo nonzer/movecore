@@ -81,6 +81,8 @@ Route::middleware('auth')->group(function (){
 
         Route::delete('/personal/delete-personal/{id}', 'PersonalController@destroy')->name('personal.destroy');
 
+        Route::get('/customer-relation', 'CustomerRelationController@index')->name('customer_relation');
+
     });
 
     Route::layout('layouts.master')->group(function () {
