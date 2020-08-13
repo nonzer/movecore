@@ -69,6 +69,7 @@
 
                         <select name="type_order" wire:model="type_order" id="" class="form-control">
                             <option value="L" >Livraison</option>
+                            <option value="A/L" >Achat et Livraison</option>
                             <option value="AAU">Achat A l'Unité</option>
                         </select>
                         @error('type_order')
