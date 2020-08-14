@@ -78,26 +78,27 @@
                     <div class="card-body">
                         <div class="row">
 
-                            <div class="col-xs-12 col-md-8 boxchart" >
+                            <div class="col-xs-12 col-md-12 boxchart" >
                                 <canvas id="lineChart" width="500" height="250" ></canvas>
                             </div>
-                            <div class="col-xs-12 col-md-4">
-                                <br>
-                                <h3 class="">Configurations</h3> <br>
-                                <p>
-                                    Vous pouvez configurer ce diagramme et faire varier <strong>l'intervalle des dates</strong> pour
-                                    obtenir ce que vous recherchez.
-                                </p>
-                                <div class="input-group ">
-                                    <input type="date" name="datebegin" wire:model.lazy="datebegin" id="" class="form-control">
-                                    <span class="p-2"> à </span>
-                                    <input type="date" name="dateend" wire:model.lazy="dateend" id="" class="form-control">
 
-                                </div>
-                                <button class="btn btn-outline-primary" wire:click="reload" >
-                                    configurer
-                                </button>
-                            </div>
+{{--                            <div class="col-xs-12 col-md-4">--}}
+{{--                                <br>--}}
+{{--                                <h3 class="">Configurations</h3> <br>--}}
+{{--                                <p>--}}
+{{--                                    Vous pouvez configurer ce diagramme et faire varier <strong>l'intervalle des dates</strong> pour--}}
+{{--                                    obtenir ce que vous recherchez.--}}
+{{--                                </p>--}}
+{{--                                <div class="input-group ">--}}
+{{--                                    <input type="date" name="datebegin" wire:model.lazy="datebegin" id="" class="form-control">--}}
+{{--                                    <span class="p-2"> à </span>--}}
+{{--                                    <input type="date" name="dateend" wire:model.lazy="dateend" id="" class="form-control">--}}
+
+{{--                                </div>--}}
+{{--                                <button class="btn btn-outline-primary" wire:click="reload" >--}}
+{{--                                    configurer--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
 
                         </div>
                     </div>

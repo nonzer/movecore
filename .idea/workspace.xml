@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/service/nkd/ChartService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/nkd_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nkd_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chartCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chartCode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,37 +34,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/nkd_helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="631">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="e#50#67#0#PHP" expanded="true" />
               </folding>
@@ -80,34 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="646">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/master/index.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="773" column="10" selection-start-line="773" selection-start-column="10" selection-end-line="817" selection-end-column="24" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/chartCode.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="14" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="488">
+              <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -115,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="661">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#47#60#0#PHP" expanded="true" />
               </folding>
@@ -125,23 +76,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/service/nkd/ChartService.php">
+        <entry file="file://$PROJECT_DIR$/app/service/nkd/ClientService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="286">
+              <caret line="51" column="39" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="39" />
               <folding>
-                <element signature="e#37#49#0#PHP" expanded="true" />
-                <element signature="e#550#600#0#PHP" />
+                <element signature="e#35#52#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            <state relative-caret-position="682">
+              <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="81" column="75" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -201,7 +160,6 @@
         <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Category/Edit.php" />
         <option value="$PROJECT_DIR$/routes/breadcrumbs.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/nkd/CommandeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/modal.blade.php" />
@@ -211,7 +169,6 @@
         <option value="$PROJECT_DIR$/resources/views/livewire/nkd/category/create.blade.php" />
         <option value="$PROJECT_DIR$/app/service/nkd/SearchService.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Search.php" />
-        <option value="$PROJECT_DIR$/app/service/nkd/ClientService.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/nkd/client/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Client/Edit.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Client/Client.php" />
@@ -224,15 +181,17 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/nkd/CategoryController.php" />
         <option value="$PROJECT_DIR$/resources/views/nkd/category/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Order.php" />
-        <option value="$PROJECT_DIR$/app/service/nkd/ChartService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/chartCode.js" />
-        <option value="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" />
-        <option value="$PROJECT_DIR$/app/helpers/nkd_helper.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/chartCode.js" />
+        <option value="$PROJECT_DIR$/app/service/nkd/ChartService.php" />
+        <option value="$PROJECT_DIR$/app/helpers/nkd_helper.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" />
+        <option value="$PROJECT_DIR$/app/service/nkd/ClientService.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" />
       </list>
     </option>
   </component>
@@ -380,7 +339,66 @@
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
               <item name="movecore" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Livewire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Livewire" type="462c0819:PsiDirectoryNode" />
+              <item name="Nkd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Livewire" type="462c0819:PsiDirectoryNode" />
+              <item name="Nkd" type="462c0819:PsiDirectoryNode" />
+              <item name="Commande" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="livewire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="livewire" type="462c0819:PsiDirectoryNode" />
+              <item name="nkd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movecore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="livewire" type="462c0819:PsiDirectoryNode" />
+              <item name="nkd" type="462c0819:PsiDirectoryNode" />
+              <item name="commande" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movecore" type="b2602c69:ProjectViewProjectNode" />
@@ -438,12 +456,12 @@
       <option name="presentableId" value="Default" />
       <updated>1596812776228</updated>
       <workItem from="1596812777630" duration="11452000" />
-      <workItem from="1596911937167" duration="140707000" />
+      <workItem from="1596911937167" duration="162505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152159000" />
+    <option name="totallyTimeSpent" value="173957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -451,9 +469,9 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1935287" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14713065" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.16020408" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.22551021" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -491,33 +509,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/nkd/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="83" column="40" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
-          <folding>
-            <element signature="e#47#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="59" lean-forward="true" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/master/pages/forms/validation.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/category/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -570,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -714,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/nkd/ClientService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-74">
@@ -787,34 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/nkd/ChartService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="43" />
-          <folding>
-            <element signature="e#37#49#0#PHP" expanded="true" />
-            <element signature="e#550#600#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#47#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/master/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -824,20 +773,6 @@
             <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/chartCode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -855,17 +790,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="707" column="9" selection-start-line="707" selection-start-column="9" selection-end-line="707" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chartCode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/nkd/ChartService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#37#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/nkd_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="655">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="81" column="75" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/nkd/ClientService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="e#35#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="631">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="e#50#67#0#PHP" expanded="true" />
           </folding>
@@ -874,8 +878,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="646">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#47#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
         </state>
       </provider>
     </entry>
