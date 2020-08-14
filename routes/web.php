@@ -13,15 +13,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return redirect()->route('login');
-});
-
 Route::get('sample', function(){
     return view('sample');
 });
 
+Auth::routes(['register' => false]);
 
 
 /***
@@ -57,19 +53,25 @@ Route::layout('layouts.master')->group(function(){
  *      END NKD ROUTES
  */
 
-Auth::routes(['register' => false]);
+
+
+/***
+ *      STROMAE ROUTES
+ */
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/tableau-de-bord', function (){
+/*Route::get('/tableau-de-bord', function (){
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/
 
-Route::middleware('auth')->group(function (){
-//    Route::get('/tableau-de-bord', function (){
-//        return view('dashboard');
-//    })->name('dashboard');
+Route::middleware(['auth', 'lock'])->group(function (){
+    Route::get('/tableau-de-bord', function (){
+        return view('dashboard');
+    })->name('dashboard');
 
     Route::namespace('Stromae')->group(function (){
         Route::delete('/countries/delete-country/{id}', 'CountryController@destroy')->name('country.destroy');
@@ -82,7 +84,6 @@ Route::middleware('auth')->group(function (){
         Route::delete('/personal/delete-personal/{id}', 'PersonalController@destroy')->name('personal.destroy');
 
         Route::get('/customer-relation', 'CustomerRelationController@index')->name('customer_relation');
-
     });
 
     Route::layout('layouts.master')->group(function () {
@@ -123,3 +124,11 @@ Route::middleware('auth')->group(function (){
     });
 });
 
+//Verrouillage d'ecran
+Route::get('/lockscreen', 'Stromae\LockAccountController@lockscreen')->name('lockscreen.index');
+Route::post('/lockscreen', 'Stromae\LockAccountController@unlock')->name('lockscreen.store');
+
+
+/***
+ *      END STROMAE ROUTES
+ */

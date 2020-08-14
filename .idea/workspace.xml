@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="mise en place gestion relation client">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ObservationRelance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gift.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/observation-relance.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/LockAccountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/LockAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/CreateGaz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/EditGaz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/CreateQuarter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/CreateQuarter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/EditQuarter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/EditQuarter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/stromae_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/stromae_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/stromae/GazService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/stromae/GazService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/stromae/QuarterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/stromae/QuarterService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/create-gaz.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/edit-gaz.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/create-quarter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/create-quarter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/edit-quarter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/edit-quarter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ObservationRelance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ObservationRelance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -205,7 +196,8 @@
       <workItem from="1597062934965" duration="11832000" />
       <workItem from="1597142500325" duration="644000" />
       <workItem from="1597263479255" duration="1769000" />
-      <workItem from="1597267815587" duration="23648000" />
+      <workItem from="1597267815587" duration="28111000" />
+      <workItem from="1597352749187" duration="8347000" />
     </task>
     <task id="LOCAL-00001" summary="debut et fin crud personnel&#10;mise en place authentification">
       <created>1596996865944</created>
@@ -221,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596997300006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mise en place gestion relation client">
+      <created>1597331091141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597331092033</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -19,7 +19,7 @@ class ObservationRelance extends Component
         if ($this->visible === true){
             $relauch = Relauch::where('customer_gaz_id', $this->id_order)->first();
             $relauch->observation = $this->observation;
-            $relauch->status = $this->observation;
+            $relauch->status = true;
             $relauch->save();
 
             return redirect()->route('customer_relation');

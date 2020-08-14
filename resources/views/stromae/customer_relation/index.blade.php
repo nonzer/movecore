@@ -73,7 +73,7 @@
                                 <td>{{ $o->quantity }}</td>
                                 <td>{{ $o->time_order }}</td>
                                 <td>{{ $o->time_deliver }}</td>
-                                <td>{{ $o->delivery_delay }}</td>
+                                <td>{{ $o->deliver_delay }}</td>
                                 <td>
                                     <span class="badge badge-{{ timing($o->relauch->date_reminder) }}">
 {{--

@@ -24,10 +24,12 @@
     @livewireStyles
     @stack('css')
 </head>
-<body class="hold-transition @if(Request::is('login')) login-page @else sidebar-mini layout-fixed @endif">
+<body class="hold-transition @if(Request::is('login')) login-page @elseif(Request::is('lockscreen')) lockscreen @else sidebar-mini layout-fixed @endif">
 
 @if(Request::is('login'))
     @yield('login-content')
+@elseif(Request::is('lockscreen'))
+    @yield('lockscreen-content')
 @else
     <div class="wrapper">
         <!-- Navbar -->

@@ -54,4 +54,12 @@
         </div>
     </div>
     <!-- /.login-box -->
+
+    <div class="text-xs">
+        <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0.0
+        </div>
+    </div>
 @endsection

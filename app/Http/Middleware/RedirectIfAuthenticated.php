@@ -28,7 +28,7 @@ class RedirectIfAuthenticated
             }elseif ($role === 'Chef_unite'){
                 return redirect()->route('order.search');
             }elseif ($role === 'GRC'){
-                //return redirect()->route('dashboard');
+                return redirect()->route('customer_relation');
             }
         }
 
