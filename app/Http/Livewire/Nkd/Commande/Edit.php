@@ -47,6 +47,8 @@ class Edit extends Component
         $order->time_order = $this->time_order;
         $order->date_order = $this->date_order;
         $order->gaz_id = $this->typegaz;
+        $order->deliver_delay= calculate_delay($order)? calculate_delay($order): $order->deliver_delay;
+
         $order->update();
         return redirect()->route('order.index');
     }

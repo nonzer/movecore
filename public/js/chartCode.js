@@ -54,10 +54,10 @@ const chartPie  = function(data_label, data_value, title, id){
 }
 
 // Line Chart
-const chartLine = function(data_label,data_value ,title , id){
+const chartLine = function(data_label, data_value, title, id){
 
     var ctx = document.getElementById(id).getContext('2d');
-    var myLineChart = new Chart(ctx, {
+    var myLineCharts = new Chart(ctx, {
         type: 'line',
         data:{
             labels: data_label,

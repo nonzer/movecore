@@ -14,7 +14,10 @@ class ChartClient extends Component
     public $dataClients;
     public $cities;
     public $gaz;
-//    public $dataGaz;
+    public $benefits;
+
+    public $dateend;
+    public $datebegin;
 
 
     public function mount()
@@ -23,6 +26,7 @@ class ChartClient extends Component
         $orders= Order::all();
         $this->doughnutChart($this->dataClients);
         $this->barOrderChart($orders);
+        $this->benefitOrderChart();
 //        $this->barChart($this->dataClients);
     }
 
@@ -47,6 +51,26 @@ class ChartClient extends Component
         $this->gaz = $objReturn;
     }
 
+    private function benefitOrderChart($date_begin=null, $date_end=null)
+    {
+        if($date_begin!==null && $date_end!==null){
+
+            $dataOrders= Order::whereBetween('date_order',[$date_begin, $date_end])->get();
+            $dataOrders= $dataOrders->filter()->all();
+            $this->benefits = ChartService::benefitForChart($dataOrders);
+        }else{
+
+            $dataOrders= Order::all();
+            $dataOrders= $dataOrders->filter()->all();
+            $this->benefits = ChartService::benefitForChart($dataOrders);
+        }
+    }
+
+    public function reload()
+    {
+        $this->benefitOrderChart($this->datebegin, $this->dateend);
+        $this->render();
+    }
 
 
     public function render()
