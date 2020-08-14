@@ -20,11 +20,9 @@
             opacity: 0.2
         }
     </style>
-
-
+    @notifyCss
     @livewireStyles
     @stack('css')
-    @notifyCss
 </head>
 <body class="hold-transition @if(Request::is('login')) login-page @else sidebar-mini layout-fixed @endif">
 

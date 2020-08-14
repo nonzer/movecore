@@ -11,6 +11,7 @@ class Order extends Model
     protected $guarded = [];
 
     protected $table = 'customer_gaz';
+    protected $primaryKey = 'id';
 
     public function customer(){
     	return $this->belongsTo('App\Customer', 'customer_id');
@@ -25,6 +26,6 @@ class Order extends Model
     }
 
     public function relauch(){
-    	return $this->hasOne('App\Relauch');
+    	return $this->hasOne('App\Relauch', 'customer_gaz_id');
     }
 }

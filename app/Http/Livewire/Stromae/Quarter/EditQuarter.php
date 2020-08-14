@@ -10,6 +10,7 @@ use Livewire\Component;
 class EditQuarter extends Component
 {
     public $name;
+    public $slug;
     public $arrondissement_id;
     public $id_quarter;
     public $quarter_arrondissement_id;
@@ -22,6 +23,7 @@ class EditQuarter extends Component
         $quarter = Quarter::find($id);
 
         $this->name = $quarter->name;
+        $this->slug = $quarter->slug;
         $this->id_quarter = $quarter->id;
 
         $this->quarter_arrondissement_id = $quarter->arrondissement->id;
@@ -30,6 +32,7 @@ class EditQuarter extends Component
     public function update(){
         $data = $this->validate([
             'name' => 'required|string|min:3',
+            'slug' => 'required|string|max:5',
             'arrondissement_id' => 'required|numeric'
         ]);
 

@@ -14,6 +14,7 @@ class EditPersonal extends Component
     public $role_id;
     public $id_personal;
     public $roles;
+    public $personal = "active";
 
     public $personal_role_id;
 
@@ -36,7 +37,7 @@ class EditPersonal extends Component
     public function update(){
         $data = $this->validate([
             'name' => 'required|string|max:255',
-            'tel' => 'required|numeric',
+            'tel' => 'required|string',
             'birth_date' => 'required|date',
             'role_id' => 'required|numeric'
         ]);

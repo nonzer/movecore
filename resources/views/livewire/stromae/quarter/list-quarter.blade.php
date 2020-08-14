@@ -11,7 +11,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('quarter') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -37,6 +37,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nom</th>
+                                        <th>Abbréviation</th>
                                         <th>Arrondissement</th>
                                         <th>Actions</th>
                                     </tr>
@@ -46,6 +47,7 @@
                                         <tr>
                                             <td></td>
                                             <td>{{ ucfirst($quarter->name) }}</td>
+                                            <td>{{ strtoupper($quarter->slug) }}</td>
                                             <td>{{ $quarter->arrondissement->slug }}</td>
                                             <td>
                                                 <a href="{{ route('quarter.edit', $quarter->id) }}" class="btn btn-default"><i class="fas fa-edit"></i> modifier</a>

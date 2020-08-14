@@ -11,7 +11,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('arrondissement') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -27,10 +27,54 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste arrondissements</h3>
-                            <a href="{{ route('arrondissement.create') }}" class="float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
+                            <a  class="text-white float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            @if($show)
+                                <form class="form-inline" wire:submit.prevent="store">
+                                    <div>
+                                        <label class="sr-only" for="nom">Nom</label>
+                                        <input wire:model.lazy="name" type="text" class="form-control mb-2 mr-sm-2 @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom arrondissement...">
+                                        @error('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div>
+                                        <label class="sr-only" for="slug">Abbréviation</label>
+                                        <input wire:model.lazy="slug" type="text" class="form-control mb-2 mr-sm-2 @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer une abbréviation ...">
+                                        @error('slug')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div>
+                                        <label class="sr-only" for="ville">Ville</label>
+                                        <select wire:model.lazy="city_id" class="form-control mb-2 mr-sm-2 @error('city_id')is-invalid @enderror" id="ville">
+                                            <option value="">Sélectionner une ville</option>
+                                            @forelse($cities as $city)
+                                                <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                            @empty
+                                                <option disabled="disabled">Aucune ville disponible </option>
+                                            @endforelse
+                                        </select>
+
+                                        <button class="btn btn-primary mb-2">Ajouter <i wire:loading wire:target="store" class="ml-2 fas fa-spinner fa-spin"></i></button>
+
+                                        @error('city_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </form>
+                            @endif
+
                             @if(count($arrondissements) > 0)
                                 <table id="" class="table table-striped">
                                     <thead>
@@ -92,7 +136,7 @@
 
                                     <p>
                                         Vous ne disposez pas d'information dans votre tableau.
-                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('arrondissement.create') }}">ajouter un arrondissement</a>.
+                                        Pour en ajouter cliquez ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a class="text-primary" style="cursor: pointer" wire:click="show_add_form_arrondissement">ajouter un arrondissement</a>.
                                     </p>
                                 </div>
                             @endif

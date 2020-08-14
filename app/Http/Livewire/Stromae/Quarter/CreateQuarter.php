@@ -10,6 +10,7 @@ class CreateQuarter extends Component
 {
 
     public $name;
+    public $slug;
     public $arrondissement_id;
     public $arrondissements;
 
@@ -20,6 +21,7 @@ class CreateQuarter extends Component
     public function store(){
         $data = $this->validate([
             'name' => 'required|string|min:3',
+            'slug' => 'required|string|max:5',
             'arrondissement_id' => 'required|numeric'
         ]);
 

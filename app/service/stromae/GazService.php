@@ -19,28 +19,34 @@ class GazService
 
     public static function store(array $data)
     {
-        $country = new Gaz();
-        $country->name = ucfirst($data['name']);
-        $country->weight = $data['weight'];
-        $country->save();
+        $gaz = new Gaz();
+        $gaz->name = ucfirst($data['name']);
+        $gaz->weight = $data['weight'];
+        $gaz->price = $data['price'];
+        $gaz->price_buy = $data['price_buy'];
+        $gaz->qty_stock = $data['qty_stock'];
+        $gaz->save();
 
         return true;
     }
 
     public static function update(int $id, array $data)
     {
-        $country = Gaz::find($id);
-        $country->name = ucfirst($data['name']);
-        $country->weight = $data['weight'];
-        $country->save();
+        $gaz = Gaz::find($id);
+        $gaz->name = ucfirst($data['name']);
+        $gaz->weight = $data['weight'];
+        $gaz->price = $data['price'];
+        $gaz->price_buy = $data['price_buy'];
+        $gaz->qty_stock = $data['qty_stock'];
+        $gaz->save();
 
         return true;
     }
 
     public static function destroy(int $id)
     {
-        $country = Gaz::find($id);
-        $country->delete();
+        $gaz = Gaz::find($id);
+        $gaz->delete();
 
         return true;
     }

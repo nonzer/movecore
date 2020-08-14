@@ -81,6 +81,8 @@ Route::middleware('auth')->group(function (){
 
         Route::delete('/personal/delete-personal/{id}', 'PersonalController@destroy')->name('personal.destroy');
 
+        Route::get('/customer-relation', 'CustomerRelationController@index')->name('customer_relation');
+
     });
 
     Route::layout('layouts.master')->group(function () {
@@ -91,7 +93,7 @@ Route::middleware('auth')->group(function (){
 
         /*City*/
         Route::livewire('/cities', 'stromae.city.list-city')->name('city.index');
-        Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');
+        /*Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');*/
         Route::livewire('/cities/edit-city/{id}', 'stromae.city.edit-city')->name('city.edit');
 
         /*Arrondissement*/

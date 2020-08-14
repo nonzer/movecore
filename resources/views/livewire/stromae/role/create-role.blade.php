@@ -1,4 +1,4 @@
-@section('title','Ajout rôle')
+@section('title','Création privilège')
 
 <div>
     <!-- Content Header (Page header) -->
@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Rôle</h1>
+                    <h1 class="m-0 text-dark">Privilège</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-role') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,7 +24,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Ajouter un rôle</h3>
+                            <h3 class="card-title">Créer un privilège</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer...">
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label" for="desc">Description </label>
-                                    <textarea wire:model="description" type="text" class="form-control @error('description')is-invalid @enderror" id="desc">
+                                    <textarea wire:model.lazy="description" type="text" class="form-control @error('description')is-invalid @enderror" id="desc">
                                     </textarea>
                                     @error('description')
                                         <div class="invalid-feedback">

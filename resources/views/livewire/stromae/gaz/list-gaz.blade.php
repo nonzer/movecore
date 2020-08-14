@@ -11,7 +11,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('gaz') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,11 +32,13 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if(count($all_gaz) > 0)
-                                <table id="" class="table table-striped">
+                                <table id="example1" class="table table-striped table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>#</th>
                                         <th>Nom</th>
+                                        <th>Prix d'achât <small>(FCFA)</small></th>
+                                        <th>Prix vente <small>(FCFA)</small></th>
+                                        <th>Quantité stock</th>
                                         <th>Poids</th>
                                         <th>Actions</th>
                                     </tr>
@@ -44,8 +46,19 @@
                                     <tbody>
                                     @foreach($all_gaz as $gaz)
                                         <tr>
-                                            <td></td>
                                             <td>{{ ucfirst($gaz->name) }}</td>
+                                            <td>{{ number_format($gaz->price,  ($gaz->price == 0) ? 2 : 0, '.', ' ') }}</td>
+                                            <td>{{ number_format($gaz->price_buy, ($gaz->price_buy == 0) ? 2 : 0, '.', ' ') }}</td>
+                                            <td>
+                                                @if($visible && ($id_gaz === $gaz->id))
+                                                    <form wire:submit.prevent="update_qty" class="form-inline">
+                                                        <input class="form-control p-l-1 w-75 my-1 mr-sm-2" id="qty" wire:model="qty_stock">
+                                                        <button class="btn btn-primary btn-sm">mettre à jour</button>
+                                                    </form>
+                                                @else
+                                                    {{ number_format($gaz->qty_stock, ($gaz->qty_stock == 0) ? 1 : 0, '.', ' ') }}
+                                                    <span wire:click="showInput({{ $gaz->id }}, {{ $gaz->qty_stock }})" style="cursor: pointer" class="float-right text-primary">editer <i class="fas fa-edit"></i></span></td>
+                                                @endif
                                             <td>{{ number_format($gaz->weight, 1).' Kg' }}</td>
                                             <td>
                                                 <a href="{{ route('gaz.edit', $gaz->id) }}" class="btn btn-default"><i class="fas fa-edit"></i> modifier</a>
@@ -101,3 +114,35 @@
         </div>
     </section>
 </div>
+
+
+@push('css')
+    <link rel="stylesheet" href="/master/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/master/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+@endpush
+
+@push('js')
+    <!-- DataTables -->
+    <script src="/master/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/master/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/master/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/master/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": false,
+                "autoWidth": true,
+                "ordering": false
+            });
+            // $('#example2').DataTable({
+            //     "paging": true,
+            //     "lengthChange": false,
+            //     "searching": false,
+            //     "ordering": true,
+            //     "info": true,
+            //     "autoWidth": false,
+            //     "responsive": true,
+            // });
+        });
+    </script>
+@endpush

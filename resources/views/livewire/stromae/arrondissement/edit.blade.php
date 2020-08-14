@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('edit-arrondissement', $id_arrondissement) }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label class="col-form-label" for="city">Ville</label>
                                     <select wire:model="city_id" class="form-control @error('city_id')is-invalid @enderror" id="city">
-                                        <option value="">Sélectionner une ville</option>
+                                        <option>Sélectionner une ville</option>
                                         @forelse($cities as $city)
                                             <option @if($city->id === $arrondissement_city_id) selected @endif value="{{ $city->id }}">{{ $city->name }}</option>
                                         @empty

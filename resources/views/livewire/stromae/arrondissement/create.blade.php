@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        {{ Breadcrumbs::render('country') }}
+                        {{ Breadcrumbs::render('add-arrondissement') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +32,7 @@
                                 <!-- input states -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="nom">Nom</label>
-                                    <input wire:model="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom arrondissement...">
+                                    <input wire:model.lazy="name" type="text" class="form-control @error('name')is-invalid @enderror" id="nom" placeholder="Entrer nom arrondissement...">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label" for="slug">Abbréviation</label>
-                                    <input wire:model="slug" type="text" class="form-control @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer une abbréviation ...">
+                                    <input wire:model.lazy="slug" type="text" class="form-control @error('slug')is-invalid @enderror" id="slug" placeholder="Entrer une abbréviation ...">
                                     @error('slug')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -51,7 +51,7 @@
 
                                 <div class="form-group">
                                     <label class="col-form-label" for="city">Ville</label>
-                                    <select wire:model="city_id" class="form-control @error('city_id')is-invalid @enderror" id="city">
+                                    <select wire:model.lazy="city_id" class="form-control @error('city_id')is-invalid @enderror" id="city">
                                         <option value="">Sélectionner une ville</option>
                                         @forelse($cities as $city)
                                             <option value="{{ $city->id }}">{{ $city->name }}</option>
