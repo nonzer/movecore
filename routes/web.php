@@ -69,6 +69,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 })->name('dashboard');*/
 
 Route::middleware(['auth', 'lock'])->group(function (){
+    Route::view('/profile', 'auth.profile')->name('profile');
+
     Route::get('/tableau-de-bord', function (){
         return view('dashboard');
     })->name('dashboard');

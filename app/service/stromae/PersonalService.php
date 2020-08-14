@@ -10,12 +10,18 @@ namespace App\service\stromae;
 
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class PersonalService
 {
     public static function list(){
-        return User::all();
+        $users = User::all();
+        $users = $users->reject(function ($user){
+            return $user->id === Auth::id();
+        });
+
+        return $users;
     }
 
     public static function store(array $data)

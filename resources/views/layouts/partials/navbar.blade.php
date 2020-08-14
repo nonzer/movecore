@@ -24,11 +24,11 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <span class="font-weight-bold">{{ Auth::user()->name ??' Daniel kong'}}</span>
+                <span class="font-weight-bold">{{ Auth::user()->name ?? 'Admin'}}</span>
                 <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
+                <a href="{{ route('profile') }}" class="dropdown-item">
                     <i class="fas fa-user-cog mr-2"></i> Profil
                 </a>
                 <div class="dropdown-divider"></div>

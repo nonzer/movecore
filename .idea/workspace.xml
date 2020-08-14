@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="mise en place gestion relation client">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/LockAccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/LockAccount.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" afterDir="false" />
+    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="mise en place système verrouillage de session">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ObservationRelance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ObservationRelance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -197,7 +191,7 @@
       <workItem from="1597142500325" duration="644000" />
       <workItem from="1597263479255" duration="1769000" />
       <workItem from="1597267815587" duration="28111000" />
-      <workItem from="1597352749187" duration="8347000" />
+      <workItem from="1597352749187" duration="18255000" />
     </task>
     <task id="LOCAL-00001" summary="debut et fin crud personnel&#10;mise en place authentification">
       <created>1596996865944</created>
@@ -220,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597331092033</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mise en place système verrouillage de session">
+      <created>1597392907329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597392907329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +247,7 @@
     <MESSAGE value="modification crud" />
     <MESSAGE value="modification" />
     <MESSAGE value="mise en place gestion relation client" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place gestion relation client" />
+    <MESSAGE value="mise en place système verrouillage de session" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place système verrouillage de session" />
   </component>
 </project>

@@ -14,8 +14,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-
-                        {{--                        {{ Breadcrumbs::render('order.index') }}--}}
+                        {{ Breadcrumbs::render('customer_info') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
