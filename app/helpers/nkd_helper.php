@@ -47,7 +47,7 @@ if(!function_exists('total_benefit')){
      * @param null $date
      * @return int
      */
-    function total_benefit($date=null):int
+    function total_benefit($date=null):string
     {
         $benefits=0;
         if($date==null){
@@ -61,7 +61,7 @@ if(!function_exists('total_benefit')){
                 $benefits += sales_benefit($o);
             endforeach;
         }
-        return (int)$benefits;
+        return number_format($benefits,0, ','," ");
     }
 }
 
@@ -76,5 +76,22 @@ if(!function_exists('client_count')){
         endif;
 
         return $count;
+    }
+}
+
+
+if(!function_exists('calculate_delay')){
+    function calculate_delay( \App\Order $order)
+    {
+        if((isset($order->time_order) && isset($order->time_deliver)) && $order->time_order!==null && $order->time_deliver!== null){
+            $delay = strtotime($order->time_deliver) - strtotime($order->time_order);
+            $delay = ($delay)/60;
+            if($delay<0)
+                return false;
+        }else{
+            return  false;
+        }
+
+        return $delay;
     }
 }

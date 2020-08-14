@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Nkd\Commande;
 use App\Customer;
 use App\Gaz;
 use App\Order;
+use App\service\nkd\ClientService;
 use Livewire\Component;
 
 class Create extends Component
@@ -57,8 +58,9 @@ class Create extends Component
             'quantity'=>'required|numeric',
             'type_order'=>'required|in:L,AAU,A/L',
             'status_order'=>'required|in:validated,passed,declined,in pending',
-            'typegaz'=>'required',
+            'typegaz'=>'required'
         ]);
+
 
         $id = $this->client->id;
         $cmd = new Order();
@@ -72,8 +74,10 @@ class Create extends Component
 
         $cmd->status_order= $this->status_order;
         $cmd->type_order= $this->type_order;
-
+        $cmd->deliver_delay= calculate_delay($cmd)? calculate_delay($cmd): null;
         $cmd->save();
+        ClientService::initRelauche($cmd);
+
 
         return redirect()->route('order.index');
     }
