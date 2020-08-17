@@ -32,34 +32,28 @@
     @yield('lockscreen-content')
 @else
     <div class="wrapper">
-        <!-- Navbar -->
-    @include('layouts.partials.navbar')
-    <!-- /.navbar -->
+            <!-- Navbar -->
+            @include('layouts.partials.navbar')
+            <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-    @include('layouts.partials.sidebar')
-    <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-
-
-            <!-- Main content -->
-        @yield('content')
-        <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1.0.0
+                <!-- Main Sidebar Container -->
+            @include('layouts.partials.sidebar')
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+                @yield('content')
+                <!-- /.content -->
             </div>
-        </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+            <!-- /.content-wrapper -->
+        @if(!Request::is('invoice-print/'. (isset($id) ? $id : '')))
+            <footer class="main-footer">
+                <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
+                All rights reserved.
+                <div class="float-right d-none d-sm-inline-block">
+                    <b>Version</b> 1.0.0
+                </div>
+            </footer>
+        @endif
     </div>
     <!-- ./wrapper -->
 @endif
@@ -82,3 +76,14 @@
 @notifyJs
 </body>
 </html>
+
+
+
+
+{{--
+<div class="callout callout-info">
+    <h5><i class="fas fa-info"></i> Note:</h5>
+    This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+</div>
+--}}
+

@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Stromae\AdminAccess;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -64,5 +65,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'lock' => \App\Http\Middleware\Stromae\LockAccount::class,
+        'admin' => \App\Http\Middleware\Stromae\AdminAccess::class,
+        'ceo' => \App\Http\Middleware\Stromae\CEOAccess::class,
+        'grc' => \App\Http\Middleware\Stromae\CustomerRelationAccess::class,
     ];
 }

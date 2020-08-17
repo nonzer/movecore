@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste arrondissements</h3>
-                            <a  class="text-white float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
+                            <a wire:click="$set('show', true)" class="text-white float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un arrondissement</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -107,7 +107,13 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body text-center">
-                                                                <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
+                                                                <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oh Oh !</h3>
+                                                                @if($arrondissement->quarters->count() > 0)
+                                                                    <p>L'arrondissement que vous vous apprêtez à supprimer, contient
+                                                                        <br><span class="text-danger font-weight-bold">{{ $arrondissement->quarters->count() }} quartier(s).</span>
+                                                                        En acceptant cette suppression, vous admettez supprimer également toutes descendances.
+                                                                    </p>
+                                                                @endif
                                                                 <p>Souhaitez-vous véritablement supprimer cet arrondissement ?</p>
                                                             </div>
                                                             <div class="modal-footer">

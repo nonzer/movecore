@@ -55,14 +55,21 @@
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h4 class="modal-title">Suppression {{ $country->name }}</h4>
+                                                                    <h4 class="modal-title">Suppression {{ '#'.$country->name }}</h4>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body text-center">
-                                                                    <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
-                                                                    <p>Souhaitez-vous véritablement supprimer ce pays ?</p>
+                                                                    <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oh Oh !</h3>
+
+                                                                    @if($country->cities->count() > 0)
+                                                                        <p>Le pays que vous vous apprêtez à supprimer, contient
+                                                                            <span class="text-danger font-weight-bold">{{ $country->cities->count() }} ville(s)</span>
+                                                                            <br>En acceptant cette suppression, vous admettez supprimer également toutes descendances.
+                                                                        </p>
+                                                                    @endif
+                                                                    <p class="text-center font-weight-bold">Souhaitez-vous véritablement supprimer ce pays ?</p>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fas fa-times"></i> Non</button>

@@ -63,7 +63,13 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body text-center">
-                                                                <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
+                                                                <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oh Oh !</h3>
+                                                                @if($quarter->customers->count() > 0)
+                                                                    <p>Le quartier que vous vous apprêtez à supprimer, contient exactement
+                                                                        <br><span class="text-danger font-weight-bold">{{ $quarter->customers->count() }} client(s).</span>
+                                                                        En acceptant cette suppression, vous admettez supprimer également toutes descendances.
+                                                                    </p>
+                                                                @endif
                                                                 <p>Souhaitez-vous véritablement supprimer ce quartier ?</p>
                                                             </div>
                                                             <div class="modal-footer">

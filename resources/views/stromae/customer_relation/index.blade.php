@@ -63,7 +63,7 @@
                                 <td class="">
                                     <strong>{{ $o->customer->birthday }}</strong>
                                     @if(birthday_status($o->customer->birthday))
-                                        <img class="float-right" src="/gift.svg" width="30px">
+                                        <img class="float-right" src="/images/gift.svg" width="30px">
                                     @endif
                                 </td>
                                 <td>{{ $o->customer->quarter->name }}</td>

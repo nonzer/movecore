@@ -13,8 +13,8 @@ class CountryController extends Controller
     public function destroy(int $id)
     {
         CountryService::destroy($id);
-
         connectify('success', 'Opération Réussie', 'Suppression de pays effectuée');
+
         return redirect()->route('country.index');
     }
 }

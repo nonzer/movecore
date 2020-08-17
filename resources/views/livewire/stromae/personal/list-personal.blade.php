@@ -22,9 +22,7 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
+            <div class="card card-solid">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste du personnel</h3>
                             <a href="{{ route('personal.create') }}" class="float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un personnel</a>
@@ -32,64 +30,72 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if(count($personals) > 0)
-                                <table id="" class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nom</th>
-                                        <th>Identifiant</th>
-                                        <th>Date anniversaire</th>
-                                        <th>Numéro téléphone</th>
-                                        <th>Privilège</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
+                                <div class="row d-flex align-items-stretch">
                                     @foreach($personals as $personal)
-                                        <tr>
-                                            <td></td>
-                                            <td>{{ ucfirst($personal->name) }}</td>
-                                            <td>{{ $personal->login }}</td>
-                                            <td>{{ $personal->birth_date }}</td>
-                                            <td>{{ $personal->tel }}</td>
-                                            <td>{{ $personal->role->name }}</td>
-                                            <td>
-                                                <a href="{{ route('personal.edit', $personal->id) }}" class="btn btn-default"><i class="fas fa-edit"></i> modifier</a>
-                                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modal-{{ $personal->id }}"><i class="fas fa-trash"></i> Supprimer</a>
-
-                                                <div class="modal fade" id="modal-{{ $personal->id }}">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h4 class="modal-title">Suppression {{ $personal->name }}</h4>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body text-center">
-                                                                <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
-                                                                <p>Etes certain de vouloir supprimer ce personnel ?</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fas fa-times"></i> Non</button>
-                                                                <form action="{{ route('personal.destroy', $personal->id) }}" method="post">
-                                                                    @method('DELETE')
-
-                                                                    @csrf
-                                                                    <button type="submit" class="btn btn-danger">Oui <i class="fas fa-check"></i></button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                        <!-- /.modal-content -->
-                                                    </div>
-                                                    <!-- /.modal-dialog -->
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                                            <div class="card bg-light">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    {{ $personal->role->name }}
                                                 </div>
-                                                <!-- /.modal -->
-                                            </td>
-                                        </tr>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b>{{ ucfirst($personal->name) }}</b></h2>
+                                                            <p class="text-muted text-sm"><b>Identifiant : {{ $personal->login }}</b> </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Anniversaire :
+                                                                    <br>{{ $personal->birth_date }}</li>
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Téléphone :
+                                                                    <br>+237 {{ $personal->tel }}</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="{{ !empty($personal->avatar) ? $personal->avatar : '/master/dist/img/user1-128x128.jpg' }}" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a href="{{ route('personal.edit', $personal->id) }}" class="btn btn-sm bg-teal">
+                                                            <i class="fas fa-edit"></i> Modifier
+                                                        </a>
+                                                        <a href="#" data-toggle="modal" data-target="#modal-{{ $personal->id }}" class="btn btn-sm btn-danger">
+                                                            <i class="fas fa-trash"></i> Supprimer
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="modal-{{ $personal->id }}">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Suppression {{ $personal->name }}</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-center">
+                                                        <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
+                                                        <p>Etes certain de vouloir supprimer ce personnel ?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fas fa-times"></i> Non</button>
+                                                        <form action="{{ route('personal.destroy', $personal->id) }}" method="post">
+                                                            @method('DELETE')
+
+                                                            @csrf
+                                                            <button type="submit" class="btn btn-danger">Oui <i class="fas fa-check"></i></button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
                                     @endforeach
-                                    </tbody>
-                                </table>
+                                </div>
                             @else
                                 <div class="error-content text-center">
                                     <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Donnée non disponible.</h3>
@@ -101,9 +107,7 @@
                                 </div>
                             @endif
                         </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 </div>
