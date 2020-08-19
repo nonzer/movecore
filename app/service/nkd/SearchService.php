@@ -11,7 +11,8 @@ class SearchService
 {
 
     public static function searchByCode(string $value):array{
-        $data= Customer::limit(7)->get();
+//        $data= Customer::limit(20)->get();
+        $data= Customer::all();
 
         return collect($data)->filter(function($resource) use ($value) {
             return Str::contains(strtolower($resource['code']), strtolower($value));
@@ -19,7 +20,8 @@ class SearchService
     }
 
     public static function searchByTel(string $value):array{
-        $data= Customer::limit(7)->get();
+//        $data= Customer::limit(7)->get();
+        $data= Customer::all();
 
         return collect($data)->filter(function($resource) use ($value) {
             return Str::contains(strtolower($resource['tel']), strtolower($value));

@@ -15,7 +15,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
 
-{{--                        {{ Breadcrumbs::render('order.index') }}--}}
+                        {{ Breadcrumbs::render('order.index') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -55,8 +55,8 @@
                         @foreach($orders as $o)
                             <tr>
                                 <td><strong>{{$o->customer->code}}</strong></td>
-                                <td>{{$o->customer->name}}</td>
-                                <td>{{$o->gaz->name}} <span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
+                                <td>{{$o->customer->name}} - {!!  getStatusOrder($o)!!}</td>
+                                <td>{{$o->gaz->name}}<span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
                                 <td>{{$o->customer->quarter->name}}</td>
                                 <td>{{$o->customer->tel}}</td>
                                 <td>{{$o->time_order}}</td>

@@ -36,29 +36,27 @@ Breadcrumbs::for('client_create', function ($trail) {
 //client_create
 
 
-//category
+//category create
 Breadcrumbs::for('category', function ($trail) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('category.index');
     $trail->push("Ajouter une catégorie de client", route('category.create'));
 });
 
 //category.index
 Breadcrumbs::for('category.index', function ($trail) {
-    $trail->parent('home');
     $trail->parent('client');
     $trail->push("Catégorie de client", route('category.index'));
 });
 
 //category.edit
 Breadcrumbs::for('category.edit', function ($trail, $cat) {
-    $trail->parent('home');
-    $trail->parent('category');
+    $trail->parent('category.index');
     $trail->push("Editer : Categorie ".$cat->name, route('category.edit',$cat->id));
 });
+
 //order.index
 Breadcrumbs::for('order.index', function ($trail) {
-    $trail->parent('home');
     $trail->parent('home');
     $trail->push("Commandes", route('order.index'));
 });

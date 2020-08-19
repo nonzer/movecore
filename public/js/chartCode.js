@@ -8,7 +8,7 @@
 //   Donuth chart
 const chartDoughnut  = function(data_label, data_value, title, id){
 
-    let ctxx = document.getElementById(id).getContext('2d');
+    var ctxx = document.getElementById(id).getContext('2d');
     var myDoughnutChart = new Chart(ctxx, {
         type: 'doughnut',
         data:{
@@ -32,18 +32,18 @@ const chartDoughnut  = function(data_label, data_value, title, id){
 
 const chartPie  = function(data_label, data_value, title, id){
 
-    let ctxx = document.getElementById(id).getContext('2d');
+    var ctxx = document.getElementById(id).getContext('2d');
     var myDoughnutChart = new Chart(ctxx, {
         type: 'pie',
         data:{
             datasets: [{
                 data: data_value ,
-                backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'
-                    // 'rgb(211,15,52)',
-                    // 'rgb(16,155,92)',
-                    // 'rgb(238,213,22)',
-                    // 'rgb(24,105,172)',
-                    // 'rgb(92,151,155)',
+                backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de',
+                    'rgb(211,15,52)',
+                    'rgb(160,15,92)',
+                    'rgb(238,213,22)',
+                    'rgb(24,105,172)',
+                    'rgb(92,151,155)',
 
                 ],
             }],
@@ -94,34 +94,37 @@ const chartBar = function(data_label,  title, id, data_value, data_value2){
                     label: title,
                     data: data_value,
                     backgroundColor: [
-                        '#00c0ef',
-                        '#39d37f',
-                        '#d91f21',
-                        '#2b2b2b',
-                        '#1869ac',
-                        '#eed516',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
-                        // 'rgba(255, 221, 13, 0.1)',
+                        // '#00c0ef',
+                        // '#39d37f',
+                        // '#d91f21',
+                        // '#2b2b2b',
+                        // '#1869ac',
+                        // '#eed516',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(211,15,52, 0.1)',
+                        'rgb(43,43,43, 0.1)',
+                        'rgb(24,105,172, 0.1)',
+                        'rgb(2,155,130, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+                        'rgb(51,211,111, 0.1)',
+
                     ],
                     borderColor: [
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
-                        // 'rgba(255, 221, 13, 1)',
+                        'rgb(51,211,111)',
+                        'rgb(211,15,52)',
+                        'rgb(43,43,43)',
+                        'rgb(24,105,172)',
+                        'rgb(2,155,130)',
+                        'rgb(51,211,111)',
+                        'rgb(51,211,111)',
+                        'rgb(51,211,111)',
+                        'rgb(51,211,111)',
+                        'rgb(51,211,111)',
+                        'rgb(51,211,111)'
 
                     ],
                     borderWidth: 1

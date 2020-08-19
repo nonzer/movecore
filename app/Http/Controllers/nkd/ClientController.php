@@ -7,6 +7,7 @@ namespace App\Http\Controllers\Nkd;
 
 use App\Customer;
 use App\Http\Controllers\Controller;
+use App\Imports\CustomerImport;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -22,6 +23,11 @@ class ClientController extends Controller
         return view('nkd.client.clients',compact(['clients']));
     }
 
+    public function importExcel(Request $request){
+
+        Excel::import(new CustomerImport, redirect()->file('myfile')) ;
+        return redirect()->back();
+    }
     /**
      * Show the form for creating a new resource.
      *

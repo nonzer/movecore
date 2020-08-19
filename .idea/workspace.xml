@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="mise en place système verrouillage de session">
+    <list default="true" id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Excel/Create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Imports/CustomerImport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Imports/OrderImport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Imports/QuarterImport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/notify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/excel/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/movecore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movecore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/ProfileUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/profile-user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/nkd/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/nkd/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/nkd/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/nkd/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/nkd_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nkd_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/service/nkd/ChartService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/ChartService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/service/nkd/SearchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/SearchService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chartCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chartCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nkd/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +48,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,9 +64,38 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DSashboard v1</find>
+      <find>Quick Example</find>
+      <find>Different Width</find>
+      <find>ra</find>
+      <find>Radio</find>
+      <find>Quick</find>
+      <find>Disabled</find>
+      <find>Select2</find>
+      <find>With icons</find>
+      <find>Warning alert preview. This alert is dismissable.</find>
+      <find>tel</find>
+      <find>dd</find>
+      <find>Radio Button Group</find>
+      <find>Small</find>
+      <find>Area Chart</find>
+      <find>New Orders</find>
+      <find>gaz ha</find>
+      <find>Dropzone.js</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -148,106 +203,121 @@
       <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/mckenziearts/laravel-notify" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1fuLFV91PXrBU2phWU73FljSYzP" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/stage-MOVe GLOBAL/APPS/movecore/resources/views/livewire/stromae/country/list-country.blade.php" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
       </list>
     </option>
+  </component>
+  <component name="ProjectId" id="1gJDVSXsxPEQftRFFbPSiGt2PIz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/nkd" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/nkd/client" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/nkd" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="" />
-      <created>1596883250808</created>
+      <changelist id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="" />
+      <created>1596812776228</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1596883250808</updated>
-      <workItem from="1596883265861" duration="63369000" />
-      <workItem from="1597058418295" duration="649000" />
-      <workItem from="1597062934965" duration="11832000" />
-      <workItem from="1597142500325" duration="644000" />
-      <workItem from="1597263479255" duration="1769000" />
-      <workItem from="1597267815587" duration="28111000" />
-      <workItem from="1597352749187" duration="18255000" />
+      <updated>1596812776228</updated>
+      <workItem from="1596812777630" duration="11452000" />
+      <workItem from="1596911937167" duration="174349000" />
+      <workItem from="1597406423073" duration="17963000" />
+      <workItem from="1597749495657" duration="13854000" />
+      <workItem from="1597823953456" duration="389000" />
+      <workItem from="1597824493117" duration="2824000" />
     </task>
-    <task id="LOCAL-00001" summary="debut et fin crud personnel&#10;mise en place authentification">
-      <created>1596996865944</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1596996865944</updated>
-    </task>
-    <task id="LOCAL-00002" summary="debut et fin crud personnel&#10;mise en place authentification">
-      <created>1596997300006</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1596997300006</updated>
-    </task>
-    <task id="LOCAL-00003" summary="mise en place gestion relation client">
-      <created>1597331091141</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597331092033</updated>
-    </task>
-    <task id="LOCAL-00004" summary="mise en place système verrouillage de session">
-      <created>1597392907329</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597392907329</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Definition Relation Eloquent&#10;Import package laravel/ui&#10;modification schéma conceptuel&#10;definition vues authentification" />
-    <MESSAGE value="debut et fin crud personnel&#10;mise en place authentification" />
-    <MESSAGE value="last_modification 12-O8-2O2O" />
-    <MESSAGE value="modification crud" />
-    <MESSAGE value="modification" />
-    <MESSAGE value="mise en place gestion relation client" />
-    <MESSAGE value="mise en place système verrouillage de session" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place système verrouillage de session" />
+  <component name="WindowStateProjectService">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1597827540379">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597827540379" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php</url>
+          <line>123</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/livewire/nkd/category/create.blade.php</url>
+          <line>87</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

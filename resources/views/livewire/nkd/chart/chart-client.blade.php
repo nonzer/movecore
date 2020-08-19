@@ -2,8 +2,6 @@
 
 
 
-
-
 <div>
     {{-- The whole world belongs to you --}}
     <div class="container-fluid">
@@ -78,27 +76,29 @@
                     <div class="card-body">
                         <div class="row">
 
-                            <div class="col-xs-12 col-md-12 boxchart" >
+                            <div class="col-xs-12 col-md-10 boxchart" >
                                 <canvas id="lineChart" width="500" height="250" ></canvas>
                             </div>
 
-{{--                            <div class="col-xs-12 col-md-4">--}}
-{{--                                <br>--}}
-{{--                                <h3 class="">Configurations</h3> <br>--}}
-{{--                                <p>--}}
-{{--                                    Vous pouvez configurer ce diagramme et faire varier <strong>l'intervalle des dates</strong> pour--}}
-{{--                                    obtenir ce que vous recherchez.--}}
-{{--                                </p>--}}
-{{--                                <div class="input-group ">--}}
-{{--                                    <input type="date" name="datebegin" wire:model.lazy="datebegin" id="" class="form-control">--}}
-{{--                                    <span class="p-2"> à </span>--}}
-{{--                                    <input type="date" name="dateend" wire:model.lazy="dateend" id="" class="form-control">--}}
+                            <div class="col-sm-12 col-md-2">
+                                <br>
+                                <h3 class="">Configurations</h3> <br>
+                                <p>
+                                    Vous pouvez configurer ce diagramme et faire varier <strong>l'intervalle des dates</strong> pour
+                                    obtenir ce que vous recherchez.
+                                </p>
+                                <div class="form-group">
+                                    <input type="date" name="datebegin" wire:model.lazy="datebegin" id="" class="form-control">
+                                    <span class="p-2"> à </span>
+                                    <input type="date" name="dateend" wire:model.lazy="dateend" id="" class="form-control">
 
-{{--                                </div>--}}
-{{--                                <button class="btn btn-outline-primary" wire:click="reload" >--}}
-{{--                                    configurer--}}
-{{--                                </button>--}}
-{{--                            </div>--}}
+                                </div>
+                                <div class="d-inline">
+                                    <button class="btn btn-primary btn-sm" wire:click="reload" >
+                                        configurer
+                                    </button>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -125,12 +125,43 @@
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded',function(){
 
-                var clients = @this.get('clients');
-                var gaz = @this.get('gaz');
-                var benefits = @this.get('benefits');
-                // console.log(benefits);
+                let clients = @this.get('clients');
+                let gaz = @this.get('gaz');
+                let benefits = @this.get('benefits');
                 // console.log(gaz);
-                // console.log(clients);
+
+                window.livewire.on('reloader',benefitss =>{
+
+                    // @this.set('clients',0);
+                    // @this.set('gaz',0);
+                    // @this.set('benefits',benefitss);
+
+                    var benefits = @this.get('benefits');
+
+                    chartPie(
+                        clients[0],
+                        clients[1],
+                        'Nombre de Clients par Quartier',
+                        'dougnuthChart'
+                    );
+
+                    chartBar(
+                        gaz[0],
+                        'Nombre de Commandes par Types de Bouteilles',
+                        'barChart',
+                        gaz[1]
+                    );
+
+                    chartLine(
+                        benefits[0],
+                        benefits[1],
+                        "bénefices du jour",
+                        'lineChart'
+                    );
+
+                });
+
+
 
                 chartPie(
                     clients[0],
@@ -143,7 +174,7 @@
                     gaz[0],
                     'Nombre de Commandes par Types de Bouteilles',
                     'barChart',
-                    gaz[1],
+                    gaz[1]
                 );
 
                 chartLine(
@@ -152,14 +183,9 @@
                     "bénefices du jour",
                     'lineChart'
                 );
-            });
 
-            // chartLine(
-            //     ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'G'],
-            //     [11, 82, 33, 25, 23, 22, 8 ,19 ,3],
-            //     "Clients par Quartier",
-            //     'chartline'
-            // );
+
+            });
 
             // chartDoughnut(
             //     ['SCTM', 'TOTAL', 'BIOGAZ','CAMGAZ','NKDGAZ' ],

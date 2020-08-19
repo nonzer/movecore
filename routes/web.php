@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
 Route::get('sample', function(){
     return view('sample');
 });
 
-Auth::routes(['register' => false]);
 
 
 /***
@@ -32,6 +36,7 @@ Route::namespace('Nkd')->group(function(){
     Route::delete('/client/Supprimer-un-clients/{id}', 'ClientController@destroy')->name('client.destroy');
     Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy');
     Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy');
+
 });
 
 Route::layout('layouts.master')->group(function(){
@@ -45,6 +50,8 @@ Route::layout('layouts.master')->group(function(){
 
    Route::livewire('/Client/Ajouter-une-Categorie-de-client', 'nkd.category.create')->name('category.create');
    Route::livewire('/Client/Editer-une-Categorie-de-client/{id}', 'nkd.category.edit')->name('category.edit');
+
+   Route::livewire('/charger-fichier-Excel/', 'nkd.excel.create')->name('excel.client');
 
 });
 
@@ -63,10 +70,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-/*Route::get('/tableau-de-bord', function (){
-    return view('dashboard');
-})->name('dashboard');*/
+Auth::routes(['register'=>false]);
 
 Route::middleware(['auth', 'lock'])->group(function (){
     Route::view('/profile', 'auth.profile')->name('profile');
@@ -86,6 +90,7 @@ Route::middleware(['auth', 'lock'])->group(function (){
         Route::delete('/personal/delete-personal/{id}', 'PersonalController@destroy')->name('personal.destroy');
 
         Route::get('/customer-relation', 'CustomerRelationController@index')->name('customer_relation');
+
     });
 
     Route::layout('layouts.master')->group(function () {
@@ -96,7 +101,7 @@ Route::middleware(['auth', 'lock'])->group(function (){
 
         /*City*/
         Route::livewire('/cities', 'stromae.city.list-city')->name('city.index');
-        /*Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');*/
+        Route::livewire('/cities/add-city', 'stromae.city.create-city')->name('city.create');
         Route::livewire('/cities/edit-city/{id}', 'stromae.city.edit-city')->name('city.edit');
 
         /*Arrondissement*/
