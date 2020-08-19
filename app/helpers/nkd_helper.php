@@ -158,7 +158,6 @@ if(!function_exists('mapModelBy')){
     {
 
         $maped = null;
-
         if($model === 'client'){
 
             if(!empty($tab_maper['slug']) && $tab_maper['tel'] !== null){

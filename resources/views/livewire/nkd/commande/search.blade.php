@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="input-group ">
-                    <input type="text" wire:model="value" class="form-control " placeholder="Rechercher un client " autocomplete="off">
+                    <input type="text" wire:model="value" list="ressources" class="form-control " placeholder="Rechercher un client " autocomplete="off">
                     <span class="input-group-append">
                         <button class="btn btn-success" >
                             <i class="fas fa-search" wire:loading.class="fas fa-spinner fa-spin"></i>
@@ -63,7 +63,7 @@
                 <span>Les résultats trouvées</span>
                 @forelse($resources as $r)
 
-                    <div class="row">
+                    <div class="row" id="ressources">
                         <div class="col-sm-12">
                             <a href="{{route('order.create',$r['id'])}}" class="linknkd text-decoration-none" style="cursor: pointer">
                                 <div class="info-box ">

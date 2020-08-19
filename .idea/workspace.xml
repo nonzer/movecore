@@ -2,44 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Excel/Create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Imports/CustomerImport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Imports/OrderImport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Imports/QuarterImport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/notify.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/excel/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/movecore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movecore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/nkd/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/nkd/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/nkd/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/nkd/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Chart/ChartClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/nkd_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nkd_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/nkd/ChartService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/ChartService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/service/nkd/SearchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/SearchService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chartCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chartCode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nkd/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/order/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/search.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +231,7 @@
       <workItem from="1597406423073" duration="17963000" />
       <workItem from="1597749495657" duration="13854000" />
       <workItem from="1597823953456" duration="389000" />
-      <workItem from="1597824493117" duration="2824000" />
+      <workItem from="1597824493117" duration="4954000" />
     </task>
     <servers />
   </component>
@@ -299,10 +265,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1597827540379">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1597842299545">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597827540379" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597842299545" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
