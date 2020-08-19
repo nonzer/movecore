@@ -167,3 +167,9 @@ Breadcrumbs::for('customer_info', function ($trail) {
     $trail->parent('home');
     $trail->push('Mon profil');
 });
+
+//Gestion Relation Client
+Breadcrumbs::for('invoice', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Facture');
+});

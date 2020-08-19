@@ -56,8 +56,7 @@ class PersonalService
 
     public static function destroy(int $id)
     {
-        $personal = User::find($id);
-        $personal->delete();
+        User::destroy($id);
 
         return true;
     }

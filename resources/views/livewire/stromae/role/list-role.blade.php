@@ -61,7 +61,13 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body text-center">
-                                                                <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oh Oh !</h3>
+                                                                <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oh Oh !</h3>
+                                                                @if($role->users->count() > 0)
+                                                                    <p>Le privilège que vous vous apprêtez à supprimer, est utilisé par exactement
+                                                                        <span class="text-danger font-weight-bold">{{ $role->users->count() }} client(s).</span>
+                                                                        En acceptant cette suppression, vous admettez supprimer également toutes descendances.
+                                                                    </p>
+                                                                @endif
                                                                 <p>Souhaitez-vous véritablement supprimer ce rôle ?</p>
                                                             </div>
                                                             <div class="modal-footer">
