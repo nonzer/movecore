@@ -64,7 +64,6 @@ Breadcrumbs::for('city', function ($trail) {
     $trail->parent('home');
     $trail->push('Villes', route('city.index'));
 });
-Breadcrumbs::for('add-city', function ($trail) {
 
 Breadcrumbs::for('history', function ($trail) {
     $trail->parent('home');
