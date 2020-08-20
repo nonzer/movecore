@@ -14,6 +14,13 @@ class ListCountry extends Component
         $this->countries = CountryService::list();
     }
 
+    public function delete($id_country){
+        CountryService::destroy($id_country);
+        connectify('success', 'Opération Réussie', 'Suppression de pays effectuée');
+
+        return redirect()->route('country.index');
+    }
+
     public function render()
     {
         return view('livewire.stromae.country.list-country');

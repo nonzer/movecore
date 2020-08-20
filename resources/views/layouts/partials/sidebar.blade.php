@@ -177,6 +177,33 @@
                     </li>
                 @endif
 
+                @if(Gate::allows('view-delivery'))
+                    <li class="nav-item">
+                    <a href="#" class="nav-link {{$delivery ?? ''}}">
+                        <i class="nav-icon fas fas fa-th-list"></i>
+                        <p>
+                            Livraison
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('delivery.order_summary') }}" class="nav-link {{$order_summary ?? ''}}">
+                                <p>Livraison en cours</p>
+                            </a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+
+                        <li class="nav-item">
+                            <a href="{{ route('delivery.history_delivery') }}" class="nav-link {{ $delivery_history ?? '' }}">
+                                <p>Historique livraison</p>
+                            </a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

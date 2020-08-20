@@ -1,6 +1,7 @@
 <?php
 
 use App\Customer;
+use App\Order;
 
 if(!function_exists('generatePassword')){
     /**
@@ -107,5 +108,17 @@ if (!function_exists('birthday_status')){
 if (!function_exists('exist_relauch')){
     function exist_relauch(int $gaz_id){
         return \App\Relauch::where('customer_gaz_id', $gaz_id)->first();
+    }
+}
+
+if(!function_exists('subtotal')){
+    function subtotal(Order $order):int {
+        return $order->quantity * $order->gaz->price;
+    }
+}
+
+if (!function_exists('total')){
+    function total(Order $order):int {
+        return $total = subtotal($order) + 500;
     }
 }

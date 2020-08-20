@@ -54,7 +54,6 @@ Breadcrumbs::for('category.edit', function ($trail, $cat) {
     $trail->parent('category.index');
     $trail->push("Editer : Categorie ".$cat->name, route('category.edit',$cat->id));
 });
-
 //order.index
 Breadcrumbs::for('order.index', function ($trail) {
     $trail->parent('home');
@@ -65,6 +64,13 @@ Breadcrumbs::for('city', function ($trail) {
     $trail->parent('home');
     $trail->push('Villes', route('city.index'));
 });
+Breadcrumbs::for('add-city', function ($trail) {
+
+Breadcrumbs::for('history', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Historique livraison', route('delivery.history_delivery'));
+});
+
 Breadcrumbs::for('add-city', function ($trail) {
     $trail->parent('city');
     $trail->push('Ajout ville');

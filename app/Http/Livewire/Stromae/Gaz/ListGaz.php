@@ -17,6 +17,14 @@ class ListGaz extends Component
         $this->all_gaz = GazService::list();
     }
 
+    public function delete(int $id)
+    {
+        GazService::destroy($id);
+
+        connectify('success', 'Opération Réussie', 'Suppression de la marque de gaz effectué');
+        return redirect()->route('gaz.index');
+    }
+
     public function showInput($id, $qtystock){
         $this->visible = true;
         $this->id_gaz = $id;

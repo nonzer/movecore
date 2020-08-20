@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CustomerRelationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('grc');
+    }
+
+
     public function index(){
         $orders = Order::whereIn('status_order', ['validated', 'declined'])->get();
 
