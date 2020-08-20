@@ -7,17 +7,18 @@
 
     </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Rechercher" aria-label="Rechercher">
-            <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </form>
+{{--    <!-- SEARCH FORM -->--}}
+{{--    <form class="form-inline ml-3">--}}
+{{--        <div class="input-group input-group-sm">--}}
+{{--            <input class="form-control form-control-navbar" type="search" placeholder="Rechercher" aria-label="Rechercher">--}}
+{{--            <div class="input-group-append">--}}
+{{--                <button class="btn btn-navbar" type="submit">--}}
+{{--                    <i class="fas fa-search"></i>--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </form>--}}
+    @livewire('nkd.commande.search-bar')
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">

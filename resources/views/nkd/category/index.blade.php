@@ -40,11 +40,11 @@
                         Réussite de l'enregistrement
                     </div>
                 @endif
-                @if(session()->has('echec_delete'))
+                @if(session()->has('sms_error'))
                     <div class="alert alert-danger alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         <h5><i class="icon fas fa-times"></i> Echec !</h5>
-                        Cette catégorie contient des utilisateurs, vous ne pouvez la supprimer!
+                         {!!  session('sms_error')!!}
                     </div>
                 @endif
 

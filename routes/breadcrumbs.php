@@ -66,12 +66,10 @@ Breadcrumbs::for('city', function ($trail) {
     $trail->push('Villes', route('city.index'));
 });
 Breadcrumbs::for('add-city', function ($trail) {
-    $trail->parent('home');
     $trail->parent('city');
     $trail->push('Ajout ville');
 });
 Breadcrumbs::for('edit-city', function ($trail, $id) {
-    $trail->parent('home');
     $trail->parent('city');
     $trail->push('Modification ville / '.$id);
 });
@@ -87,7 +85,6 @@ Breadcrumbs::for('add-arrondissement', function ($trail) {
     $trail->push('Ajout arrondissement');
 });
 Breadcrumbs::for('edit-arrondissement', function ($trail, $id) {
-    $trail->parent('home');
     $trail->parent('arrondissement');
     $trail->push('Modification arrondissement / '.$id);
 });
@@ -98,12 +95,10 @@ Breadcrumbs::for('quarter', function ($trail) {
     $trail->push('Quartiers', route('quarter.index'));
 });
 Breadcrumbs::for('add-quarter', function ($trail) {
-    $trail->parent('home');
     $trail->parent('quarter');
     $trail->push('Ajout quartier');
 });
 Breadcrumbs::for('edit-quarter', function ($trail, $id) {
-    $trail->parent('home');
     $trail->parent('quarter');
     $trail->push('Modification quartier / '.$id);
 });
@@ -114,12 +109,10 @@ Breadcrumbs::for('gaz', function ($trail) {
     $trail->push('Gaz', route('gaz.index'));
 });
 Breadcrumbs::for('add-gaz', function ($trail) {
-    $trail->parent('home');
     $trail->parent('gaz');
     $trail->push('Ajout gaz');
 });
 Breadcrumbs::for('edit-gaz', function ($trail, $id) {
-    $trail->parent('home');
     $trail->parent('gaz');
     $trail->push('Modification marque gaz / '.$id);
 });
@@ -130,12 +123,12 @@ Breadcrumbs::for('role', function ($trail) {
     $trail->push('Privilèges', route('role.index'));
 });
 Breadcrumbs::for('add-role', function ($trail) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('role');
     $trail->push('Ajout privilège');
 });
 Breadcrumbs::for('edit-role', function ($trail, $id) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('role');
     $trail->push('Modification privilège / '.$id);
 });
@@ -146,12 +139,12 @@ Breadcrumbs::for('personal', function ($trail) {
     $trail->push('Personnels', route('personal.index'));
 });
 Breadcrumbs::for('add-personal', function ($trail) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('personal');
     $trail->push('Ajout personnel');
 });
 Breadcrumbs::for('edit-personal', function ($trail, $id) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('personal');
     $trail->push('Modification personnel / '.$id);
 });

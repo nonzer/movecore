@@ -85,10 +85,10 @@ class CategoryController extends Controller
     {
         $cat = Category::find($id);
         if($cat->customers->count() > 0){
-            session()->flash('echec_delete',true);
+            session()->flash('sms_error',"la catégorie '$cat->name' contient des utilisateurs, vous ne pouvez la supprimer!");
             return redirect()->back();
         }
-        Category::whereId($id)->delete();
+        $cat->delete();
         return redirect()->route('category.index');
     }
 }

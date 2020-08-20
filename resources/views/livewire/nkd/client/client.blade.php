@@ -2,7 +2,7 @@
 
 
 
-@section('title','Ajouter un Client',['client'=>'active'])
+@section('title','Ajouter un Client')
 
 <div class="container-fluid ">
 

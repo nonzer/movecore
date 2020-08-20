@@ -19,8 +19,8 @@ class OrderImport implements ToModel, WithHeadingRow
             'customer_id'=>       mapModelBy('client',[ 'name'=> $row['name'], 'tel'=> $row['tel'] ]),
             'gaz_id'=>            mapModelBy('gaz',['name'=> $row['gaz']]),
 
-            'time_order'=>        $row['time_order'],
-            'date_order'=>        $row['date_order'],
+            'time_order'=>        $row['time_order'] ?? '',
+            'date_order'=>        $row['date_order'] ?? '',
             'ime_deliver'=>       $row['ime_deliver'],
             'status_order'=>      $row['status_order'],
             'deliver_delay'=>     $row['deliver_delay'],

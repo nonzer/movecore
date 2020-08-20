@@ -23,11 +23,11 @@ class ClientController extends Controller
         return view('nkd.client.clients',compact(['clients']));
     }
 
-    public function importExcel(Request $request){
-
-        Excel::import(new CustomerImport, redirect()->file('myfile')) ;
-        return redirect()->back();
-    }
+//    public function importExcel(Request $request){
+//
+//        Excel::import(new CustomerImport, redirect()->file('myfile')) ;
+//        return redirect()->back();
+//    }
     /**
      * Show the form for creating a new resource.
      *
@@ -84,14 +84,18 @@ class ClientController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        Customer::whereId($id)->delete();
+        $clt= Customer::whereId($id)->first();
+        if($clt->orders->count() > 0){
+            session()->flash('sms_error', "Le client <strong>$clt->name</strong> a plusieurs commandes enregistrées, vous ne pouvez le supprimer!");
+            return redirect()->back();
+        }
+
+        $clt->delete();
         return redirect()->route('client.index');
     }
 }

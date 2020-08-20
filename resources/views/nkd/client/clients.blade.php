@@ -31,12 +31,19 @@
             <div class="card-header">
                 <h3 class="card-title font-weight-bold">Liste des cLients</h3>
                 <a href="{{route('category.create')}}" class="float-right btn btn-dark btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter une Categorie</a>
-                <a href="{{route('excel.client')}}" class="float-right btn btn-success btn-sm ml-1"><i class="fas fa-file-excel mr-1"></i>Charger Excel</a>
+                <a href="{{route('excel.client')}}" class="float-right btn btn-success btn-sm ml-1"><i class="fas fa-file-excel mr-1"></i>Charger via Excel</a>
                 <a href="{{route('client.create')}}" class="float-right btn btn-primary btn-sm"><i class="fas fa-plus-circle mr-1"></i>Ajouter un client</a>
             </div>
             <!-- /.card-header -->
-            <div class="card-body">
 
+            <div class="card-body">
+                @if(session()->has('sms_error'))
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-times"></i> Echec !</h5>
+                        {!! session('sms_error')!!}
+                    </div>
+                @endif
                 @if($clients->count() >0)
                     <table id="example1" class="table table-bordered table-responsive table-striped">
                         <thead>

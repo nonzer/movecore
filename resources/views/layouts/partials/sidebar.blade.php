@@ -1,8 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-        <img src="/master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">MOVeCore</span>
+    <a href="/" class="brand-link ml-3">
+{{--        <img src="/master/images/logo-core.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">--}}
+        <img src="/images/logo-render.png" alt="AdminLTE Logo" height="46px" style="">
+{{--        <span class="brand-text font-weight-light">MOVeCore</span>--}}
     </a>
 
     <!-- Sidebar -->
@@ -19,16 +20,16 @@
         </div>
 
         <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Recherche" aria-label="Recherche">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+{{--        <div class="form-inline">--}}
+{{--            <div class="input-group" data-widget="sidebar-search">--}}
+{{--                <input class="form-control form-control-sidebar" type="search" placeholder="Recherche" aria-label="Recherche">--}}
+{{--                <div class="input-group-append">--}}
+{{--                    <button class="btn btn-sidebar">--}}
+{{--                        <i class="fas fa-search fa-fw"></i>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -69,9 +70,7 @@
                                     <p>Nouvelle Commande</p>
                                 </a>
                             </li>
-
                         </ul>
-
 
                     </li>
                     <li class="nav-item {{$menu_client ?? ''}}" >
@@ -82,14 +81,21 @@
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('category.index') }}" class="nav-link {{$category ?? ''}}">
                                 <p>Categories</p>
                             </a>
                         </li>
-                        <div class="dropdown-divider"></div>
 
+                        <li class="nav-item">
+                            <a href="{{ route('client.create') }}" class="nav-link">
+                                <p>Ajouter un Client</p>
+                            </a>
+                        </li>
+
+                        <div class="dropdown-divider"></div>
                         <li class="nav-item">
                             <a href="{{ route('client.index') }}" class="nav-link {{$client_list ?? ''}}">
                                 <p>Tous les Clients</p>
@@ -118,12 +124,12 @@
                                 </a>
                             </li>
                             <div class="dropdown-divider"></div>
-
                             <li class="nav-item">
                                 <a href="{{ route('country.index') }}" class="nav-link">
                                     <p>Pays</p>
                                 </a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="{{ route('city.index') }}" class="nav-link {{$city ?? ''}}">
                                     <p>Villes</p>

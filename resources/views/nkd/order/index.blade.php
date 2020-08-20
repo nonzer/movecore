@@ -46,6 +46,7 @@
                             <th>Heure commande </th>
                             <th>Heure livraison</th>
                             <th>Délai</th>
+                            <th>Livreur</th>
                             <th>Qté</th>
                             <th>Action</th>
                         </tr>
@@ -62,6 +63,7 @@
                                 <td>{{$o->time_order}}</td>
                                 <td>{{$o->time_deliver }}</td>
                                 <td>{{$o->deliver_delay}}</td>
+                                <td>{!!  $o->delivery_man->name ?? '<span class=\'text-secondary\'>Inconnu</span>' !!}</td>
                                 <td>{{$o->quantity}}</td>
                                 <td>
                                     <a class="btn btn-primary btn-xs" href="{{route('order.edit',$o->id)}}"><i class="fas fa-user-edit"></i></a>

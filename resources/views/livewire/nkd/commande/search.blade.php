@@ -20,8 +20,9 @@
                 <div class="mx-auto text-center">
                     <h1 class=""> Code Maison ou Numero de Téléphone</h1>
                     <p>
-                        <span class="text-secondary">Cliquez dessous sur <strong>code</strong>/<strong>tel</strong> puis Entrer le <strong>code/numéro</strong> et trouver une client pour lui ajouter une commande.</span>
+                        <span class="text-secondary">Cliquez dessous sur <strong>code</strong>/<strong>tel</strong> puis entrer le <strong>code/numéro</strong> et trouver une client pour lui ajouter une commande.</span>
                     </p>
+
                     <div class="input-group m-1 justify-content-center">
                         <div class="btn-group btn-group-toggle border">
                             <label class="btn btn-sm @if($searchbycode) bg-success @endif ">
@@ -31,12 +32,11 @@
                                 <input type="radio" name="options"  wire:model="searchbytel"> tel
                             </label>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="input-group ">
-                    <input type="text" wire:model="value" list="ressources" class="form-control " placeholder="Rechercher un client " autocomplete="off">
+                    <input type="text" wire:model="value" class="form-control " placeholder="Rechercher un client " autocomplete="off">
                     <span class="input-group-append">
                         <button class="btn btn-success" >
                             <i class="fas fa-search" wire:loading.class="fas fa-spinner fa-spin"></i>
@@ -62,8 +62,7 @@
                 <br>
                 <span>Les résultats trouvées</span>
                 @forelse($resources as $r)
-
-                    <div class="row" id="ressources">
+                    <div class="row">
                         <div class="col-sm-12">
                             <a href="{{route('order.create',$r['id'])}}" class="linknkd text-decoration-none" style="cursor: pointer">
                                 <div class="info-box ">

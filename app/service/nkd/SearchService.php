@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 
 class SearchService
 {
-
     public static function searchByCode(string $value):array{
 //        $data= Customer::limit(20)->get();
         $data= Customer::all();

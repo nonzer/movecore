@@ -23,7 +23,7 @@
                         <select name="type" wire:model="type_importation" id="" class="form-control ">
                             <option value="">Choirir un type ...</option>
                             <option value="client">Importation des Clients</option>
-                            <option value="order">Importation des Commandes</option>
+{{--                            <option value="order">Importation des Commandes</option>--}}
                             <option value="quater">Importation des Quartiers</option>
                         </select>
 

@@ -24,7 +24,7 @@ Auth::routes(['register' => false]);
  *      NKD ROUTES
  */
 
-Route::namespace('Nkd')->group(function(){
+Route::namespace('Nkd')->middleware(['auth', 'lock'])->group(function(){
     Route::get('/client/liste-des-clients', 'ClientController@index')->name('client.index');
     Route::get('/commande/liste-des-commandes', 'CommandeController@index')->name('order.index');
     Route::get('/category/category-des-clients', 'CategoryController@index')->name('category.index');
@@ -35,7 +35,7 @@ Route::namespace('Nkd')->group(function(){
 
 });
 
-Route::layout('layouts.master')->group(function(){
+Route::layout('layouts.master')->middleware(['auth', 'lock'])->group(function(){
 
    Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create');
    Route::livewire('/Client/Editer-un-client/{id}', 'nkd.client.edit')->name('client.edit');
