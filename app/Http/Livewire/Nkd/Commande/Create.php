@@ -23,9 +23,10 @@ class Create extends Component
     public $quantity=1;
     public $cmdcount=0;
 
-    public $status_order='passed';
+//    public $status_order='passed';
     public $type_order='A/L';
-    public $delivery_man=null;
+    public $delivery_man;
+    public $deliver_id;
 
     public function mount($id){
         $this->client = Customer::find($id);
@@ -73,11 +74,12 @@ class Create extends Component
         $cmd->quantity= $this->quantity;
         $cmd->gaz_id= $this->typegaz;
 
-        if(is_numeric($this->delivery_man ))
-            $cmd->personals_id= $this->delivery_man;
+        if(is_numeric($this->deliver_id))
+            $cmd->personals_id= $this->deliver_id;
 
         $cmd->date_order= date('Y-m-d');
-        $cmd->time_order= date('h:i:s');
+//        $cmd->time_order= date('h:i:s');
+        $cmd->time_order= date('H:i:s');
         $cmd->time_deliver= null;
         $cmd->status_order= 'passed';
 

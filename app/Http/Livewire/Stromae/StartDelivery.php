@@ -37,7 +37,7 @@ class StartDelivery extends Component
             'signature' => 'required'
         ]);
 
-        $this->order->time_deliver = Carbon::now()->addHours(3)->isoFormat('H:mm:s');
+        $this->order->time_deliver = Carbon::now()->isoFormat('H:mm:s');
         $this->order->deliver_delay = calculate_delay($this->order);
         $this->order->status_order = "validated";
         $this->order->save();

@@ -5,7 +5,7 @@
 
 
 
-    <div class="">
+    <div class="container">
         <style>
             .linknkd:hover{
                 background-color: #2b2b2b;
