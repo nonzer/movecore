@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         @error('login')
-                            <div class="invalid-feedback">
+                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
                         @enderror
