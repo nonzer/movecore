@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="mise en place système verrouillage de session">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/CEOAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/CustomerRelationAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/stromae/error_page/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/stromae/error_page/503.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" afterDir="false" />
+    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/StartDelivery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/DeliverManAccess.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/delivery_history.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/movecore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movecore.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/PersonalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/PersonalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/ArrondissementController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/PersonalController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/stromae/PersonalService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/gift.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/gift.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/master/pages/examples/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/master/pages/examples/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/master/pages/examples/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/master/pages/examples/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/stromae_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/stromae_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,9 +49,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -178,11 +181,17 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/stage-MOVe GLOBAL/APPS/movecore/resources/views/livewire/stromae/country/list-country.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/stromae/error_page" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/BrainFacilitator" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -194,18 +203,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\stage-MOVe GLOBAL\APPS\movecore\public\images" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -224,7 +221,9 @@
       <workItem from="1597263479255" duration="1769000" />
       <workItem from="1597267815587" duration="28111000" />
       <workItem from="1597352749187" duration="54424000" />
-      <workItem from="1597677535646" duration="550000" />
+      <workItem from="1597677535646" duration="1803000" />
+      <workItem from="1597752560430" duration="32816000" />
+      <workItem from="1597864695520" duration="1771000" />
     </task>
     <task id="LOCAL-00001" summary="debut et fin crud personnel&#10;mise en place authentification">
       <created>1596996865944</created>
@@ -261,24 +260,30 @@
       <option name="project" value="LOCAL" />
       <updated>1597404430814</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture">
+      <created>1597678527885</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597678527885</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Definition Relation Eloquent&#10;Import package laravel/ui&#10;modification schéma conceptuel&#10;definition vues authentification" />
@@ -288,6 +293,13 @@
     <MESSAGE value="modification" />
     <MESSAGE value="mise en place gestion relation client" />
     <MESSAGE value="mise en place système verrouillage de session" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place système verrouillage de session" />
+    <MESSAGE value="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture" />
+    <option name="LAST_COMMIT_MESSAGE" value="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1597903215692">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1597903215692" />
   </component>
 </project>

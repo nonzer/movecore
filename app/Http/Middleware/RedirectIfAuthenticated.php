@@ -29,7 +29,12 @@ class RedirectIfAuthenticated
                 return redirect()->route('order.search');
             }elseif ($user->hasRole('GRC')){
                 return redirect()->route('customer_relation');
+            }elseif ($user->hasRole('Livreur')){
+                return redirect()->route('delivery.order_summary');
+            }else{
+                return redirect()->route('error-503');
             }
+
         }
 
         return $next($request);

@@ -41,5 +41,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('view-configAndPersonal', function ($user){
             return $user->hasRole('Admin');
         });
+
+        Gate::define('view-delivery', function ($user){
+            return $user->hasRole('Livreur');
+        });
     }
 }

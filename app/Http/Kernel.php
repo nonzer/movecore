@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\Stromae\AdminAccess;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Support\Facades\App;
 
 class Kernel extends HttpKernel
 {
@@ -68,5 +69,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\Stromae\AdminAccess::class,
         'ceo' => \App\Http\Middleware\Stromae\CEOAccess::class,
         'grc' => \App\Http\Middleware\Stromae\CustomerRelationAccess::class,
+        'livreur' => \App\Http\Middleware\Stromae\DeliverManAccess::class,
     ];
 }

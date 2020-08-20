@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -64,10 +65,6 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*Route::get('/tableau-de-bord', function (){
-    return view('dashboard');
-})->name('dashboard');*/
-
 Route::middleware(['auth', 'lock'])->group(function (){
     Route::view('/profile', 'auth.profile')->name('profile');
 
@@ -76,19 +73,7 @@ Route::middleware(['auth', 'lock'])->group(function (){
     })->name('dashboard');
 
     Route::middleware('admin')->group(function (){
-        Route::namespace('Stromae')->group(function (){
-            Route::delete('/countries/delete-country/{id}', 'CountryController@destroy')->name('country.destroy');
-            Route::delete('/cities/delete-city/{id}', 'CityController@destroy')->name('city.destroy');
-            Route::delete('/arrondissements/delete-arrondissement/{id}', 'ArrondissementController@destroy')->name('arrondissement.destroy');
-            Route::delete('/quarters/delete-quarter/{id}', 'QuarterController@destroy')->name('quarter.destroy');
-            Route::delete('/roles/delete-role/{id}', 'RoleController@destroy')->name('role.destroy');
-            Route::delete('/gaz/delete-gaz/{id}', 'GazController@destroy')->name('gaz.destroy');
-
-            Route::delete('/personal/delete-personal/{id}', 'PersonalController@destroy')->name('personal.destroy');
-
-            Route::get('/invoice-print/{id}', 'InvoiceController@printInvoice')->name('invoice-print');
-
-        });
+        Route::get('/invoice-print/{id}', 'Stromae\InvoiceController@printInvoice')->name('invoice-print');
 
         Route::layout('layouts.master')->group(function () {
             /*Country*/
@@ -128,20 +113,30 @@ Route::middleware(['auth', 'lock'])->group(function (){
         });
     });
 
-    Route::middleware('grc')->get('/customer-relation', 'Stromae\CustomerRelationController@index')->name('customer_relation');
+    //Gestion Relation Client
+    Route::get('/customer-relation', 'Stromae\CustomerRelationController@index')->name('customer_relation');
+
+    //livraison
+    Route::prefix('delivery')->group(function (){
+        Route::get('/order-summary', 'Stromae\DeliveryController@order_summary')->name('delivery.order_summary');
+        Route::get('/history-delivery', 'Stromae\DeliveryController@history_delivery')->name('delivery.history_delivery');
+    });
 });
+
 
 //Verrouillage d'ecran
 Route::get('/lockscreen', 'Stromae\LockAccountController@lockscreen')->name('lockscreen.index');
 Route::post('/lockscreen', 'Stromae\LockAccountController@unlock')->name('lockscreen.store');
 
+//page d'erreurs
 Route::fallback(function (){
     return view('stromae.error_page.404');
 });
-
 Route::view('error_page_503', 'stromae.error_page.503')->name('error-503');
 
 
 /***
  *      END STROMAE ROUTES
  */
+
+//23337036lyd

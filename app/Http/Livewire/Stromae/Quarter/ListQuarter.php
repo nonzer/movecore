@@ -13,6 +13,14 @@ class ListQuarter extends Component
         $this->quarters = QuarterService::list();
     }
 
+    public function delete(int $id)
+    {
+        QuarterService::destroy($id);
+
+        connectify('success', 'Opération Réussie', 'Suppression du quartier effectué');
+        return redirect()->route('quarter.index');
+    }
+
     public function render()
     {
         return view('livewire.stromae.quarter.list-quarter');

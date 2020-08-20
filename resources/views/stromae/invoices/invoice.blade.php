@@ -77,7 +77,7 @@
                                             <td>{{ $order->gaz->name }}</td>
                                             <td>{{ number_format($order->gaz->weight, 1).' Kg' }}</td>
                                             <td>El snort testosterone trophy driving gloves handsome</td>
-                                            <td>{{ number_format($order->gaz->price,  0, '.', ' ').' FCFA' }}</td>
+                                            <td>{{ number_format(subtotal($order),  0, '.', ' ').' FCFA' }}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -109,7 +109,7 @@
                                     <table class="table">
                                         <tr>
                                             <th style="width:50%">Sous-total:</th>
-                                            <td>{{ number_format($order->gaz->price,  0, '.', ' ') }}</td>
+                                            <td>{{ number_format(total($order),  0, '.', ' ') }}</td>
                                         </tr>
                                         <tr>
                                             <th>Frais de livraison:</th>
@@ -117,7 +117,7 @@
                                         </tr>
                                         <tr>
                                             <th>Total:</th>
-                                            <td>{{ number_format(($order->gaz->price + 500),  0, '.', ' ') }}</td>
+                                            <td>{{ number_format((total($order) + 500),  0, '.', ' ') }}</td>
                                         </tr>
                                     </table>
                                 </div>

@@ -22,6 +22,14 @@ class ListArrondissement extends Component
         $this->cities = City::all();
     }
 
+    public function delete(int $id)
+    {
+        ArrondissementService::destroy($id);
+
+        connectify('success', 'Opération Réussie', 'Suppression de l\'arrondissement effectué');
+        return redirect()->route('arrondissement.index');
+    }
+
     public function show_add_form_arrondissement(){
         $this->show = true;
     }

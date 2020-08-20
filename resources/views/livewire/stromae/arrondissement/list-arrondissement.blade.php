@@ -118,12 +118,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fas fa-times"></i> Non</button>
-                                                                <form action="{{ route('arrondissement.destroy', $arrondissement->id) }}" method="post">
-                                                                    @method('DELETE')
-
-                                                                    @csrf
-                                                                    <button type="submit" class="btn btn-danger">Oui <i class="fas fa-check"></i></button>
-                                                                </form>
+                                                                <button type="button" wire:click="delete({{ $arrondissement->id }})" class="btn btn-danger">Oui <i class="fas fa-check"></i></button>
                                                             </div>
                                                         </div>
                                                         <!-- /.modal-content -->

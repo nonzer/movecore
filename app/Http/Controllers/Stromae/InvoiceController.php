@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
 {
+
     public function printInvoice(int $id){
 
         $order = Order::findOrFail($id);
