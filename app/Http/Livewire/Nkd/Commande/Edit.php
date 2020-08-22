@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Nkd\Commande;
 
 use App\Gaz;
 use App\Order;
+use App\service\nkd\GazServices;
 use Livewire\Component;
 
 class Edit extends Component
@@ -34,6 +35,7 @@ class Edit extends Component
         $this->date_order = $this->cmd->date_order;
         $this->quantity = $this->cmd->quantity;
         $this->type_order = $this->cmd->type_order;
+        $this->status_order = $this->cmd->status_order;
 
     }
 
@@ -53,13 +55,16 @@ class Edit extends Component
         ]);
 
         $order = $this->cmd;
-        $order->gaz_id = $this->typegaz;
-
+        $order->gaz_id= $this->typegaz;
         $order->quantity= $this->quantity;
         $order->status_order= $this->status_order;
         $order->type_order= $this->type_order;
         $order->update();
-        return redirect()->route('order.index');
+
+//        GazServices::updateStock($order->gaz_id, $this->cmd->quantity, $order->quantity);
+
+        return redirect()->route('invoice-print', $order->id);
+//        return redirect()->route('order.index');
     }
     public function render()
     {

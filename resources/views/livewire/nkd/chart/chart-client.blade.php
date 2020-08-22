@@ -6,7 +6,7 @@
     {{-- The whole world belongs to you --}}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card ">
                     <div class="card-header">
                         <h3 class="card-title">Nombre de Commandes par Types de Bouteilles</h3>
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <!-- AREA CHART -->
                 <div class="card ">
                     <div class="card-header">
@@ -76,8 +76,8 @@
                     <div class="card-body">
                         <div class="row">
 
-                            <div class="col-xs-12 col-md-10 boxchart" >
-                                <canvas id="lineChart" width="500" height="250" ></canvas>
+                            <div class="col-xs-12 col-md-10 boxchart">
+                                <canvas id="lineChart" width="500" height="250"></canvas>
                             </div>
 
                             <div class="col-sm-12 col-md-2">

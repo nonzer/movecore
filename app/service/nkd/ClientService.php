@@ -35,7 +35,7 @@ class ClientService
      * @param $quater_id
      * @return string
      */
-    public static function generateCode($slugCity, $quater_id):string
+    public static function generateCode($slugCity, $quater_id)
     {
         if($slugCity!== null && $quater_id!== null){
 

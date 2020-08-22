@@ -6,6 +6,7 @@ use App\Customer;
 use App\Gaz;
 use App\Order;
 use App\service\nkd\ClientService;
+use App\service\nkd\GazServices;
 use App\User;
 use Livewire\Component;
 
@@ -15,15 +16,10 @@ class Create extends Component
     public $client;
     public $typegaz;
 
-//    public $time_order;
-//    public $time_deliver; //
-//    public $date_order;
-
     public $gaz;
     public $quantity=1;
     public $cmdcount=0;
 
-//    public $status_order='passed';
     public $type_order='A/L';
     public $delivery_man;
     public $deliver_id;
@@ -59,15 +55,10 @@ class Create extends Component
      */
     public function save(){
         $this->validate([
-//            'time_order'=>'required|string',
-//            'date_order'=>'required|string',
-//            'status_order'=>'required|in:validated,passed,declined,in pending',
-
             'quantity'=>'required|numeric',
             'type_order'=>'required|in:L,AAU,A/L',
             'typegaz'=>'required'
         ]);
-
 
         $cmd = new Order();
         $cmd->customer_id= $this->client->id;
@@ -78,17 +69,16 @@ class Create extends Component
             $cmd->personals_id= $this->deliver_id;
 
         $cmd->date_order= date('Y-m-d');
-//        $cmd->time_order= date('h:i:s');
         $cmd->time_order= date('H:i:s');
         $cmd->time_deliver= null;
         $cmd->status_order= 'passed';
 
         $cmd->type_order= $this->type_order;
-//        $cmd->deliver_delay= calculate_delay($cmd)? calculate_delay($cmd): null;
         $cmd->save();
         ClientService::initRelauche($cmd);
+//        GazServices::updateStock($cmd->gaz_id, $cmd->quantity);
 
-        return redirect()->route('order.index');
+        return redirect()->route('invoice-print', $cmd->id);
     }
 
     public function render()

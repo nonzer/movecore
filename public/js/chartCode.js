@@ -38,12 +38,16 @@ const chartPie  = function(data_label, data_value, title, id){
         data:{
             datasets: [{
                 data: data_value ,
-                backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de',
+                backgroundColor: ['#ffc0e3', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de',
                     'rgb(211,15,52)',
                     'rgb(160,15,92)',
-                    'rgb(238,213,22)',
+                    'rgb(23,213,22)',
                     'rgb(24,105,172)',
                     'rgb(92,151,155)',
+                    'rgb(12,121,15)',
+                    'rgb(9,151,155)',
+                    'rgb(222,121,55)',
+                    'rgb(219,211,15)',
 
                 ],
             }],

@@ -62,6 +62,8 @@ class CommandeController extends Controller
         //
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *

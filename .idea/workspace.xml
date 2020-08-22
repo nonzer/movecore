@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="">
+    <list default="true" id="cd1ce8ab-fb66-4df6-98f9-d702c6d2ecff" name="Default Changelist" comment="additionnal work orders">
+      <change afterPath="$PROJECT_DIR$/app/service/nkd/GazServices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/movecore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movecore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/nkd_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/nkd_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/nkd/SearchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/SearchService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/commande/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/nkd/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/nkd/CommandeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/Edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/SearchBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Nkd/Commande/SearchBar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/service/nkd/ClientService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/nkd/ClientService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chartCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chartCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +249,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="69571506-921b-4a20-81c2-c86d86b5d59a" name="Default Changelist" comment="" />
+      <changelist id="cd1ce8ab-fb66-4df6-98f9-d702c6d2ecff" name="Default Changelist" comment="additionnal work orders" />
       <created>1596812776228</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,15 +260,123 @@
       <workItem from="1597749495657" duration="13854000" />
       <workItem from="1597823953456" duration="389000" />
       <workItem from="1597824493117" duration="4954000" />
+      <workItem from="1598011132668" duration="9282000" />
     </task>
+    <task id="LOCAL-00001" summary="last work excel, search-bar, after last problem">
+      <created>1597931025855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597931025855</updated>
+    </task>
+    <task id="LOCAL-00002" summary="last work excel, search-bar, after last problem">
+      <created>1597931602587</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597931602587</updated>
+    </task>
+    <task id="LOCAL-00003" summary="additionnal work orders">
+      <created>1597940147565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597940147565</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Volumes/Nkd OSX 2/Stage MOVe Global/APP/movecore/resources/views/livewire/nkd/client" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Volumes/Nkd OSX 2/Stage MOVe Global/APP/movecore/app/Http" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="3">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -264,18 +400,76 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="last work excel, search-bar, after last problem" />
+    <MESSAGE value="additionnal work orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="additionnal work orders" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1597842299545">
+    <state x="725" y="79" width="812" height="576" key="#Notifications" timestamp="1597928720957">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597842299545" />
+    <state x="725" y="79" width="812" height="576" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1597928720957" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598021468852">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598021468852" />
+    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2" timestamp="1598112652998">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1598112652998" />
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1597930684598">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597930684598" />
+    <state x="57" y="1" width="1623" height="992" key="MergeDialog" timestamp="1597931222968">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="57" y="1" width="1623" height="992" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597931222968" />
+    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog" timestamp="1597931223009">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597931223009" />
+    <state x="525" y="258" key="NewPhpClassDialog" timestamp="1598018934856">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="525" y="258" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598018934856" />
+    <state x="582" y="252" key="RollbackChangesDialog" timestamp="1597927553642">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="582" y="252" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597927553642" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597940158547">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597940158547" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1597930684598">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597930684598" />
+    <state x="60" y="174" width="1680" height="651" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597929787868">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="60" y="174" width="1680" height="651" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597929787868" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1597929787868">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597929787868" />
+    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597931077204">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597931077204" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1598112995388">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/1680.0.1024.768@0.0.1680.1050" timestamp="1598024525424" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1598112995388" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php</url>
-          <line>123</line>
+          <line>128</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

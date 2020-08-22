@@ -22,10 +22,11 @@ class SearchBar extends Component
     }
 
     public  function search(){
-        if($this->value!==null){
+        if($this->value !== null){
             $code_client=$this->value;
             $client = Customer::whereCode($code_client)->first('id');
-            return redirect()->route('order.create', $client->id);
+            if($client !== null)
+                return redirect()->route('order.create', $client->id);
         }
     }
 

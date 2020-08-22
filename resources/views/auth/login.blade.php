@@ -4,7 +4,7 @@
 
 @section('login-content')
     <div class="login-box">
-        <div class="login-logo mb-0">
+        <div class="login-logo" style="margin-bottom: -30px">
 {{--            <a href="#"><b>MOVe</b>Core</a>--}}
             <img src="/images/movecore.png" height="199px" alt="" class="">
         </div>
