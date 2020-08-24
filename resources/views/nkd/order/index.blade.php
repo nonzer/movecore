@@ -15,7 +15,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
 
-{{--                        {{ Breadcrumbs::render('order.index') }}--}}
+                        {{ Breadcrumbs::render('order.index') }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -46,6 +46,7 @@
                             <th>Heure commande </th>
                             <th>Heure livraison</th>
                             <th>Délai</th>
+                            <th>Livreur</th>
                             <th>Qté</th>
                             <th>Action</th>
                         </tr>
@@ -55,13 +56,14 @@
                         @foreach($orders as $o)
                             <tr>
                                 <td><strong>{{$o->customer->code}}</strong></td>
-                                <td>{{$o->customer->name}}</td>
-                                <td>{{$o->gaz->name}} <span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
+                                <td>{{$o->customer->name}} - {!!  getStatusOrder($o)!!}</td>
+                                <td>{{$o->gaz->name}}<span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
                                 <td>{{$o->customer->quarter->name}}</td>
                                 <td>{{$o->customer->tel}}</td>
                                 <td>{{$o->time_order}}</td>
                                 <td>{{$o->time_deliver }}</td>
                                 <td>{{$o->deliver_delay}}</td>
+                                <td>{!!  $o->delivery_man->name ?? '<span class=\'text-secondary\'>Inconnu</span>' !!}</td>
                                 <td>{{$o->quantity}}</td>
                                 <td>
                                     <a class="btn btn-primary btn-xs" href="{{route('order.edit',$o->id)}}"><i class="fas fa-user-edit"></i></a>

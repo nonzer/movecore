@@ -27,7 +27,9 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Liste quartiers</h3>
-                            <a href="{{ route('quarter.create') }}" class="float-right btn btn-primary"><i class="fas fa-plus-circle mr-1"></i> Ajouter un quartier</a>
+                            <a href="{{ route('quarter.create') }}" class="float-right btn btn-primary ml-2"><i class="fas fa-plus-circle mr-1"></i> Ajouter un quartier</a>
+                            <a href="{{route('excel.client')}}" class="float-right btn btn-success "><i class="fas fa-file-excel mr-1"></i>Charger via Excel</a>
+
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">

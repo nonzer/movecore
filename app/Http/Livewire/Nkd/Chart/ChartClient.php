@@ -19,6 +19,7 @@ class ChartClient extends Component
     public $dateend;
     public $datebegin;
 
+    protected $listeners = ['reloadChartLine'=>'reload'];
 
     public function mount()
     {
@@ -39,9 +40,9 @@ class ChartClient extends Component
 
     private function barChart($_clients)
     {
-        $_clients = ($_clients->filter()->all());
-        $objReturn = ChartService::clientGazForChart($_clients);
-        $this->gaz = $objReturn;
+        $_clients= ($_clients->filter()->all());
+        $objReturn= ChartService::clientGazForChart($_clients);
+        $this->gaz= $objReturn;
     }
 
     private function barOrderChart($_orders)
@@ -55,21 +56,22 @@ class ChartClient extends Component
     {
         if($date_begin!==null && $date_end!==null){
 
-            $dataOrders= Order::whereBetween('date_order',[$date_begin, $date_end])->get();
-            $dataOrders= $dataOrders->filter()->all();
-            $this->benefits = ChartService::benefitForChart($dataOrders);
+            $objectCollections= Order::whereBetween('date_order',[$date_begin, $date_end])->orderBy('date_order')->get();
+            $dataOrders= $objectCollections->filter()->all();
+            $this->benefits = ChartService::benefitForChart($dataOrders, $objectCollections);
         }else{
 
             $dataOrders= Order::all();
             $dataOrders= $dataOrders->filter()->all();
-            $this->benefits = ChartService::benefitForChart($dataOrders);
+            $this->benefits = ChartService::benefitForChart($dataOrders, null);
         }
     }
 
     public function reload()
     {
         $this->benefitOrderChart($this->datebegin, $this->dateend);
-        $this->render();
+        $this->emit('reloader',$this->benefits);
+//        return redirect()->route('dashboard');
     }
 
 

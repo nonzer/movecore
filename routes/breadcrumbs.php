@@ -36,24 +36,22 @@ Breadcrumbs::for('client_create', function ($trail) {
 //client_create
 
 
-//category
+//category create
 Breadcrumbs::for('category', function ($trail) {
-    $trail->parent('home');
+//    $trail->parent('home');
     $trail->parent('category.index');
     $trail->push("Ajouter une catégorie de client", route('category.create'));
 });
 
 //category.index
 Breadcrumbs::for('category.index', function ($trail) {
-    $trail->parent('home');
     $trail->parent('client');
     $trail->push("Catégorie de client", route('category.index'));
 });
 
 //category.edit
 Breadcrumbs::for('category.edit', function ($trail, $cat) {
-    $trail->parent('home');
-    $trail->parent('category');
+    $trail->parent('category.index');
     $trail->push("Editer : Categorie ".$cat->name, route('category.edit',$cat->id));
 });
 //order.index
@@ -87,6 +85,7 @@ Breadcrumbs::for('arrondissement', function ($trail) {
     $trail->push('Arrondissements', route('arrondissement.index'));
 });
 Breadcrumbs::for('add-arrondissement', function ($trail) {
+    $trail->parent('home');
     $trail->parent('arrondissement');
     $trail->push('Ajout arrondissement');
 });
@@ -129,10 +128,12 @@ Breadcrumbs::for('role', function ($trail) {
     $trail->push('Privilèges', route('role.index'));
 });
 Breadcrumbs::for('add-role', function ($trail) {
+//    $trail->parent('home');
     $trail->parent('role');
     $trail->push('Ajout privilège');
 });
 Breadcrumbs::for('edit-role', function ($trail, $id) {
+//    $trail->parent('home');
     $trail->parent('role');
     $trail->push('Modification privilège / '.$id);
 });
@@ -143,10 +144,12 @@ Breadcrumbs::for('personal', function ($trail) {
     $trail->push('Personnels', route('personal.index'));
 });
 Breadcrumbs::for('add-personal', function ($trail) {
+//    $trail->parent('home');
     $trail->parent('personal');
     $trail->push('Ajout personnel');
 });
 Breadcrumbs::for('edit-personal', function ($trail, $id) {
+//    $trail->parent('home');
     $trail->parent('personal');
     $trail->push('Modification personnel / '.$id);
 });

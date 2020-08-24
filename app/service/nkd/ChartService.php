@@ -7,11 +7,13 @@ namespace App\service\nkd;
 use App\Gaz;
 use App\Order;
 use App\Quarter;
+use Illuminate\Support\Collection;
 
 class ChartService
 {
 
     /**
+     * IMPORTANT : All dataTab MUST BE IN  ORDER by $key, $label_tab and $value_tab
      * very important for Chart, delete all double proprely in the 2 tabs on Matching values
      * @param array $label_tab
      * @param array $value_tab
@@ -23,7 +25,6 @@ class ChartService
         for($i=0; $i < count($label_tab); $i++)
         {
             if(isset($label_tab[$i+1]) && $label_tab[$i] === $label_tab[$i+1]){
-//                array_splice($value_tab,$i+1,1);
                 unset($value_tab[$i+1]);
             }
         }
@@ -34,7 +35,6 @@ class ChartService
         // tres important change les index et les met en ordre croissant <3 <3
         $label_tab = array_values($label_tab);
         $value_tab = array_values($value_tab);
-//        dd($label_tab, $value_tab);
 
         return [$label_tab, $value_tab];
     }
@@ -45,19 +45,25 @@ class ChartService
      * @param array $data Order tab
      * @return array
      */
-    public static function benefitForChart(array $data):array
+    public static function benefitForChart(array $data, Collection $objectCollections=null):array
     {
         $label_tab=[];
         $data_tab=[];
 
-        $dates = Order::orderBy('date_order')->get('date_order', 'id', 'quantity'); // Dates table
+        if($objectCollections===null){
+            $dates = Order::orderBy('date_order')->get('date_order', 'id', 'quantity'); // Dates tab, optimised
+
+        }else{
+            $dates = $objectCollections; // Order table for get dates Tab
+        }
 
         foreach($dates as $date):
             $sum_value=0;
 
             foreach($data as $order):
-                if($date->date_order === $order->date_order)
+                if($date->date_order === $order->date_order){
                     $sum_value += sales_benefit($order);
+                }
             endforeach;
 
             array_push($data_tab, $sum_value);
@@ -86,10 +92,9 @@ class ChartService
                     $count_value++;
             endforeach;
             array_push($data_tab, $count_value);
-            array_push($label_tab, $g->name);
+            array_push($label_tab, $g->name.'-'.$g->weight);
         endforeach;
 
-//        return [$label_tab, $data_tab];
         return ChartService::deleteDoubleForChart($label_tab, $data_tab);
     }
 
@@ -138,6 +143,9 @@ class ChartService
             array_push($label_tab, $q->name);
         endforeach;
 
+        /**
+         * You can return an object
+         */
 //        return new class($label_tab, $data_tab){
 //            public $_labelname;
 //            public $_data;

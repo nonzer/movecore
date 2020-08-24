@@ -6,6 +6,7 @@ use App\Customer;
 use App\Gaz;
 use App\Order;
 use App\service\nkd\ClientService;
+use App\User;
 use Livewire\Component;
 
 class Create extends Component
@@ -13,19 +14,24 @@ class Create extends Component
     public $name;
     public $client;
     public $typegaz;
-    public $time_order;
-    public $time_deliver; //
-    public $date_order;
+
+//    public $time_order;
+//    public $time_deliver; //
+//    public $date_order;
+
     public $gaz;
     public $quantity=1;
     public $cmdcount=0;
 
-    public $status_order='passed';
-    public $type_order='L';
+//    public $status_order='passed';
+    public $type_order='A/L';
+    public $delivery_man;
+    public $deliver_id;
 
     public function mount($id){
         $this->client = Customer::find($id);
         $this->gaz = Gaz::all();
+        $this->delivery_man = User::where('roles_id',9)->get();
     }
 
     /**
@@ -53,31 +59,34 @@ class Create extends Component
      */
     public function save(){
         $this->validate([
-            'time_order'=>'required|string',
-            'date_order'=>'required|string',
+//            'time_order'=>'required|string',
+//            'date_order'=>'required|string',
+//            'status_order'=>'required|in:validated,passed,declined,in pending',
+
             'quantity'=>'required|numeric',
             'type_order'=>'required|in:L,AAU,A/L',
-            'status_order'=>'required|in:validated,passed,declined,in pending',
             'typegaz'=>'required'
         ]);
 
 
-        $id = $this->client->id;
         $cmd = new Order();
-        $cmd->customer_id= $id;
+        $cmd->customer_id= $this->client->id;
         $cmd->quantity= $this->quantity;
         $cmd->gaz_id= $this->typegaz;
-        $cmd->date_order= $this->date_order;
 
-        $cmd->time_order= $this->time_order;
-        $cmd->time_deliver= $this->time_deliver;
+        if(is_numeric($this->deliver_id))
+            $cmd->personals_id= $this->deliver_id;
 
-        $cmd->status_order= $this->status_order;
+        $cmd->date_order= date('Y-m-d');
+//        $cmd->time_order= date('h:i:s');
+        $cmd->time_order= date('H:i:s');
+        $cmd->time_deliver= null;
+        $cmd->status_order= 'passed';
+
         $cmd->type_order= $this->type_order;
-        $cmd->deliver_delay= calculate_delay($cmd)? calculate_delay($cmd): null;
+//        $cmd->deliver_delay= calculate_delay($cmd)? calculate_delay($cmd): null;
         $cmd->save();
         ClientService::initRelauche($cmd);
-
 
         return redirect()->route('order.index');
     }

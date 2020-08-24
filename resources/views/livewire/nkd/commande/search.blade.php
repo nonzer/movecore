@@ -5,7 +5,7 @@
 
 
 
-    <div class="">
+    <div class="container">
         <style>
             .linknkd:hover{
                 background-color: #2b2b2b;
@@ -20,8 +20,9 @@
                 <div class="mx-auto text-center">
                     <h1 class=""> Code Maison ou Numero de Téléphone</h1>
                     <p>
-                        <span class="text-secondary">Cliquez dessous sur <strong>code</strong>/<strong>tel</strong> puis Entrer le <strong>code/numéro</strong> et trouver une client pour lui ajouter une commande.</span>
+                        <span class="text-secondary">Cliquez dessous sur <strong>code</strong>/<strong>tel</strong> puis entrer le <strong>code/numéro</strong> et trouver une client pour lui ajouter une commande.</span>
                     </p>
+
                     <div class="input-group m-1 justify-content-center">
                         <div class="btn-group btn-group-toggle border">
                             <label class="btn btn-sm @if($searchbycode) bg-success @endif ">
@@ -31,7 +32,6 @@
                                 <input type="radio" name="options"  wire:model="searchbytel"> tel
                             </label>
                         </div>
-
                     </div>
                 </div>
 
@@ -62,7 +62,6 @@
                 <br>
                 <span>Les résultats trouvées</span>
                 @forelse($resources as $r)
-
                     <div class="row">
                         <div class="col-sm-12">
                             <a href="{{route('order.create',$r['id'])}}" class="linknkd text-decoration-none" style="cursor: pointer">

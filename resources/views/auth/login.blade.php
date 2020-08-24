@@ -4,8 +4,9 @@
 
 @section('login-content')
     <div class="login-box">
-        <div class="login-logo">
-            <a href="#"><b>MOVe</b>Core</a>
+        <div class="login-logo mb-0">
+{{--            <a href="#"><b>MOVe</b>Core</a>--}}
+            <img src="/images/movecore.png" height="199px" alt="" class="">
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -44,7 +45,7 @@
                     </div>
 
                     <div class="row">
-                            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                            <button type="submit" class="btn btn-danger btn-block">Se connecter</button>
                     </div>
                 </form>
 

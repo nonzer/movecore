@@ -32,7 +32,7 @@
                         <div class="inner">
                             <h3> {{total_orders(false)}}</h3>
                             <h4>Commandes au total</h4>
-                            <p class="">Aujour'hui: <strong>{{total_orders()}}</strong></p>
+                            <p class="">Aujourd'hui: <strong>{{total_orders()}}</strong></p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-shopping-bag"></i>
@@ -61,7 +61,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>33<sup style="font-size: 20px">Min</sup></h3> <br> <p></p>
+                            <h3>{{number_format(delayAvg(),1)}}<sup style="font-size: 20px">Min</sup></h3> <br> <p></p>
                             <h4>Délais Moyen de livraison</h4>
                         </div>
                         <div class="icon">
