@@ -1,7 +1,7 @@
 <div>
     <div class="text-center">
         <img class="profile-user-img img-fluid img-circle"
-             src="{{ !empty(Auth::user()->avatar) ? Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
+             src="{{ !empty(Auth::user()->avatar) ? asset('storage') . '/images/avatars/' .Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
              alt="{{ Auth::user()->name }} profile picture">
     </div>
 
@@ -24,16 +24,16 @@
     <form wire:submit.prevent="update_avatar_user">
         <label for="photo">Modifier Avatar</label>
         <div class="row">
-            <div class="col-md-3">
+            {{--<div class="col-md-3">
                 @if ($avatar)
                     <img class="shadow-sm img-fluid img-circle" src="{{ $avatar->temporaryUrl() }}" width="100">
                 @endif
-            </div>
+            </div>--}}
             <div class="col-md-6">
                 <input wire:model="avatar" type="file" id="photo"  class="@error('avatar') is-invalid @enderror mt-3 mb-3 form-control-file border-0">
                 @error('avatar') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <button type="submit" class="btn btn-dark">Valider</button>
             </div>
             <div class="col-md-12">

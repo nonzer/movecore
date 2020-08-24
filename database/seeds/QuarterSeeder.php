@@ -14,32 +14,32 @@ class QuarterSeeder extends Seeder
         \App\Quarter::insert([
             [
                 'name' => 'Bepanda',
-                'slug' => 'BPD',
+                'slug' => 'BEP',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-5')->first()->id
             ],
             [
                 'name' => 'Bonamoussadi',
-                'slug' => 'BSD',
+                'slug' => 'SADI',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-5')->first()->id
             ],
             [
                 'name' => 'New-bell',
-                'slug' => 'NBL',
+                'slug' => 'NB',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-2')->first()->id
             ],
             [
                 'name' => 'Bonapriso',
-                'slug' => 'BPS',
+                'slug' => 'PRISO',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-2')->first()->id
             ],
             [
-                'name' => 'Ndogpassi-1',
-                'slug' => 'NP1',
+                'name' => 'Ndogpassi-3',
+                'slug' => 'NDG3',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-3')->first()->id
             ],
             [
                 'name' => 'Ndogpassi-2',
-                'slug' => 'NP2',
+                'slug' => 'NDG2',
                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-3')->first()->id
             ]
         ]);

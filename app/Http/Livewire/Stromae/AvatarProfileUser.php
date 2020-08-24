@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Stromae;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -19,12 +20,14 @@ class AvatarProfileUser extends Component
             'avatar' => 'image|mimes:jpg,jpeg,png|max:1024', // 1MB Max
         ]);
 
-        dd($this->avatar);
-        $filename = 'avatar-'.rand(0, 10000).'-'.date('Y-m-d');
-        Storage::putFile('avatars', new File('/images/avatars/'.$filename), $filename);
+        $image = $this->avatar;
+        //dd($image);
+        $currentDate = Carbon::now()->toDateString();
+        $imagename =  'avatar-'. $currentDate .'-'. uniqid() .'.'. $image->getClientOriginalExtension();
+        $image->storeAs('public/images/avatars', $imagename);
 
         $user = Auth::user();
-        $user->avatar = 'images/avatar/'.$filename;
+        $user->avatar = $imagename;
         $user->save();
 
         //unset($this->avatar);

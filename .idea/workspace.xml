@@ -20,27 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess...">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/-modification_seeder_-modification_facture_-intégration_modification_avatar_personnel_-mod.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/-modification_seeder_-modification_facture_-intégration_modification_avatar_personnel_-mod/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_08_2020_16_30_[Default]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_08_2020_16_30__Default_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/MTN-Mobile-Money.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/cash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/dOBnZ2XmGO.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/move_core_DB.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/mtn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/orange.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/rappport insertion.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21_[Default]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_21__Default_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_58_[Default]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_11_58__Default_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_12_14_[Default]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_08_2020_12_14__Default_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/livewire.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc project/~$fichier de suivi clients-MOVeGLOBAL.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/storage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/MTN-Mobile-Money.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/cash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/dOBnZ2XmGO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/mtn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/orange.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/stromae_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/stromae_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/GazSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GazSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,6 +344,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1598265151241" />
+    <state x="97" y="97" width="1182" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598269438854">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="97" y="97" width="1182" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1598269438854" />
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598270152874">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1598270152874" />
     <state x="492" y="298" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598264084525">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

@@ -42,6 +42,7 @@
                             <th>Anniverssaire</th>
                             <th>Quartier</th>
                             <th>Type Gaz</th>
+                            <th>Livreur</th>
                             <th>Date commande</th>
                             <th>Nbr commande</th>
                             <th>Heure commande</th>
@@ -68,6 +69,7 @@
                                 </td>
                                 <td>{{ $o->customer->quarter->name }}</td>
                                 <td>{{ $o->gaz->name }}</td>
+                                <td>{{ $o->delivery_man->name }}</td>
                                 <td>{{ $o->date_order }}</td>
                                 <td>{{ $o->quantity }}</td>
                                 <td>{{ $o->time_order }}</td>
@@ -92,10 +94,10 @@
                                 <td class="text-center">
                                     @if($o->status_order === "declined")
                                         <i class="fas fa-minus-square text-danger"></i>
-                                        <span class="text-danger">Décliné</span>
+                                        <span class="text-danger">Déclinée</span>
                                     @elseif($o->status_order === "validated")
                                         <i class="fas fa-check-square text-success"></i>
-                                        <span class="text-success">Approuvé</span>
+                                        <span class="text-success">Livrée</span>
                                     @endif
                                 </td>
                             </tr>
