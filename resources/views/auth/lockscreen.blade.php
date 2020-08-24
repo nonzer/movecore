@@ -4,8 +4,12 @@
 
 @section('lockscreen-content')
     <div class="lockscreen-wrapper">
-        <div class="lockscreen-logo">
+        <div class="lockscreen-logo mb-0">
+{{--
             <a href="#"><b>MOVe</b>CORE</a>
+--}}
+            <img src="/images/movecore.png" height="199px" alt="" class="">
+
         </div>
         <!-- User name -->
         <div class="lockscreen-name">{{ Auth::user()->name }}</div>
