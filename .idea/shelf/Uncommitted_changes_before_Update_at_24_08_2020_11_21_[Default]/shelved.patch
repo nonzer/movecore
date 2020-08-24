@@ -1,0 +1,966 @@
+Index: database/seeds/QuarterSeeder.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Database\\Seeder;\r\n\r\nclass QuarterSeeder extends Seeder\r\n{\r\n    /**\r\n     * Run the database seeds.\r\n     *\r\n     * @return void\r\n     */\r\n    public function run()\r\n    {\r\n        \\App\\Quarter::insert([\r\n            [\r\n                'name' => 'Bepanda',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-5')->first()->id\r\n            ],\r\n            [\r\n                'name' => 'Bonamoussadi',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-5')->first()->id\r\n            ],\r\n            [\r\n                'name' => 'New-bell',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-2')->first()->id\r\n            ],\r\n            [\r\n                'name' => 'Bonapriso',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-2')->first()->id\r\n            ],\r\n            [\r\n                'name' => 'Ndogpassi-3',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-3')->first()->id\r\n            ],\r\n            [\r\n                'name' => 'Ndogpassi-2',\r\n                'arrondissements_id' => \\App\\Arrondissement::where('slug', 'DLA-3')->first()->id\r\n            ]\r\n        ]);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- database/seeds/QuarterSeeder.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ database/seeds/QuarterSeeder.php	(date 1598152566049)
+@@ -14,26 +14,32 @@
+         \App\Quarter::insert([
+             [
+                 'name' => 'Bepanda',
++                'slug' => 'BEP',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-5')->first()->id
+             ],
+             [
+                 'name' => 'Bonamoussadi',
++                'slug' => 'SADI',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-5')->first()->id
+             ],
+             [
+                 'name' => 'New-bell',
++                'slug' => 'NB',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-2')->first()->id
+             ],
+             [
+                 'name' => 'Bonapriso',
++                'slug' => 'PRISO',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-2')->first()->id
+             ],
+             [
+                 'name' => 'Ndogpassi-3',
++                'slug' => 'NDG3',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-3')->first()->id
+             ],
+             [
+                 'name' => 'Ndogpassi-2',
++                'slug' => 'NDG2',
+                 'arrondissements_id' => \App\Arrondissement::where('slug', 'DLA-3')->first()->id
+             ]
+         ]);
+Index: database/seeds/RoleSeeder.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Database\\Seeder;\r\n\r\nclass RoleSeeder extends Seeder\r\n{\r\n    /**\r\n     * Run the database seeds.\r\n     *\r\n     * @return void\r\n     */\r\n    public function run()\r\n    {\r\n        \\App\\Role::insert([\r\n            [\r\n                'name' => 'Admin',\r\n                'description' => 'Gestionnaire du système'\r\n            ],\r\n            [\r\n                'name' => 'CEO',\r\n                'description' => 'Manager'\r\n            ],\r\n            [\r\n                'name' => 'Chef_unite',\r\n                'description' => 'Gestionnaire des entrées / sorties des commandes et des clients'\r\n            ],\r\n            [\r\n                'name' => 'GRC',\r\n                'description' => 'Gestionnaire Relation Client'\r\n            ]\r\n        ]);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- database/seeds/RoleSeeder.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ database/seeds/RoleSeeder.php	(date 1598152874760)
+@@ -27,7 +27,11 @@
+             [
+                 'name' => 'GRC',
+                 'description' => 'Gestionnaire Relation Client'
+-            ]
++            ],
++            [
++                'name' => 'Livreur',
++                'description' => 'Personne  chargée d\'acheminer les colis aux clients'
++            ],
+         ]);
+     }
+ }
+Index: resources/views/livewire/stromae/personal/list-personal.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@section('title','Liste du personnel')\r\n\r\n<div>\r\n\r\n    <!-- Content Header (Page header) -->\r\n    <div class=\"content-header\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row mb-2\">\r\n                <div class=\"col-sm-6\">\r\n                    <h1 class=\"m-0 text-dark\">Personnels</h1>\r\n                </div><!-- /.col -->\r\n                <div class=\"col-sm-6\">\r\n                    <ol class=\"breadcrumb float-sm-right\">\r\n                        {{ Breadcrumbs::render('personal') }}\r\n                    </ol>\r\n                </div><!-- /.col -->\r\n            </div><!-- /.row -->\r\n        </div><!-- /.container-fluid -->\r\n    </div>\r\n    <!-- /.content-header -->\r\n\r\n\r\n    <section class=\"content\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"card card-solid\">\r\n                        <div class=\"card-header\">\r\n                            <h3 class=\"card-title font-weight-bold\">Liste du personnel</h3>\r\n                            <a href=\"{{ route('personal.create') }}\" class=\"float-right btn btn-primary\"><i class=\"fas fa-plus-circle mr-1\"></i> Ajouter un personnel</a>\r\n                        </div>\r\n                        <!-- /.card-header -->\r\n                        <div class=\"card-body\">\r\n                            @if(count($personals) > 0)\r\n                                <div class=\"row d-flex align-items-stretch\">\r\n                                    @foreach($personals as $personal)\r\n                                        <div class=\"col-12 col-sm-6 col-md-4 d-flex align-items-stretch\">\r\n                                            <div class=\"card bg-light\">\r\n                                                <div class=\"card-header text-muted border-bottom-0\">\r\n                                                    {{ $personal->role->name }}\r\n                                                </div>\r\n                                                <div class=\"card-body pt-0\">\r\n                                                    <div class=\"row\">\r\n                                                        <div class=\"col-7\">\r\n                                                            <h2 class=\"lead\"><b>{{ ucfirst($personal->name) }}</b></h2>\r\n                                                            <p class=\"text-muted text-sm\"><b>Identifiant : {{ $personal->login }}</b> </p>\r\n                                                            <ul class=\"ml-4 mb-0 fa-ul text-muted\">\r\n                                                                <li class=\"small\"><span class=\"fa-li\"><i class=\"fas fa-lg fa-building\"></i></span> Anniversaire :\r\n                                                                    <br>{{ $personal->birth_date }}</li>\r\n                                                                <li class=\"small\"><span class=\"fa-li\"><i class=\"fas fa-lg fa-phone\"></i></span> Téléphone :\r\n                                                                    <br>+237 {{ $personal->tel }}</li>\r\n                                                            </ul>\r\n                                                        </div>\r\n                                                        <div class=\"col-5 text-center\">\r\n                                                            <img src=\"{{ !empty($personal->avatar) ? $personal->avatar : '/master/dist/img/user1-128x128.jpg' }}\" alt=\"user-avatar\" class=\"img-circle img-fluid\">\r\n                                                        </div>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <div class=\"card-footer\">\r\n                                                    <div class=\"text-right\">\r\n                                                        <a href=\"{{ route('personal.edit', $personal->id) }}\" class=\"btn btn-sm bg-teal\">\r\n                                                            <i class=\"fas fa-edit\"></i> Modifier\r\n                                                        </a>\r\n                                                        <a href=\"#\" data-toggle=\"modal\" data-target=\"#modal-{{ $personal->id }}\" class=\"btn btn-sm btn-danger\">\r\n                                                            <i class=\"fas fa-trash\"></i> Supprimer\r\n                                                        </a>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"modal fade\" id=\"modal-{{ $personal->id }}\">\r\n                                            <div class=\"modal-dialog\">\r\n                                                <div class=\"modal-content\">\r\n                                                    <div class=\"modal-header\">\r\n                                                        <h4 class=\"modal-title\">Suppression {{ $personal->name }}</h4>\r\n                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                                                            <span aria-hidden=\"true\">&times;</span>\r\n                                                        </button>\r\n                                                    </div>\r\n                                                    <div class=\"modal-body text-center\">\r\n                                                        <h3><i class=\"fas fa-exclamation-triangle text-warning\"></i> Oh Oh !</h3>\r\n                                                        <p>Etes certain de vouloir supprimer ce personnel ?</p>\r\n                                                    </div>\r\n                                                    <div class=\"modal-footer\">\r\n                                                        <button type=\"button\" class=\"btn btn-dark\" data-dismiss=\"modal\"><i class=\"fas fa-times\"></i> Non</button>\r\n                                                        <button type=\"button\" wire:click=\"delete({{ $personal->id }})\" class=\"btn btn-danger\">Oui <i class=\"fas fa-check\"></i></button>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <!-- /.modal-content -->\r\n                                            </div>\r\n                                            <!-- /.modal-dialog -->\r\n                                        </div>\r\n                                        <!-- /.modal -->\r\n                                    @endforeach\r\n                                </div>\r\n                            @else\r\n                                <div class=\"error-content text-center\">\r\n                                    <h3><i class=\"fas fa-exclamation-triangle text-warning\"></i> Oops! Donnée non disponible.</h3>\r\n\r\n                                    <p>\r\n                                        Vous ne disposez pas d'information dans votre tableau.\r\n                                        Pour en ajouter cliquez ici <i class=\"ml-2 mr-2 fas fa-arrow-right\"></i> <a href=\"{{ route('personal.create') }}\">ajouter un personnel</a>.\r\n                                    </p>\r\n                                </div>\r\n                            @endif\r\n                        </div>\r\n        </div>\r\n        </div>\r\n    </section>\r\n</div>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/livewire/stromae/personal/list-personal.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/livewire/stromae/personal/list-personal.blade.php	(date 1597963200043)
+@@ -50,7 +50,7 @@
+                                                             </ul>
+                                                         </div>
+                                                         <div class="col-5 text-center">
+-                                                            <img src="{{ !empty($personal->avatar) ? $personal->avatar : '/master/dist/img/user1-128x128.jpg' }}" alt="user-avatar" class="img-circle img-fluid">
++                                                            <img src="{{ !empty($personal->avatar) ? $personal->avatar : '/master/dist/img/avatar4.png' }}" alt="user-avatar" class="img-circle img-fluid">
+                                                         </div>
+                                                     </div>
+                                                 </div>
+Index: resources/views/auth/lockscreen.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@extends('layouts.master')\r\n\r\n@section('title', 'Vérrouillage session')\r\n\r\n@section('lockscreen-content')\r\n    <div class=\"lockscreen-wrapper\">\r\n        <div class=\"lockscreen-logo\">\r\n            <a href=\"#\"><b>MOVe</b>CORE</a>\r\n        </div>\r\n        <!-- User name -->\r\n        <div class=\"lockscreen-name\">{{ Auth::user()->name }}</div>\r\n\r\n        <!-- START LOCK SCREEN ITEM -->\r\n        <div class=\"lockscreen-item\">\r\n            <!-- lockscreen image -->\r\n            <div class=\"lockscreen-image\">\r\n                <img src=\"/master/dist/img/user1-128x128.jpg\" width=\"128px\" alt=\"{{ Auth::user()->name }}\">\r\n            </div>\r\n            <!-- /.lockscreen-image -->\r\n\r\n            <!-- lockscreen credentials (contains the form) -->\r\n            <form class=\"lockscreen-credentials\" method=\"post\" action=\"{{ route('lockscreen.store') }}\">\r\n                @csrf\r\n\r\n                <div class=\"input-group\">\r\n                    <input name=\"password\" type=\"password\" class=\"form-control @error(\"password\") is-invalid @enderror\" placeholder=\"Mot de passe...\">\r\n                    <div class=\"input-group-append\">\r\n                        <button type=\"button\" class=\"btn\">\r\n                            <i class=\"fas fa-arrow-right text-muted\"></i>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n                @error(\"password\")\r\n                <span class=\"text-danger\">\r\n                        {{ $message }}\r\n                    </span>\r\n                @enderror\r\n            </form>\r\n            <!-- /.lockscreen credentials -->\r\n\r\n        </div>\r\n        <!-- /.lockscreen-item -->\r\n        <div class=\"help-block text-center\">\r\n            Entrez votre mot de passe reprendre votre session\r\n        </div>\r\n        <div class=\"text-center\">\r\n            Or\r\n            <a href=\"{{ route('logout') }}\" onclick=\"event.preventDefault(); document.getElementById('logout-form').submit();\">Connectez-vous en tant qu'autre utilisateur</a>\r\n            <form id=\"logout-form\" action=\"{{ route('logout') }}\" method=\"POST\" style=\"display: none;\">\r\n                @csrf\r\n            </form>\r\n        </div>\r\n        <div class=\"lockscreen-footer text-center text-xs\">\r\n            <strong>Copyright MOVe GLOBAL &copy; 2020</strong>\r\n            All rights reserved.\r\n            <div class=\"float-right d-none d-sm-inline-block\">\r\n                <b>Version</b> 1.0.0\r\n            </div>\r\n        </div>\r\n    </div>\r\n@endsection
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/auth/lockscreen.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/auth/lockscreen.blade.php	(date 1598154344438)
+@@ -14,7 +14,7 @@
+         <div class="lockscreen-item">
+             <!-- lockscreen image -->
+             <div class="lockscreen-image">
+-                <img src="/master/dist/img/user1-128x128.jpg" width="128px" alt="{{ Auth::user()->name }}">
++                <img src="{{ !empty(Auth::user()->avatar) ? asset('storage') . '/images/avatars/' .Auth::user()->avatar : '/master/dist/img/avatar4.png' }}" width="128px" alt="{{ Auth::user()->name }}">
+             </div>
+             <!-- /.lockscreen-image -->
+ 
+@@ -41,10 +41,10 @@
+         </div>
+         <!-- /.lockscreen-item -->
+         <div class="help-block text-center">
+-            Entrez votre mot de passe reprendre votre session
++            Entrez votre mot de passe pour reprendre votre session
+         </div>
+         <div class="text-center">
+-            Or
++            Ou
+             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Connectez-vous en tant qu'autre utilisateur</a>
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 @csrf
+@@ -52,7 +52,7 @@
+         </div>
+         <div class="lockscreen-footer text-center text-xs">
+             <strong>Copyright MOVe GLOBAL &copy; 2020</strong>
+-            All rights reserved.
++            Tous droits reservés.
+             <div class="float-right d-none d-sm-inline-block">
+                 <b>Version</b> 1.0.0
+             </div>
+Index: resources/views/livewire/stromae/start-delivery.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div>\r\n    @if($order->status_order === \"passed\")\r\n        <button wire:click=\"start_delivery\" wire:loading.remove class=\"shadow-sm btn btn-md bg-lime\">\r\n            <b>Démarrer la livraison</b>\r\n            <i class=\"fas fa-truck\"></i>\r\n        </button>\r\n        <br>\r\n        <div wire:loading class=\"text-center\">\r\n            <i class=\"fas fa-2x fa-history fa-spin\"></i><br>\r\n            En cours de démarrage...\r\n        </div>\r\n    @elseif($order->status_order === \"in pending\")\r\n        <div class=\"text-center @if($status) d-none @endif\">\r\n            <i class=\"text-lime fas fa-2x fa-refresh fa-spin\"></i><br>\r\n            <span class=\"text-lime\">Livraison Démarrée</span> <br>\r\n            Excellente livraison à vous...\r\n        </div>\r\n        <div class=\"mt-2\">\r\n            @if($status)\r\n                <div class=\"form-group\">\r\n                    <label for=\"signature\">Espace réservé au client <br><small>(Le client doit signé dans le champ ci-dessous)</small></label>\r\n                    <input type=\"text\" wire:model=\"signature\" id=\"signature\" class=\"@error('signature') is-invalid @enderror col-5 mb-2 mx-auto form-control\" style=\"height: 125px\">\r\n                    @error('signature')\r\n                        <div class=\"invalid-feedback\">{{ $message }}</div>\r\n                    @enderror\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <button wire:click=\"$set('status', false)\" class=\"btn btn-sm bg-gray-dark\">Annuler</button>\r\n                    <button wire:click=\"validate_order\"  class=\"btn btn-sm bg-lime shadow-sm\">Valider</button>\r\n                </div>\r\n            @else\r\n                <button data-toggle=\"modal\" data-target=\"#modal\" class=\"btn btn-sm bg-warning shadow-sm\"><i class=\"fas fa-times\"></i> Décliné</button>\r\n                <button wire:click=\"$set('status', true)\" class=\"ml-2 btn btn-sm bg-lime shadow-sm\">livré <i class=\"fas fa-check\"></i></button>\r\n\r\n                <div class=\"modal fade\" id=\"modal\">\r\n                    <div class=\"modal-dialog\">\r\n                        <div class=\"modal-content\">\r\n                            <div class=\"modal-header\">\r\n                                <h6 class=\"modal-title\">Confirmation d'annulation livraison</h6>\r\n                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                                    <span aria-hidden=\"true\">&times;</span>\r\n                                </button>\r\n                            </div>\r\n                            <div class=\"modal-body text-center\">\r\n                                <p>Etes-vous sûr de vouloir décliné cette livraison ?</p>\r\n                            </div>\r\n                            <div class=\"modal-footer\">\r\n                                <button type=\"button\" class=\"btn btn-sm btn-dark shadow-sm\" data-dismiss=\"modal\">Non</button>\r\n                                <button wire:click=\"decline_order\" class=\"btn btn-sm bg-warning shadow-sm\">Décliné</button>\r\n                            </div>\r\n                        </div>\r\n                        <!-- /.modal-content -->\r\n                    </div>\r\n                    <!-- /.modal-dialog -->\r\n                </div>\r\n                <!-- /.modal -->\r\n            @endif\r\n        </div>\r\n    @endif\r\n</div>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/livewire/stromae/start-delivery.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/livewire/stromae/start-delivery.blade.php	(date 1598154586951)
+@@ -25,12 +25,12 @@
+                     @enderror
+                 </div>
+                 <div class="form-group">
+-                    <button wire:click="$set('status', false)" class="btn btn-sm bg-gray-dark">Annuler</button>
+-                    <button wire:click="validate_order"  class="btn btn-sm bg-lime shadow-sm">Valider</button>
++                    <button wire:click="$set('status', false)" class="btn btn-block bg-gray-dark">Annuler</button>
++                    <button wire:click="validate_order"  class="btn btn-block bg-danger shadow-sm">Valider</button>
+                 </div>
+             @else
+-                <button data-toggle="modal" data-target="#modal" class="btn btn-sm bg-warning shadow-sm"><i class="fas fa-times"></i> Décliné</button>
+-                <button wire:click="$set('status', true)" class="ml-2 btn btn-sm bg-lime shadow-sm">livré <i class="fas fa-check"></i></button>
++                <button data-toggle="modal" data-target="#modal" class="btn btn-block bg-warning shadow-sm"><i class="fas fa-times"></i> Décliné</button>
++                <button wire:click="$set('status', true)" class="ml-2 btn btn-block bg-success shadow-sm">livré <i class="fas fa-check"></i></button>
+ 
+                 <div class="modal fade" id="modal">
+                     <div class="modal-dialog">
+@@ -45,8 +45,8 @@
+                                 <p>Etes-vous sûr de vouloir décliné cette livraison ?</p>
+                             </div>
+                             <div class="modal-footer">
+-                                <button type="button" class="btn btn-sm btn-dark shadow-sm" data-dismiss="modal">Non</button>
+-                                <button wire:click="decline_order" class="btn btn-sm bg-warning shadow-sm">Décliné</button>
++                                <button type="button" class="btn btn-block btn-dark shadow-sm" data-dismiss="modal">Non</button>
++                                <button wire:click="decline_order" class="btn btn-block bg-warning shadow-sm">Décliné</button>
+                             </div>
+                         </div>
+                         <!-- /.modal-content -->
+Index: app/Http/Controllers/Stromae/DeliveryController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Http\\Controllers\\Stromae;\r\n\r\nuse App\\Http\\Controllers\\Controller;\r\nuse Illuminate\\Http\\Request;\r\nuse Illuminate\\Support\\Facades\\Auth;\r\n\r\nclass DeliveryController extends Controller\r\n{\r\n    public function __construct()\r\n    {\r\n        $this->middleware('livreur');\r\n    }\r\n\r\n    public function order_summary(){\r\n        $order = Auth::user()->orders->whereIn('status_order', ['passed', 'in pending'])->last();\r\n        return view('stromae.delivery.order_summary', compact('order'));\r\n    }\r\n\r\n    public function history_delivery(){\r\n        $orders = Auth::user()->orders->whereIn('status_order', ['validated', 'declined']);\r\n        return view('stromae.delivery.delivery_history', compact('orders'));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Http/Controllers/Stromae/DeliveryController.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ app/Http/Controllers/Stromae/DeliveryController.php	(date 1598157019565)
+@@ -14,7 +14,7 @@
+     }
+ 
+     public function order_summary(){
+-        $order = Auth::user()->orders->whereIn('status_order', ['passed', 'in pending'])->last();
++        $order = Auth::user()->orders->whereIn('status_order', ['passed', 'in pending'])->first();
+         return view('stromae.delivery.order_summary', compact('order'));
+     }
+ 
+Index: doc project/movecore.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-- MySQL Script generated by MySQL Workbench\r\n-- Wed Aug 12 03:28:45 2020\r\n-- Model: New Model    Version: 1.0\r\n-- MySQL Workbench Forward Engineering\r\n\r\nSET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;\r\nSET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;\r\nSET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';\r\n\r\n-- -----------------------------------------------------\r\n-- Schema movecore\r\n-- -----------------------------------------------------\r\nDROP SCHEMA IF EXISTS `movecore` ;\r\n\r\n-- -----------------------------------------------------\r\n-- Schema movecore\r\n-- -----------------------------------------------------\r\nCREATE SCHEMA IF NOT EXISTS `movecore` DEFAULT CHARACTER SET utf8 ;\r\nUSE `movecore` ;\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`countries`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`countries` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NOT NULL,\r\n  `slug` VARCHAR(5) NULL,\r\n  PRIMARY KEY (`id`))\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`cities`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`cities` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(50) NOT NULL,\r\n  `slug` VARCHAR(5) NULL,\r\n  `countries_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_cities_countries1_idx` (`countries_id` ASC),\r\n  CONSTRAINT `fk_cities_countries1`\r\n    FOREIGN KEY (`countries_id`)\r\n    REFERENCES `movecore`.`countries` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`arrondissements`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`arrondissements` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NOT NULL,\r\n  `slug` VARCHAR(45) NULL,\r\n  `cities_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_arrondissements_cities_idx` (`cities_id` ASC),\r\n  CONSTRAINT `fk_arrondissements_cities`\r\n    FOREIGN KEY (`cities_id`)\r\n    REFERENCES `movecore`.`cities` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`quaters`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`quaters` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NULL,\r\n  `arrondissements_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_quaters_arrondissements1_idx` (`arrondissements_id` ASC),\r\n  CONSTRAINT `fk_quaters_arrondissements1`\r\n    FOREIGN KEY (`arrondissements_id`)\r\n    REFERENCES `movecore`.`arrondissements` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`roles`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`roles` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NULL,\r\n  `description` MEDIUMTEXT NULL,\r\n  PRIMARY KEY (`id`))\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`personals`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`personals` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NOT NULL,\r\n  `birth_date` DATE NULL,\r\n  `login` VARCHAR(45) NULL,\r\n  `password` VARCHAR(255) NULL,\r\n  `tel` VARCHAR(15) NULL,\r\n  `avatar` VARCHAR(255) NULL,\r\n  `roles_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_personals_roles1_idx` (`roles_id` ASC),\r\n  CONSTRAINT `fk_personals_roles1`\r\n    FOREIGN KEY (`roles_id`)\r\n    REFERENCES `movecore`.`roles` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`category_customers`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`category_customers` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NOT NULL,\r\n  `description` MEDIUMTEXT NULL,\r\n  `period` INT NOT NULL COMMENT 'Période ou nombre de jours pour relancer le client.',\r\n  PRIMARY KEY (`id`))\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`customers`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`customers` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `code` VARCHAR(45) NULL,\r\n  `name` VARCHAR(45) NULL,\r\n  `sex` CHAR(1) NULL,\r\n  `tel` VARCHAR(10) NULL,\r\n  `birthday` DATE NULL,\r\n  `sector` VARCHAR(45) NULL,\r\n  `particular_landmark` VARCHAR(45) NULL COMMENT 'Repère particulier',\r\n  `landmark` VARCHAR(45) NULL COMMENT 'repere',\r\n  `type_gaz` VARCHAR(45) NULL,\r\n  `quaters_id` INT NOT NULL,\r\n  `category_customers_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_customers_quaters1_idx` (`quaters_id` ASC),\r\n  UNIQUE INDEX `code_UNIQUE` (`code` ASC),\r\n  INDEX `fk_customers_category_customers1_idx` (`category_customers_id` ASC),\r\n  CONSTRAINT `fk_customers_quaters1`\r\n    FOREIGN KEY (`quaters_id`)\r\n    REFERENCES `movecore`.`quaters` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION,\r\n  CONSTRAINT `fk_customers_category_customers1`\r\n    FOREIGN KEY (`category_customers_id`)\r\n    REFERENCES `movecore`.`category_customers` (`id`)\r\n    ON DELETE NO ACTION\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`gaz`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`gaz` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `name` VARCHAR(45) NOT NULL,\r\n  `weight` VARCHAR(45) NOT NULL COMMENT 'Le poids du ',\r\n  `price` INT NULL,\r\n  PRIMARY KEY (`id`))\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`customer_gaz`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`customer_gaz` (\r\n  `id` INT NOT NULL AUTO_INCREMENT,\r\n  `customer_id` INT NOT NULL,\r\n  `gaz_id` INT NOT NULL,\r\n  `time_order` TIME NULL,\r\n  `date_order` DATE NULL,\r\n  `time_deliver` TIME NULL,\r\n  `status_order` VARCHAR(45) NULL,\r\n  `deliver_delay` VARCHAR(45) NULL COMMENT 'Différence entre time_ordre et  time_deliver',\r\n  `quantity` INT NULL,\r\n  `personals_id` INT NOT NULL,\r\n  INDEX `fk_customers_has_gaz_gaz1_idx` (`gaz_id` ASC),\r\n  INDEX `fk_customers_has_gaz_customers1_idx` (`customer_id` ASC),\r\n  INDEX `fk_customer_gaz_personals1_idx` (`personals_id` ASC),\r\n  PRIMARY KEY (`id`, `customer_id`, `gaz_id`),\r\n  CONSTRAINT `fk_customers_has_gaz_customers1`\r\n    FOREIGN KEY (`customer_id`)\r\n    REFERENCES `movecore`.`customers` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION,\r\n  CONSTRAINT `fk_customers_has_gaz_gaz1`\r\n    FOREIGN KEY (`gaz_id`)\r\n    REFERENCES `movecore`.`gaz` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION,\r\n  CONSTRAINT `fk_customer_gaz_personals1`\r\n    FOREIGN KEY (`personals_id`)\r\n    REFERENCES `movecore`.`personals` (`id`)\r\n    ON DELETE CASCADE\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\n-- -----------------------------------------------------\r\n-- Table `movecore`.`relauches`\r\n-- -----------------------------------------------------\r\nCREATE TABLE IF NOT EXISTS `movecore`.`relauches` (\r\n  `id` INT NOT NULL,\r\n  `statuts` VARCHAR(45) NULL,\r\n  `date` DATE NULL,\r\n  `date_reminder` DATE NULL,\r\n  `customer_gaz_id` INT NOT NULL,\r\n  `customer_gaz_customer_id` INT NOT NULL,\r\n  `customer_gaz_gaz_id` INT NOT NULL,\r\n  PRIMARY KEY (`id`),\r\n  INDEX `fk_relauches_customer_gaz1_idx` (`customer_gaz_id` ASC, `customer_gaz_customer_id` ASC, `customer_gaz_gaz_id` ASC),\r\n  CONSTRAINT `fk_relauches_customer_gaz1`\r\n    FOREIGN KEY (`customer_gaz_id` , `customer_gaz_customer_id` , `customer_gaz_gaz_id`)\r\n    REFERENCES `movecore`.`customer_gaz` (`id` , `customer_id` , `gaz_id`)\r\n    ON DELETE NO ACTION\r\n    ON UPDATE NO ACTION)\r\nENGINE = InnoDB;\r\n\r\n\r\nSET SQL_MODE=@OLD_SQL_MODE;\r\nSET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;\r\nSET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- doc project/movecore.sql	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ doc project/movecore.sql	(date 1598113922011)
+@@ -1,16 +1,15 @@
+ -- MySQL Script generated by MySQL Workbench
+--- Wed Aug 12 03:28:45 2020
++-- Sat Aug 22 16:38:00 2020
+ -- Model: New Model    Version: 1.0
+ -- MySQL Workbench Forward Engineering
+ 
+ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
++SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+ 
+ -- -----------------------------------------------------
+ -- Schema movecore
+ -- -----------------------------------------------------
+-DROP SCHEMA IF EXISTS `movecore` ;
+ 
+ -- -----------------------------------------------------
+ -- Schema movecore
+@@ -21,6 +20,8 @@
+ -- -----------------------------------------------------
+ -- Table `movecore`.`countries`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`countries` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`countries` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NOT NULL,
+@@ -32,13 +33,14 @@
+ -- -----------------------------------------------------
+ -- Table `movecore`.`cities`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`cities` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`cities` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(50) NOT NULL,
+   `slug` VARCHAR(5) NULL,
+   `countries_id` INT NOT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_cities_countries1_idx` (`countries_id` ASC),
+   CONSTRAINT `fk_cities_countries1`
+     FOREIGN KEY (`countries_id`)
+     REFERENCES `movecore`.`countries` (`id`)
+@@ -46,17 +48,20 @@
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_cities_countries1_idx` ON `movecore`.`cities` (`countries_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`arrondissements`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`arrondissements` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`arrondissements` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NOT NULL,
+-  `slug` VARCHAR(45) NULL,
++  `slug` VARCHAR(5) NULL,
+   `cities_id` INT NOT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_arrondissements_cities_idx` (`cities_id` ASC),
+   CONSTRAINT `fk_arrondissements_cities`
+     FOREIGN KEY (`cities_id`)
+     REFERENCES `movecore`.`cities` (`id`)
+@@ -64,16 +69,20 @@
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_arrondissements_cities_idx` ON `movecore`.`arrondissements` (`cities_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`quaters`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`quaters` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`quaters` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NULL,
++  `slug` VARCHAR(5) NULL,
+   `arrondissements_id` INT NOT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_quaters_arrondissements1_idx` (`arrondissements_id` ASC),
+   CONSTRAINT `fk_quaters_arrondissements1`
+     FOREIGN KEY (`arrondissements_id`)
+     REFERENCES `movecore`.`arrondissements` (`id`)
+@@ -81,14 +90,18 @@
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_quaters_arrondissements1_idx` ON `movecore`.`quaters` (`arrondissements_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`roles`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`roles` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`roles` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NULL,
+-  `description` MEDIUMTEXT NULL,
++  `description` TEXT NULL,
+   PRIMARY KEY (`id`))
+ ENGINE = InnoDB;
+ 
+@@ -96,6 +109,8 @@
+ -- -----------------------------------------------------
+ -- Table `movecore`.`personals`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`personals` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`personals` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NOT NULL,
+@@ -106,7 +121,6 @@
+   `avatar` VARCHAR(255) NULL,
+   `roles_id` INT NOT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_personals_roles1_idx` (`roles_id` ASC),
+   CONSTRAINT `fk_personals_roles1`
+     FOREIGN KEY (`roles_id`)
+     REFERENCES `movecore`.`roles` (`id`)
+@@ -114,14 +128,18 @@
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_personals_roles1_idx` ON `movecore`.`personals` (`roles_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`category_customers`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`category_customers` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`category_customers` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NOT NULL,
+-  `description` MEDIUMTEXT NULL,
++  `description` VARCHAR(255) NULL,
+   `period` INT NOT NULL COMMENT 'Période ou nombre de jours pour relancer le client.',
+   PRIMARY KEY (`id`))
+ ENGINE = InnoDB;
+@@ -130,23 +148,22 @@
+ -- -----------------------------------------------------
+ -- Table `movecore`.`customers`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`customers` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`customers` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `code` VARCHAR(45) NULL,
+   `name` VARCHAR(45) NULL,
+   `sex` CHAR(1) NULL,
+-  `tel` VARCHAR(10) NULL,
++  `tel` VARCHAR(100) NULL,
+   `birthday` DATE NULL,
+-  `sector` VARCHAR(45) NULL,
+-  `particular_landmark` VARCHAR(45) NULL COMMENT 'Repère particulier',
+-  `landmark` VARCHAR(45) NULL COMMENT 'repere',
+-  `type_gaz` VARCHAR(45) NULL,
++  `sector` VARCHAR(255) NULL COMMENT 'Secteur d’un quartier\n',
++  `particular_landmark` TEXT NULL COMMENT 'Repère particulier',
++  `landmark` VARCHAR(255) NULL COMMENT 'repere',
++  `type_gaz` VARCHAR(45) NULL COMMENT 'Gaz habituellement acheté\n',
+   `quaters_id` INT NOT NULL,
+   `category_customers_id` INT NOT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_customers_quaters1_idx` (`quaters_id` ASC),
+-  UNIQUE INDEX `code_UNIQUE` (`code` ASC),
+-  INDEX `fk_customers_category_customers1_idx` (`category_customers_id` ASC),
+   CONSTRAINT `fk_customers_quaters1`
+     FOREIGN KEY (`quaters_id`)
+     REFERENCES `movecore`.`quaters` (`id`)
+@@ -155,19 +172,29 @@
+   CONSTRAINT `fk_customers_category_customers1`
+     FOREIGN KEY (`category_customers_id`)
+     REFERENCES `movecore`.`category_customers` (`id`)
+-    ON DELETE NO ACTION
++    ON DELETE CASCADE
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_customers_quaters1_idx` ON `movecore`.`customers` (`quaters_id` ASC);
++
++CREATE UNIQUE INDEX `code_UNIQUE` ON `movecore`.`customers` (`code` ASC);
++
++CREATE INDEX `fk_customers_category_customers1_idx` ON `movecore`.`customers` (`category_customers_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`gaz`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`gaz` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`gaz` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(45) NOT NULL,
+-  `weight` VARCHAR(45) NOT NULL COMMENT 'Le poids du ',
++  `weight` FLOAT NOT NULL COMMENT 'Le poids du ',
+   `price` INT NULL,
++  `qty_stock` INT NULL COMMENT 'Quantité\n',
++  `price_buy` INT NULL,
+   PRIMARY KEY (`id`))
+ ENGINE = InnoDB;
+ 
+@@ -175,6 +202,8 @@
+ -- -----------------------------------------------------
+ -- Table `movecore`.`customer_gaz`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`customer_gaz` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`customer_gaz` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `customer_id` INT NOT NULL,
+@@ -182,13 +211,11 @@
+   `time_order` TIME NULL,
+   `date_order` DATE NULL,
+   `time_deliver` TIME NULL,
+-  `status_order` VARCHAR(45) NULL,
+-  `deliver_delay` VARCHAR(45) NULL COMMENT 'Différence entre time_ordre et  time_deliver',
++  `status_order` ENUM('passed', 'validated', 'declined', 'in pending') NULL,
++  `deliver_delay` INT NULL COMMENT 'Différence entre time_ordre et  time_deliver',
+   `quantity` INT NULL,
+-  `personals_id` INT NOT NULL,
+-  INDEX `fk_customers_has_gaz_gaz1_idx` (`gaz_id` ASC),
+-  INDEX `fk_customers_has_gaz_customers1_idx` (`customer_id` ASC),
+-  INDEX `fk_customer_gaz_personals1_idx` (`personals_id` ASC),
++  `type_order` ENUM('L', 'AAU') NULL COMMENT 'L=Livraison et \nAAU= Achat a la l’unité\n\n',
++  `personals_id` INT NULL,
+   PRIMARY KEY (`id`, `customer_id`, `gaz_id`),
+   CONSTRAINT `fk_customers_has_gaz_customers1`
+     FOREIGN KEY (`customer_id`)
+@@ -207,27 +234,37 @@
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_customers_has_gaz_gaz1_idx` ON `movecore`.`customer_gaz` (`gaz_id` ASC);
++
++CREATE INDEX `fk_customers_has_gaz_customers1_idx` ON `movecore`.`customer_gaz` (`customer_id` ASC);
++
++CREATE INDEX `fk_customer_gaz_personals1_idx` ON `movecore`.`customer_gaz` (`personals_id` ASC);
++
+ 
+ -- -----------------------------------------------------
+ -- Table `movecore`.`relauches`
+ -- -----------------------------------------------------
++DROP TABLE IF EXISTS `movecore`.`relauches` ;
++
+ CREATE TABLE IF NOT EXISTS `movecore`.`relauches` (
+   `id` INT NOT NULL,
+-  `statuts` VARCHAR(45) NULL,
++  `statuts` TINYINT NULL,
+   `date` DATE NULL,
+   `date_reminder` DATE NULL,
++  `observation` TEXT NULL,
+   `customer_gaz_id` INT NOT NULL,
+-  `customer_gaz_customer_id` INT NOT NULL,
+-  `customer_gaz_gaz_id` INT NOT NULL,
++  `customer_gaz_customer_id` INT NULL,
++  `customer_gaz_gaz_id` INT NULL,
+   PRIMARY KEY (`id`),
+-  INDEX `fk_relauches_customer_gaz1_idx` (`customer_gaz_id` ASC, `customer_gaz_customer_id` ASC, `customer_gaz_gaz_id` ASC),
+   CONSTRAINT `fk_relauches_customer_gaz1`
+     FOREIGN KEY (`customer_gaz_id` , `customer_gaz_customer_id` , `customer_gaz_gaz_id`)
+     REFERENCES `movecore`.`customer_gaz` (`id` , `customer_id` , `gaz_id`)
+-    ON DELETE NO ACTION
++    ON DELETE CASCADE
+     ON UPDATE NO ACTION)
+ ENGINE = InnoDB;
+ 
++CREATE INDEX `fk_relauches_customer_gaz1_idx` ON `movecore`.`relauches` (`customer_gaz_id` ASC, `customer_gaz_customer_id` ASC, `customer_gaz_gaz_id` ASC);
++
+ 
+ SET SQL_MODE=@OLD_SQL_MODE;
+ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+Index: resources/views/layouts/partials/sidebar.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n    <!-- Brand Logo -->\r\n    <a href=\"#\" class=\"brand-link\">\r\n        <img src=\"/master/dist/img/AdminLTELogo.png\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">\r\n        <span class=\"brand-text font-weight-light\">MOVeCore</span>\r\n    </a>\r\n\r\n    <!-- Sidebar -->\r\n    <div class=\"sidebar\">\r\n        <!-- Sidebar user panel (optional) -->\r\n        <div class=\"user-panel mt-3 pb-3 mb-3 d-flex\">\r\n            <div class=\"image\">\r\n                <img src=\"{{ !empty(Auth::user()->avatar) ? Auth::user()->avatar : '/master/dist/img/avatar4.png' }}\"\r\n                     alt=\"{{ Auth::user()->name }} profile picture\" class=\"img-circle elevation-2\">\r\n            </div>\r\n            <div class=\"info\">\r\n                <a href=\"{{ route('profile') }}\" class=\"d-block\">{{ Auth::user()->name ??' Admin'}}</a>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- SidebarSearch Form -->\r\n        <div class=\"form-inline\">\r\n            <div class=\"input-group\" data-widget=\"sidebar-search\">\r\n                <input class=\"form-control form-control-sidebar\" type=\"search\" placeholder=\"Recherche\" aria-label=\"Recherche\">\r\n                <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-sidebar\">\r\n                        <i class=\"fas fa-search fa-fw\"></i>\r\n                    </button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Sidebar Menu -->\r\n        <nav class=\"mt-2\">\r\n            <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">\r\n                <!-- Add icons to the links using the .nav-icon class\r\n                     with font-awesome or any other icon font library :::: menu-open -->\r\n                @if(Gate::allows('view-dashboard'))\r\n                    <li class=\"nav-item \">\r\n                    <a href=\"{{route('dashboard')}}\" class=\"nav-link {{$home ?? ''}}\">\r\n                        <i class=\"nav-icon fas fa-tachometer-alt\"></i   >\r\n                        <p>\r\n                            Dashboard\r\n                        </p>\r\n                    </a>\r\n                </li>\r\n                @endif\r\n\r\n                @if(Gate::any(['view-orderAndClient', 'view-configAndPersonal']))\r\n                    <li class=\"nav-item {{$menu_order ?? ''}}\">\r\n                        <a href=\"{{route('order.index')}}\" class=\"nav-link {{$order?? ''}}\">\r\n                            <i class=\"nav-icon fas fa-list\"></i>\r\n                            <p>\r\n                                Commandes\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('order.index') }}\" class=\"nav-link {{$orderindex ?? ''}}\">\r\n    {{--                                <i class=\"far fa-circle nav-icon\"></i>--}}\r\n                                    <p>Commandes</p>\r\n                                </a>\r\n                            </li>\r\n                            <div class=\"dropdown-divider\"></div>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{route('order.search')}}\" class=\"nav-link {{$ordersearch ?? ''}}\">\r\n    {{--                                <i class=\"far fa-circle nav-icon\"></i>--}}\r\n                                    <p>Nouvelle Commande</p>\r\n                                </a>\r\n                            </li>\r\n\r\n                        </ul>\r\n\r\n\r\n                    </li>\r\n                    <li class=\"nav-item {{$menu_client ?? ''}}\" >\r\n                    <a href=\"#\" class=\"nav-link {{$client ?? ''}}\">\r\n                        <i class=\"nav-icon fas fa-users\"></i>\r\n                        <p>\r\n                            Clients\r\n                            <i class=\"fas fa-angle-left right\"></i>\r\n                        </p>\r\n                    </a>\r\n                    <ul class=\"nav nav-treeview\">\r\n                        <li class=\"nav-item\">\r\n                            <a href=\"{{ route('category.index') }}\" class=\"nav-link {{$category ?? ''}}\">\r\n                                <p>Categories</p>\r\n                            </a>\r\n                        </li>\r\n                        <div class=\"dropdown-divider\"></div>\r\n\r\n                        <li class=\"nav-item\">\r\n                            <a href=\"{{ route('client.index') }}\" class=\"nav-link {{$client_list ?? ''}}\">\r\n                                <p>Tous les Clients</p>\r\n                            </a>\r\n                        </li>\r\n\r\n                    </ul>\r\n\r\n                </li>\r\n                @endif\r\n\r\n                @if(Gate::allows('view-configAndPersonal'))\r\n                    <li class=\"nav-item\">\r\n                        <a href=\"#\" class=\"nav-link {{$config ?? ''}}\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Configuration\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('gaz.index') }}\" class=\"nav-link {{$gaz ?? ''}}\">\r\n                                    <p>Bouteilles de gaz</p>\r\n                                </a>\r\n                            </li>\r\n                            <div class=\"dropdown-divider\"></div>\r\n\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('country.index') }}\" class=\"nav-link\">\r\n                                    <p>Pays</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('city.index') }}\" class=\"nav-link {{$city ?? ''}}\">\r\n                                    <p>Villes</p>\r\n                                </a>\r\n                            </li>\r\n\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('arrondissement.index') }}\" class=\"nav-link {{$arrondissement ?? ''}}\">\r\n                                    <p>Arrondissements</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('quarter.index') }}\" class=\"nav-link {{$quater ?? ''}}\">\r\n                                    <p>Quartiers</p>\r\n                                </a>\r\n                            </li>\r\n                            <div class=\"dropdown-divider\"></div>\r\n\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"{{ route('role.index') }}\" class=\"nav-link {{$role ?? ''}}\">\r\n                                    <p>Roles</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <a href=\"{{ route('personal.index') }}\" class=\"nav-link {{$personal ?? ''}}\">\r\n                            <i class=\"nav-icon fas fa-user-cog\"></i>\r\n                            <p>\r\n                                Personnels\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                @endif\r\n\r\n                @if(Gate::allows('view-grc'))\r\n                    <li class=\"nav-item\">\r\n                        <a href=\"{{ route('customer_relation') }}\" class=\"nav-link {{$customer_relation ?? ''}}\">\r\n                            <i class=\"nav-icon fas fa-child\"></i>\r\n                            <p>\r\n                                Relation client\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                @endif\r\n\r\n                @if(Gate::allows('view-delivery'))\r\n                    <li class=\"nav-item\">\r\n                    <a href=\"#\" class=\"nav-link {{$delivery ?? ''}}\">\r\n                        <i class=\"nav-icon fas fas fa-th-list\"></i>\r\n                        <p>\r\n                            Livraison\r\n                            <i class=\"fas fa-angle-left right\"></i>\r\n                        </p>\r\n                    </a>\r\n\r\n                    <ul class=\"nav nav-treeview\">\r\n                        <li class=\"nav-item\">\r\n                            <a href=\"{{ route('delivery.order_summary') }}\" class=\"nav-link {{$order_summary ?? ''}}\">\r\n                                <p>Livraison en cours</p>\r\n                            </a>\r\n                        </li>\r\n                        <div class=\"dropdown-divider\"></div>\r\n\r\n                        <li class=\"nav-item\">\r\n                            <a href=\"{{ route('delivery.history_delivery') }}\" class=\"nav-link {{ $delivery_history ?? '' }}\">\r\n                                <p>Historique livraison</p>\r\n                            </a>\r\n                        </li>\r\n                        <div class=\"dropdown-divider\"></div>\r\n                    </ul>\r\n                </li>\r\n                @endif\r\n            </ul>\r\n        </nav>\r\n        <!-- /.sidebar-menu -->\r\n    </div>\r\n    <!-- /.sidebar -->\r\n</aside>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/layouts/partials/sidebar.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/layouts/partials/sidebar.blade.php	(date 1598153876341)
+@@ -10,7 +10,7 @@
+         <!-- Sidebar user panel (optional) -->
+         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+             <div class="image">
+-                <img src="{{ !empty(Auth::user()->avatar) ? Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
++                <img src="{{ !empty(Auth::user()->avatar) ? asset('storage') . '/images/avatars/' .Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
+                      alt="{{ Auth::user()->name }} profile picture" class="img-circle elevation-2">
+             </div>
+             <div class="info">
+Index: app/helpers/stromae_helper.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse App\\Customer;\r\nuse App\\Order;\r\n\r\nif(!function_exists('generatePassword')){\r\n    /**\r\n     * Genere un mot de passe aléatoirement\r\n     * @param int $lenght\r\n     * @return string\r\n     */\r\n    function generatePassword(int $lenght = 8):string {\r\n        $chars = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\";\r\n        $count = mb_strlen($chars);\r\n\r\n        for ($i=0, $result=\"\"; $i < $lenght; $i++){\r\n            $index = rand(0, $count-1);\r\n            $result .= mb_substr($chars, $index, 1);\r\n        }\r\n\r\n        return $result;\r\n    }\r\n}\r\n\r\nif(!function_exists('date_relance')){\r\n    /**\r\n     * Détermine la date de relance d'un client\r\n     * @param $date : date de commande du gaz\r\n     * @param int $nbrMois : nombre de mois d'expiration de gaz\r\n     * @return false|string\r\n     */\r\n    function date_relance($date, int $nbrMois){\r\n        $unJour = 3600*24;\r\n\r\n        $nbrJr = number_days($nbrMois) - 3; //on relance 3 jours avant la date d'expiration de gaz\r\n\r\n        $ts = strtotime($date);\r\n        $ts += $nbrJr*$unJour;\r\n\r\n        return date('Y-m-d', $ts);\r\n    }\r\n}\r\n\r\nif (!function_exists('delai_livraison')){\r\n    function delai_livraison($order_hour, $delivery_hour):string {\r\n        $result = '';\r\n\r\n        if (!is_null($delivery_hour)){\r\n            $order_hour = date_create_from_format('H:i:s', $order_hour);\r\n            $delivery_hour = date_create_from_format('H:i:s', $delivery_hour);\r\n            $result = date_diff($delivery_hour, $order_hour)->format('%h:%i').' min';\r\n        }\r\n\r\n        return $result;\r\n    }\r\n}\r\n\r\nif(!function_exists('number_days')){\r\n    /**\r\n     * Détermine le nombre de jours en fonction du nombre de mois\r\n     * @param int $number_months\r\n     * @return int\r\n     */\r\n    function number_days(int $number_months):int {\r\n        return 30*$number_months;\r\n    }\r\n}\r\n\r\nif (!function_exists('civilite')){\r\n    /**\r\n     * @param Customer $customer\r\n     * @return string\r\n     */\r\n    function civilite(Customer $customer):string {\r\n        return ($customer->sexe === 'F') ? 'Mme' : 'Mr';\r\n    }\r\n}\r\n\r\nif (!function_exists('timing')){\r\n    /**\r\n     * détermine si la date de relance prévue est proche de celle actuelle\r\n     * @param $date_relance\r\n     * @return string\r\n     */\r\n    function timing($date_relance):string {\r\n        $status = '';\r\n        if ($date_relance > date('Y-m-d')){\r\n            $status = 'success';\r\n        }else {\r\n            $status = 'danger';\r\n        }\r\n\r\n        return $status;\r\n    }\r\n}\r\n\r\nif (!function_exists('birthday_status')){\r\n    function birthday_status($birthday):string{\r\n        $result = false;\r\n\r\n        if (DateTime::createFromFormat('Y-m-d', $birthday)->format('M:d') === date('M:d'))\r\n            $result = true;\r\n\r\n        return $result;\r\n    }\r\n}\r\n\r\nif (!function_exists('exist_relauch')){\r\n    function exist_relauch(int $gaz_id){\r\n        return \\App\\Relauch::where('customer_gaz_id', $gaz_id)->first();\r\n    }\r\n}\r\n\r\nif(!function_exists('subtotal')){\r\n    function subtotal(Order $order):int {\r\n        return $order->quantity * $order->gaz->price;\r\n    }\r\n}\r\n\r\nif (!function_exists('total')){\r\n    function total(Order $order):int {\r\n        return $total = subtotal($order) + 500;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/helpers/stromae_helper.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ app/helpers/stromae_helper.php	(date 1598155725194)
+@@ -117,8 +117,33 @@
+     }
+ }
+ 
++if (!function_exists('delivery_cost')){
++    function delivery_cost(Order $order):int {
++        return $order->quantity * 500;
++    }
++}
++
+ if (!function_exists('total')){
+     function total(Order $order):int {
+-        return $total = subtotal($order) + 500;
++        return $total = subtotal($order) + delivery_cost($order);
++    }
++}
++
++if(!function_exists('addZero')){
++    function addZero($number){
++
++        switch (strlen($number)){
++            case 1:
++                $number = "000".$number;
++                break;
++            case 2:
++                $number = "00".$number;
++                break;
++            case 3:
++                $number = "0".$number;
++                break;
++        }
++
++        return $number;
+     }
+ }
+\ No newline at end of file
+Index: resources/views/livewire/stromae/avatar-profile-user.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div>\r\n    <div class=\"text-center\">\r\n        <img class=\"profile-user-img img-fluid img-circle\"\r\n             src=\"{{ !empty(Auth::user()->avatar) ? Auth::user()->avatar : '/master/dist/img/avatar4.png' }}\"\r\n             alt=\"{{ Auth::user()->name }} profile picture\">\r\n    </div>\r\n\r\n    <h3 class=\"profile-username text-center\">{{ Auth::user()->name }}</h3>\r\n\r\n    <p class=\"text-muted text-center\">{{ Auth::user()->role->name }}</p>\r\n\r\n    <ul class=\"list-group list-group-unbordered mb-3\">\r\n        <li class=\"list-group-item\">\r\n            <b>Identifiant</b> <a class=\"float-right\">{{ Auth::user()->login }}</a>\r\n        </li>\r\n        <li class=\"list-group-item\">\r\n            <b>Numéro téléphone</b> <a class=\"float-right\">{{ '+237 '.Auth::user()->tel }}</a>\r\n        </li>\r\n        <li class=\"list-group-item\">\r\n            <b>Date Anniversaire</b> <a class=\"float-right\">{{ Auth::user()->birth_date }}</a>\r\n        </li>\r\n    </ul>\r\n\r\n    <form wire:submit.prevent=\"update_avatar_user\">\r\n        <label for=\"photo\">Modifier Avatar</label>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-3\">\r\n                @if ($avatar)\r\n                    <img class=\"shadow-sm img-fluid img-circle\" src=\"{{ $avatar->temporaryUrl() }}\" width=\"100\">\r\n                @endif\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n                <input wire:model=\"avatar\" type=\"file\" id=\"photo\"  class=\"@error('avatar') is-invalid @enderror mt-3 mb-3 form-control-file border-0\">\r\n                @error('avatar') <div class=\"invalid-feedback\">{{ $message }}</div> @enderror\r\n            </div>\r\n            <div class=\"col-md-3\">\r\n                <button type=\"submit\" class=\"btn btn-dark\">Valider</button>\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n                <div wire:loading wire:target=\"avatar\" class=\"text-blue\">Téléchargement image <i class=\"ml-2 fas fa-spinner fa-spin\"></i></div>\r\n            </div>\r\n        </div>\r\n    </form>\r\n</div>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/livewire/stromae/avatar-profile-user.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/livewire/stromae/avatar-profile-user.blade.php	(date 1598153954948)
+@@ -1,7 +1,7 @@
+ <div>
+     <div class="text-center">
+         <img class="profile-user-img img-fluid img-circle"
+-             src="{{ !empty(Auth::user()->avatar) ? Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
++             src="{{ !empty(Auth::user()->avatar) ? asset('storage') . '/images/avatars/' .Auth::user()->avatar : '/master/dist/img/avatar4.png' }}"
+              alt="{{ Auth::user()->name }} profile picture">
+     </div>
+ 
+@@ -24,16 +24,16 @@
+     <form wire:submit.prevent="update_avatar_user">
+         <label for="photo">Modifier Avatar</label>
+         <div class="row">
+-            <div class="col-md-3">
++            {{--<div class="col-md-3">
+                 @if ($avatar)
+                     <img class="shadow-sm img-fluid img-circle" src="{{ $avatar->temporaryUrl() }}" width="100">
+                 @endif
+-            </div>
++            </div>--}}
+             <div class="col-md-6">
+                 <input wire:model="avatar" type="file" id="photo"  class="@error('avatar') is-invalid @enderror mt-3 mb-3 form-control-file border-0">
+                 @error('avatar') <div class="invalid-feedback">{{ $message }}</div> @enderror
+             </div>
+-            <div class="col-md-3">
++            <div class="col-md-6">
+                 <button type="submit" class="btn btn-dark">Valider</button>
+             </div>
+             <div class="col-md-12">
+Index: resources/views/stromae/delivery/order_summary.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@extends('layouts.master', ['order_summary' => 'active', 'delivery' => 'active'])\r\n\r\n@section('title', 'Livraison')\r\n\r\n@section('content')\r\n    <section class=\"content\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-12\">\r\n                    @if($order)\r\n                        <!-- Main content -->\r\n                        <div class=\"invoice p-3 mb-3\">\r\n                            <!-- title row -->\r\n                            <div class=\"row\">\r\n                                <div class=\"col-12\">\r\n                                    <h4>\r\n                                        <i class=\"fas fa-globe\"></i> MOVe GLOBAL.\r\n                                        <small class=\"float-right\">Date: {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}</small>\r\n                                    </h4>\r\n                                </div>\r\n                                <!-- /.col -->\r\n                            </div>\r\n                            <!-- info row -->\r\n                            <div class=\"row invoice-info\">\r\n                                <div class=\"col-sm-6 col-md-4 invoice-col\">\r\n                                    Livreur\r\n                                    <address>\r\n                                        <strong>{{ Auth::user()->name }}.</strong><br>\r\n                                        {{--795 Folsom Ave, Suite 600<br>\r\n                                        San Francisco, CA 94107<br>\r\n                                        Phone: (804) 123-5432<br>\r\n                                        Email: info@almasaeedstudio.com--}}\r\n                                    </address>\r\n                                </div>\r\n                                <!-- /.col -->\r\n                                <div class=\"col-sm-6 col-md-4 invoice-col\">\r\n                                    Client\r\n                                    <address>\r\n                                        <strong>{{ $order->customer->name }}</strong><br>\r\n                                        {{ $order->customer->quarter->arrondissement->city->name }}, {{ $order->customer->quarter->arrondissement->slug }}<br>\r\n                                        {{ $order->customer->quarter->name }}<br>\r\n                                        Téléphone: (237) {{ $order->customer->tel }}<br>\r\n                                    </address>\r\n                                </div>\r\n                                <!-- /.col -->\r\n                                <div class=\"col-sm-12 col-md-4 invoice-col\">\r\n                                    <b>Facture #007612</b><br>\r\n                                    <b>ID Commande :</b> 4F3S8J<br>\r\n                                    <b>Date Paiement :</b> {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}<br>\r\n                                    <b>Code Maison :</b> {{ $order->customer->code }}\r\n                                </div>\r\n                                <!-- /.col -->\r\n                            </div>\r\n                            <!-- /.row -->\r\n\r\n                            <!-- Table row -->\r\n                            <div class=\"row mt-3\">\r\n                                <div class=\"col-12 table-responsive\">\r\n                                    <table class=\"table table-striped\">\r\n                                        <thead>\r\n                                        <tr>\r\n                                            <th>Qte</th>\r\n                                            <th>Gaz</th>\r\n                                            <th>poids</th>\r\n                                            <th>Sous-total</th>\r\n                                        </tr>\r\n                                        </thead>\r\n                                        <tbody>\r\n                                        <tr>\r\n                                            <td>{{ $order->quantity }}</td>\r\n                                            <td>{{ $order->gaz->name }}</td>\r\n                                            <td>{{ number_format($order->gaz->weight, 1).' Kg' }}</td>\r\n                                            <td>{{ number_format(subtotal($order),  0, '.', ' ').' FCFA' }}</td>\r\n                                        </tr>\r\n                                        </tbody>\r\n                                    </table>\r\n                                </div>\r\n                                <!-- /.col -->\r\n                            </div>\r\n                            <!-- /.row -->\r\n\r\n                            <div class=\"row\">\r\n                                <!-- /.col -->\r\n                                <div class=\"col-md-12\">\r\n                                    <p class=\"lead\">Total</p>\r\n\r\n                                    <div class=\"table-responsive\">\r\n                                        <table class=\"table\">\r\n                                            <tr>\r\n                                                <th style=\"width:50%\">Sous-total:</th>\r\n                                                <td class=\"font-weight-bold text-right\">{{ number_format(subtotal($order),  0, '.', ' ') }} FCFA</td>\r\n                                            </tr>\r\n                                            <tr>\r\n                                                <th>Frais de livraison:</th>\r\n                                                <td class=\"font-weight-bold text-right\">{{ number_format(500,  0, '.', ' ') }} FCFA</td>\r\n                                            </tr>\r\n                                            <tr>\r\n                                                <th>Total:</th>\r\n                                                <td class=\"font-weight-bold text-right\">{{ number_format((total($order)),  0, '.', ' ') }} FCFA</td>\r\n                                            </tr>\r\n                                        </table>\r\n                                    </div>\r\n                                </div>\r\n                                <!-- /.col -->\r\n                            </div>\r\n                            <!-- /.row -->\r\n\r\n                            <!-- this row will not appear when printing -->\r\n                            <div class=\"row no-print mt-5 mb-3\">\r\n                                <div class=\"col-12 mx-auto text-center\">\r\n                                    @livewire('stromae.start-delivery', ['id_order' => $order->id])\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <!-- /.invoice -->\r\n                    @else\r\n                        <div class=\"mt-5 text-center\">\r\n                            <h2 class=\"headline text-maroon\"> <i class=\"fas fa-3x fa-bell-slash\"></i></h2>\r\n                            <h3 class=\"headline text-maroon\">Livraison non disponible.</h3>\r\n                            <p>\r\n                                Aucune livraison ne vous a été attribuée pour le moment. <br>\r\n                                Veuillez patienter qu'une commande soit emise.\r\n                                <br>\r\n                            </p>\r\n                        </div>\r\n                        <!-- /.error_page -->\r\n                    @endif\r\n                </div>\r\n            </div><!-- /.row -->\r\n        </div><!-- /.container-fluid -->\r\n    </section>\r\n    <!-- /.content -->\r\n@endsection
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/stromae/delivery/order_summary.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/stromae/delivery/order_summary.blade.php	(date 1598155776333)
+@@ -38,14 +38,16 @@
+                                     <address>
+                                         <strong>{{ $order->customer->name }}</strong><br>
+                                         {{ $order->customer->quarter->arrondissement->city->name }}, {{ $order->customer->quarter->arrondissement->slug }}<br>
+-                                        {{ $order->customer->quarter->name }}<br>
++                                        {{ $order->customer->quarter->name }}, {{ $order->customer->quarter->sector }}<br>
++                                        {{ $order->customer->quarter->landmark }}<br>
++                                        {{ $order->customer->quarter->particular_landmark }}<br>
+                                         Téléphone: (237) {{ $order->customer->tel }}<br>
+                                     </address>
+                                 </div>
+                                 <!-- /.col -->
+                                 <div class="col-sm-12 col-md-4 invoice-col">
+-                                    <b>Facture #007612</b><br>
+-                                    <b>ID Commande :</b> 4F3S8J<br>
++                                    <b>Code Maison {{ $order->customer->code }}</b><br>
++                                    <b>ID Commande :</b> {{ '#'.addZero($order->id) }}<br>
+                                     <b>Date Paiement :</b> {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}<br>
+                                     <b>Code Maison :</b> {{ $order->customer->code }}
+                                 </div>
+@@ -92,7 +94,7 @@
+                                             </tr>
+                                             <tr>
+                                                 <th>Frais de livraison:</th>
+-                                                <td class="font-weight-bold text-right">{{ number_format(500,  0, '.', ' ') }} FCFA</td>
++                                                <td class="font-weight-bold text-right">{{ number_format(delivery_cost($order),  0, '.', ' ') }} FCFA</td>
+                                             </tr>
+                                             <tr>
+                                                 <th>Total:</th>
+Index: app/Http/Livewire/Stromae/AvatarProfileUser.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Http\\Livewire\\Stromae;\r\n\r\nuse Illuminate\\Support\\Facades\\Auth;\r\nuse Illuminate\\Support\\Facades\\File;\r\nuse Illuminate\\Support\\Facades\\Storage;\r\nuse Livewire\\Component;\r\nuse Livewire\\WithFileUploads;\r\n\r\nclass AvatarProfileUser extends Component\r\n{\r\n    use WithFileUploads;\r\n\r\n    public $avatar;\r\n\r\n    public function update_avatar_user(){\r\n        $this->validate([\r\n            'avatar' => 'image|mimes:jpg,jpeg,png|max:1024', // 1MB Max\r\n        ]);\r\n\r\n        dd($this->avatar);\r\n        $filename = 'avatar-'.rand(0, 10000).'-'.date('Y-m-d');\r\n        Storage::putFile('avatars', new File('/images/avatars/'.$filename), $filename);\r\n\r\n        $user = Auth::user();\r\n        $user->avatar = 'images/avatar/'.$filename;\r\n        $user->save();\r\n\r\n        //unset($this->avatar);\r\n\r\n        return redirect()->route('profile');\r\n    }\r\n\r\n    public function render()\r\n    {\r\n        return view('livewire.stromae.avatar-profile-user');\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Http/Livewire/Stromae/AvatarProfileUser.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ app/Http/Livewire/Stromae/AvatarProfileUser.php	(date 1598012447994)
+@@ -2,6 +2,7 @@
+ 
+ namespace App\Http\Livewire\Stromae;
+ 
++use Carbon\Carbon;
+ use Illuminate\Support\Facades\Auth;
+ use Illuminate\Support\Facades\File;
+ use Illuminate\Support\Facades\Storage;
+@@ -19,12 +20,14 @@
+             'avatar' => 'image|mimes:jpg,jpeg,png|max:1024', // 1MB Max
+         ]);
+ 
+-        dd($this->avatar);
+-        $filename = 'avatar-'.rand(0, 10000).'-'.date('Y-m-d');
+-        Storage::putFile('avatars', new File('/images/avatars/'.$filename), $filename);
++        $image = $this->avatar;
++        //dd($image);
++        $currentDate = Carbon::now()->toDateString();
++        $imagename =  'avatar-'. $currentDate .'-'. uniqid() .'.'. $image->getClientOriginalExtension();
++        $image->storeAs('public/images/avatars', $imagename);
+ 
+         $user = Auth::user();
+-        $user->avatar = 'images/avatar/'.$filename;
++        $user->avatar = $imagename;
+         $user->save();
+ 
+         //unset($this->avatar);
+Index: resources/views/stromae/invoices/invoice.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@extends('layouts.master')\r\n\r\n@section('title', 'Facture')\r\n\r\n@section('content')\r\n    <!-- Content Header (Page header) -->\r\n    <section class=\"content-header\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row mb-2\">\r\n                <div class=\"col-sm-6\">\r\n                    <h1>Invoice</h1>\r\n                </div>\r\n                <div class=\"col-sm-6\">\r\n                    <ol class=\"breadcrumb float-sm-right\">\r\n                        {{ Breadcrumbs::render('invoice') }}\r\n                    </ol>\r\n                </div>\r\n            </div>\r\n        </div><!-- /.container-fluid -->\r\n    </section>\r\n\r\n    <section class=\"content\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-12\">\r\n                    <!-- Main content -->\r\n                    <div class=\"invoice p-3 mb-3\">\r\n                        <!-- title row -->\r\n                        <div class=\"row\">\r\n                            <div class=\"col-12\">\r\n                                <h4>\r\n                                    <i class=\"fas fa-globe\"></i> MOVe GLOBAL.\r\n                                    <small class=\"float-right\">Date: {{ date('d/m/Y') }}</small>\r\n                                </h4>\r\n                            </div>\r\n                            <!-- /.col -->\r\n                        </div>\r\n                        <!-- info row -->\r\n                        <div class=\"row invoice-info mt-4\">\r\n                            <div class=\"col-sm-4 invoice-col\">\r\n                                Client\r\n                                <address>\r\n                                    <strong>{{ $order->customer->name }}</strong><br>\r\n                                    {{ $order->customer->quarter->arrondissement->city->name }}, {{ $order->customer->quarter->arrondissement->slug }}<br>\r\n                                    {{ $order->customer->quarter->name }}<br>\r\n                                    Téléphone: (237) {{ $order->customer->tel }}<br>\r\n                                </address>\r\n                            </div>\r\n                            <!-- /.col -->\r\n                            <div class=\"col-sm-4 invoice-col\">\r\n                                <b>Facture #007612</b><br>\r\n                                <br>\r\n                                <b>ID Commande :</b> 4F3S8J<br>\r\n                                <b>Date Paiement :</b> {{ date('d/m/Y') }}<br>\r\n                                <b>Code Maison :</b> {{ $order->customer->code }}\r\n                            </div>\r\n                            <!-- /.col -->\r\n                        </div>\r\n                        <!-- /.row -->\r\n\r\n                        <!-- Table row -->\r\n                        <div class=\"row\">\r\n                            <div class=\"col-12 table-responsive\">\r\n                                <table class=\"table table-striped\">\r\n                                    <thead>\r\n                                    <tr>\r\n                                        <th>Qte</th>\r\n                                        <th>Gaz</th>\r\n                                        <th>poids</th>\r\n                                        <th>Description</th>\r\n                                        <th>Sous-total</th>\r\n                                    </tr>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td>{{ $order->quantity }}</td>\r\n                                            <td>{{ $order->gaz->name }}</td>\r\n                                            <td>{{ number_format($order->gaz->weight, 1).' Kg' }}</td>\r\n                                            <td>El snort testosterone trophy driving gloves handsome</td>\r\n                                            <td>{{ number_format(subtotal($order),  0, '.', ' ').' FCFA' }}</td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>\r\n                            </div>\r\n                            <!-- /.col -->\r\n                        </div>\r\n                        <!-- /.row -->\r\n\r\n                        <div class=\"row\">\r\n                            <!-- accepted payments column -->\r\n                            <div class=\"col-6\">\r\n                                <p class=\"lead\">Méthode Paiement :</p>\r\n                                <img src=\"/master/dist/img/credit/visa.png\" alt=\"Visa\">\r\n                                <img src=\"/master/dist/img/credit/mastercard.png\" alt=\"Mastercard\">\r\n                                <img src=\"/master/dist/img/credit/american-express.png\" alt=\"American Express\">\r\n                                <img src=\"/master/dist/img/credit/paypal2.png\" alt=\"Paypal\">\r\n\r\n                                <p class=\"text-muted well well-sm shadow-none\" style=\"margin-top: 10px;\">\r\n                                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem\r\n                                    plugg\r\n                                    dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.\r\n                                </p>\r\n                            </div>\r\n                            <!-- /.col -->\r\n                            <div class=\"col-6\">\r\n                                <p class=\"lead\">Total</p>\r\n\r\n                                <div class=\"table-responsive\">\r\n                                    <table class=\"table\">\r\n                                        <tr>\r\n                                            <th style=\"width:50%\">Sous-total:</th>\r\n                                            <td>{{ number_format(total($order),  0, '.', ' ') }}</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <th>Frais de livraison:</th>\r\n                                            <td>{{ number_format(500,  0, '.', ' ') }}</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <th>Total:</th>\r\n                                            <td>{{ number_format((total($order) + 500),  0, '.', ' ') }}</td>\r\n                                        </tr>\r\n                                    </table>\r\n                                </div>\r\n                            </div>\r\n                            <!-- /.col -->\r\n                        </div>\r\n                        <!-- /.row -->\r\n                        <hr style=\"border: 1px dashed black\">\r\n                    </div>\r\n                    <!-- /.invoice -->\r\n\r\n                </div><!-- /.col -->\r\n            </div><!-- /.row -->\r\n        </div><!-- /.container-fluid -->\r\n    </section>\r\n    <!-- /.content -->\r\n@endsection\r\n\r\n@push('js')\r\n    <script>\r\n        window.addEventListener(\"load\", window.print());\r\n    </script>\r\n@endpush
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/stromae/invoices/invoice.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/stromae/invoices/invoice.blade.php	(date 1598156630264)
+@@ -1,6 +1,6 @@
+ @extends('layouts.master')
+ 
+-@section('title', 'Facture')
++@section('title', 'Facture-'.addZero($order->id))
+ 
+ @section('content')
+     <!-- Content Header (Page header) -->
+@@ -8,7 +8,7 @@
+         <div class="container-fluid">
+             <div class="row mb-2">
+                 <div class="col-sm-6">
+-                    <h1>Invoice</h1>
++                    <h1>Facture {{ '#'.addZero($order->id) }}</h1>
+                 </div>
+                 <div class="col-sm-6">
+                     <ol class="breadcrumb float-sm-right">
+@@ -30,28 +30,29 @@
+                             <div class="col-12">
+                                 <h4>
+                                     <i class="fas fa-globe"></i> MOVe GLOBAL.
+-                                    <small class="float-right">Date: {{ date('d/m/Y') }}</small>
++                                    <small class="float-right">Date: {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}</small>
+                                 </h4>
+                             </div>
+                             <!-- /.col -->
+                         </div>
+                         <!-- info row -->
+                         <div class="row invoice-info mt-4">
+-                            <div class="col-sm-4 invoice-col">
++                            <div class="col-sm-6 col-md-4 invoice-col">
+                                 Client
+                                 <address>
+                                     <strong>{{ $order->customer->name }}</strong><br>
+                                     {{ $order->customer->quarter->arrondissement->city->name }}, {{ $order->customer->quarter->arrondissement->slug }}<br>
+-                                    {{ $order->customer->quarter->name }}<br>
++                                    {{ $order->customer->quarter->name }}, {{ $order->customer->quarter->sector }}<br>
++                                    {{ $order->customer->quarter->landmark }}<br>
++                                    {{ $order->customer->quarter->particular_landmark }}<br>
+                                     Téléphone: (237) {{ $order->customer->tel }}<br>
+                                 </address>
+                             </div>
+                             <!-- /.col -->
+-                            <div class="col-sm-4 invoice-col">
+-                                <b>Facture #007612</b><br>
+-                                <br>
+-                                <b>ID Commande :</b> 4F3S8J<br>
+-                                <b>Date Paiement :</b> {{ date('d/m/Y') }}<br>
++                            <div class="col-sm-12 col-md-4 invoice-col">
++                                <b>Code Maison {{ $order->customer->code }}</b><br>
++                                <b>ID Commande :</b> {{ '#'.addZero($order->id) }}<br>
++                                <b>Date Paiement :</b> {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}<br>
+                                 <b>Code Maison :</b> {{ $order->customer->code }}
+                             </div>
+                             <!-- /.col -->
+@@ -67,7 +68,6 @@
+                                         <th>Qte</th>
+                                         <th>Gaz</th>
+                                         <th>poids</th>
+-                                        <th>Description</th>
+                                         <th>Sous-total</th>
+                                     </tr>
+                                     </thead>
+@@ -76,7 +76,6 @@
+                                             <td>{{ $order->quantity }}</td>
+                                             <td>{{ $order->gaz->name }}</td>
+                                             <td>{{ number_format($order->gaz->weight, 1).' Kg' }}</td>
+-                                            <td>El snort testosterone trophy driving gloves handsome</td>
+                                             <td>{{ number_format(subtotal($order),  0, '.', ' ').' FCFA' }}</td>
+                                         </tr>
+                                     </tbody>
+@@ -89,17 +88,16 @@
+                         <div class="row">
+                             <!-- accepted payments column -->
+                             <div class="col-6">
+-                                <p class="lead">Méthode Paiement :</p>
+-                                <img src="/master/dist/img/credit/visa.png" alt="Visa">
+-                                <img src="/master/dist/img/credit/mastercard.png" alt="Mastercard">
+-                                <img src="/master/dist/img/credit/american-express.png" alt="American Express">
+-                                <img src="/master/dist/img/credit/paypal2.png" alt="Paypal">
++                                <p class="lead">Méthode Paiement Disponible :</p>
++                                <img src="/master/dist/img/credit/cash.jpg" alt="cash" width="51" height="32">
++                                <img src="/master/dist/img/credit/mtn.jpg" alt="MTN Mobile Money" width="51" height="32">
++                                <img src="/master/dist/img/credit/orange.jpg" alt="Orange Money" width="51" height="32">
+ 
+-                                <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
++                                {{--<p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                     Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem
+                                     plugg
+                                     dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+-                                </p>
++                                </p>--}}
+                             </div>
+                             <!-- /.col -->
+                             <div class="col-6">
+@@ -109,15 +107,15 @@
+                                     <table class="table">
+                                         <tr>
+                                             <th style="width:50%">Sous-total:</th>
+-                                            <td>{{ number_format(total($order),  0, '.', ' ') }}</td>
++                                            <td class="font-weight-bold text-right">{{ number_format(subtotal($order),  0, '.', ' ') }} FCFA</td>
+                                         </tr>
+                                         <tr>
+                                             <th>Frais de livraison:</th>
+-                                            <td>{{ number_format(500,  0, '.', ' ') }}</td>
++                                            <td class="font-weight-bold text-right">{{ number_format(delivery_cost($order),  0, '.', ' ') }} FCFA</td>
+                                         </tr>
+                                         <tr>
+                                             <th>Total:</th>
+-                                            <td>{{ number_format((total($order) + 500),  0, '.', ' ') }}</td>
++                                            <td class="font-weight-bold text-right">{{ number_format((total($order)),  0, '.', ' ') }} FCFA</td>
+                                         </tr>
+                                     </table>
+                                 </div>
+Index: database/seeds/GazSeeder.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Database\\Seeder;\r\n\r\nclass GazSeeder extends Seeder\r\n{\r\n    /**\r\n     * Run the database seeds.\r\n     *\r\n     * @return void\r\n     */\r\n    public function run()\r\n    {\r\n        \\App\\Gaz::insert([\r\n            [\r\n                'name' => 'Total',\r\n                'weight' => 12.5,\r\n                'price' => 3500\r\n            ],\r\n            [\r\n                'name' => 'Tradex',\r\n                'weight' => 21.4,\r\n                'price' => 6500\r\n            ]\r\n        ]);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- database/seeds/GazSeeder.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ database/seeds/GazSeeder.php	(date 1598152748939)
+@@ -15,12 +15,16 @@
+             [
+                 'name' => 'Total',
+                 'weight' => 12.5,
+-                'price' => 3500
++                'price' => 6500,
++                'price_buy' => 6100,
++                'qty_stock' => 15
+             ],
+             [
+                 'name' => 'Tradex',
+                 'weight' => 21.4,
+-                'price' => 6500
++                'price' => 6500,
++                'price_buy' => 6100,
++                'qty_stock' => 15
+             ]
+         ]);
+     }
+Index: resources/views/stromae/customer_relation/index.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@extends('layouts.master',['customer_relation'=>'active'])\r\n\r\n\r\n@section('title','Gestion relation client')\r\n\r\n@section('content')\r\n\r\n    <!-- Content Header (Page header) -->\r\n    <div class=\"content-header\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row mb-2\">\r\n                <div class=\"col-sm-6\">\r\n                    <h1 class=\"m-0 text-dark\">Gestion Relation Client</h1>\r\n                </div><!-- /.col -->\r\n                <div class=\"col-sm-6\">\r\n                    <ol class=\"breadcrumb float-sm-right\">\r\n                        {{ Breadcrumbs::render('customer_info') }}\r\n                    </ol>\r\n                </div><!-- /.col -->\r\n            </div><!-- /.row -->\r\n        </div><!-- /.container-fluid -->\r\n    </div>\r\n    <!-- /.content-header -->\r\n\r\n    <section class=\"content\">\r\n\r\n        <div class=\"card\">\r\n\r\n            <div class=\"card-header\">\r\n                <h3 class=\"card-title font-weight-bold\">Gestion relation client</h3>\r\n            </div>\r\n            <!-- /.card-header -->\r\n            <div class=\"card-body\">\r\n\r\n                @if($orders->count() >0)\r\n                    <table id=\"example1\" class=\"table table-bordered table-striped table-responsive\">\r\n                        <thead>\r\n                        <tr>\r\n                            <th>Code</th>\r\n                            <th>Client</th>\r\n                            <th>Téléphone</th>\r\n                            <th>Anniverssaire</th>\r\n                            <th>Quartier</th>\r\n                            <th>Type Gaz</th>\r\n                            <th>Date commande</th>\r\n                            <th>Nbr commande</th>\r\n                            <th>Heure commande</th>\r\n                            <th>Heure livraison</th>\r\n                            <th>Delai livraison</th>\r\n                            <th>Date relance</th>\r\n                            <th>Rappel client</th>\r\n                            <th>Observation</th>\r\n                            <th>Statut commande</th>\r\n                        </tr>\r\n                        </thead>\r\n                        <tbody>\r\n\r\n                        @foreach($orders as $o)\r\n                            <tr>\r\n                                <td><span class=\"p-1 badge badge-dark\">{{ $o->customer->code }}</span></td>\r\n                                <td class=\"\">{{ civilite($o->customer) }} <strong>{{ $o->customer->name }}</strong><br></td>\r\n                                <td>{{ $o->customer->tel }}</td>\r\n                                <td class=\"\">\r\n                                    <strong>{{ $o->customer->birthday }}</strong>\r\n                                    @if(birthday_status($o->customer->birthday))\r\n                                        <img class=\"float-right\" src=\"/images/gift.svg\" width=\"30px\">\r\n                                    @endif\r\n                                </td>\r\n                                <td>{{ $o->customer->quarter->name }}</td>\r\n                                <td>{{ $o->gaz->name }}</td>\r\n                                <td>{{ $o->date_order }}</td>\r\n                                <td>{{ $o->quantity }}</td>\r\n                                <td>{{ $o->time_order }}</td>\r\n                                <td>{{ $o->time_deliver }}</td>\r\n                                <td>{{ $o->deliver_delay }}</td>\r\n                                <td>\r\n                                    <span class=\"badge badge-{{ timing($o->relauch->date_reminder) }}\">\r\n{{--\r\n                                        {{ date_relance($o->date_order, $o->customer->category->period) }}\r\n--}}\r\n                                        {{ $o->relauch->date_reminder }}\r\n                                    </span>\r\n                                </td>\r\n                                <td></td>\r\n                                <td>\r\n                                    @if($o->relauch->status)\r\n                                        {{ $o->relauch->observation }}\r\n                                    @else\r\n                                        @livewire('stromae.observation-relance', ['id' => $o->id])\r\n                                    @endif\r\n                                </td>\r\n                                <td class=\"text-center\">\r\n                                    @if($o->status_order === \"declined\")\r\n                                        <i class=\"fas fa-minus-square text-danger\"></i>\r\n                                        <span class=\"text-danger\">Décliné</span>\r\n                                    @elseif($o->status_order === \"validated\")\r\n                                        <i class=\"fas fa-check-square text-success\"></i>\r\n                                        <span class=\"text-success\">Approuvé</span>\r\n                                    @endif\r\n                                </td>\r\n                            </tr>\r\n\r\n\r\n                        @endforeach\r\n\r\n                        </tbody>\r\n                    </table>\r\n                @else\r\n                    <div class=\"error-content text-center\">\r\n                        <h3><i class=\"fas fa-exclamation-triangle text-warning\"></i> Oops! Données non disponible.</h3>\r\n\r\n                        <p>\r\n                            Vous ne disposez d'aucune information dans votre tableau.\r\n                        </p>\r\n                    </div>\r\n                @endif\r\n\r\n            </div>\r\n            <!-- /.card-body -->\r\n        </div>\r\n    </section>\r\n\r\n@endsection\r\n\r\n@push('css')\r\n    <link rel=\"stylesheet\" href=\"/master/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css\">\r\n    <link rel=\"stylesheet\" href=\"/master/plugins/datatables-responsive/css/responsive.bootstrap4.min.css\">\r\n@endpush\r\n\r\n@push('js')\r\n    <!-- DataTables -->\r\n    <script src=\"/master/plugins/datatables/jquery.dataTables.min.js\"></script>\r\n    <script src=\"/master/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js\"></script>\r\n    <script src=\"/master/plugins/datatables-responsive/js/dataTables.responsive.min.js\"></script>\r\n    <script src=\"/master/plugins/datatables-responsive/js/responsive.bootstrap4.min.js\"></script>\r\n    <script>\r\n        $(function () {\r\n            $(\"#example1\").DataTable({\r\n                \"responsive\": false,\r\n                \"autoWidth\": true,\r\n            });\r\n            // $('#example2').DataTable({\r\n            //     \"paging\": true,\r\n            //     \"lengthChange\": false,\r\n            //     \"searching\": false,\r\n            //     \"ordering\": true,\r\n            //     \"info\": true,\r\n            //     \"autoWidth\": false,\r\n            //     \"responsive\": true,\r\n            // });\r\n        });\r\n    </script>\r\n@endpush
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/stromae/customer_relation/index.blade.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ resources/views/stromae/customer_relation/index.blade.php	(date 1598156884962)
+@@ -42,6 +42,7 @@
+                             <th>Anniverssaire</th>
+                             <th>Quartier</th>
+                             <th>Type Gaz</th>
++                            <th>Livreur</th>
+                             <th>Date commande</th>
+                             <th>Nbr commande</th>
+                             <th>Heure commande</th>
+@@ -68,6 +69,7 @@
+                                 </td>
+                                 <td>{{ $o->customer->quarter->name }}</td>
+                                 <td>{{ $o->gaz->name }}</td>
++                                <td>{{ $o->delivery_man->name }}</td>
+                                 <td>{{ $o->date_order }}</td>
+                                 <td>{{ $o->quantity }}</td>
+                                 <td>{{ $o->time_order }}</td>
+@@ -92,10 +94,10 @@
+                                 <td class="text-center">
+                                     @if($o->status_order === "declined")
+                                         <i class="fas fa-minus-square text-danger"></i>
+-                                        <span class="text-danger">Décliné</span>
++                                        <span class="text-danger">Déclinée</span>
+                                     @elseif($o->status_order === "validated")
+                                         <i class="fas fa-check-square text-success"></i>
+-                                        <span class="text-success">Approuvé</span>
++                                        <span class="text-success">Livrée</span>
+                                     @endif
+                                 </td>
+                             </tr>
+Index: app/Http/Middleware/Stromae/AdminAccess.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Http\\Middleware\\Stromae;\r\n\r\nuse Closure;\r\n\r\nclass AdminAccess\r\n{\r\n    /**\r\n     * Handle an incoming request.\r\n     *\r\n     * @param  \\Illuminate\\Http\\Request  $request\r\n     * @param  \\Closure  $next\r\n     * @return mixed\r\n     */\r\n    public function handle($request, Closure $next)\r\n    {\r\n        if (!$request->user()->hasRole('Admin')){\r\n            return redirect()->route('error-503');\r\n        }\r\n        return $next($request);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Http/Middleware/Stromae/AdminAccess.php	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ app/Http/Middleware/Stromae/AdminAccess.php	(date 1598153568614)
+@@ -15,7 +15,7 @@
+      */
+     public function handle($request, Closure $next)
+     {
+-        if (!$request->user()->hasRole('Admin')){
++        if (!$request->user()->hasRole('Admin') && !$request->user()->hasRole('Chef_unite')){
+             return redirect()->route('error-503');
+         }
+         return $next($request);
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bb74cfdf-a3e0-494e-95f8-a2dad0d1174e\" name=\"Default\" comment=\"- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture\">\r\n      <change afterPath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/StartDelivery.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/Http/Middleware/Stromae/DeliverManAccess.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/views/stromae/delivery/delivery_history.blade.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/movecore.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/movecore.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/ArrondissementController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/PersonalController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Kernel.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Kernel.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/Providers/AuthServiceProvider.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Providers/AuthServiceProvider.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/helpers/stromae_helper.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/helpers/stromae_helper.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/routes/breadcrumbs.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/routes/breadcrumbs.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/routes/web.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/routes/web.php\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\r\n    <execution />\r\n  </component>\r\n  <component name=\"DatabaseView\">\r\n    <option name=\"SHOW_INTERMEDIATE\" value=\"true\" />\r\n    <option name=\"GROUP_DATA_SOURCES\" value=\"true\" />\r\n    <option name=\"GROUP_SCHEMA\" value=\"true\" />\r\n    <option name=\"GROUP_CONTENTS\" value=\"false\" />\r\n    <option name=\"SORT_POSITIONED\" value=\"false\" />\r\n    <option name=\"SHOW_EMPTY_GROUPS\" value=\"false\" />\r\n    <option name=\"AUTO_SCROLL_FROM_SOURCE\" value=\"false\" />\r\n    <option name=\"HIDDEN_KINDS\">\r\n      <set />\r\n    </option>\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"MERGE\" />\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/nunomaduro/collision\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/mockery/mockery\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpoption/phpoption\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ralouphie/getallheaders\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/global-state\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-enumerator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/recursion-context\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/diff\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/lexer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-reflector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/version\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/type\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/myclabs/deep-copy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/environment\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/comparator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/resource-operations\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/exporter\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/livewire/livewire\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/swiftmailer/swiftmailer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/uuid\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/collection\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/tinker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/framework\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/version\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/manifest\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/filp/whoops\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-timer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-file-iterator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-token-stream\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-text-template\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/phpunit\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-code-coverage\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/commonmark\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/flysystem\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/asm89/stack-cors\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fzaninotto/faker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/hamcrest/hamcrest-php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/container\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/string\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-message\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/simple-cache\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mime\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/brick/math\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/service-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-iconv\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/error-handler\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-ctype\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php73\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/opis/closure\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php72\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php70\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/psr7\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/flare-client-php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/guzzle\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/promises\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/voku/portable-ascii\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nesbot/carbon\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psy/psysh\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/vlucas/phpdotenv\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/dragonmantank/cron-expression\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/scrivo/highlight.php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fideloper/proxy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpspec/prophecy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fruitcake/laravel-cors\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/egulias/email-validator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/paragonie/random_compat\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/theseer/tokenizer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/mckenziearts/laravel-notify\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/ui\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1fuLFV91PXrBU2phWU73FljSYzP\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DatabaseDriversLRU\" value=\"mysql\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SearchEverywhereHistoryKey\" value=\"&#9;FILE&#9;file://D:/stage-MOVe GLOBAL/APPS/movecore/resources/views/livewire/stromae/country/list-country.blade.php\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$USER_HOME$/Desktop/BrainFacilitator\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"vcs.Git\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\stage-MOVe GLOBAL\\APPS\\movecore\\resources\\views\\stromae\\error_page\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\stage-MOVe GLOBAL\\APPS\\movecore\\public\\images\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bb74cfdf-a3e0-494e-95f8-a2dad0d1174e\" name=\"Default\" comment=\"\" />\r\n      <created>1596883250808</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1596883250808</updated>\r\n      <workItem from=\"1596883265861\" duration=\"63369000\" />\r\n      <workItem from=\"1597058418295\" duration=\"649000\" />\r\n      <workItem from=\"1597062934965\" duration=\"11832000\" />\r\n      <workItem from=\"1597142500325\" duration=\"644000\" />\r\n      <workItem from=\"1597263479255\" duration=\"1769000\" />\r\n      <workItem from=\"1597267815587\" duration=\"28111000\" />\r\n      <workItem from=\"1597352749187\" duration=\"54424000\" />\r\n      <workItem from=\"1597677535646\" duration=\"1803000\" />\r\n      <workItem from=\"1597752560430\" duration=\"32816000\" />\r\n      <workItem from=\"1597864695520\" duration=\"1771000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"debut et fin crud personnel&#10;mise en place authentification\">\r\n      <created>1596996865944</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1596996865944</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"debut et fin crud personnel&#10;mise en place authentification\">\r\n      <created>1596997300006</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1596997300006</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"mise en place gestion relation client\">\r\n      <created>1597331091141</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597331092033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"mise en place système verrouillage de session\">\r\n      <created>1597392907329</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597392907329</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"mise en place système verrouillage de session\">\r\n      <created>1597404430814</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597404430814</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture\">\r\n      <created>1597678527885</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597678527885</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Definition Relation Eloquent&#10;Import package laravel/ui&#10;modification schéma conceptuel&#10;definition vues authentification\" />\r\n    <MESSAGE value=\"debut et fin crud personnel&#10;mise en place authentification\" />\r\n    <MESSAGE value=\"last_modification 12-O8-2O2O\" />\r\n    <MESSAGE value=\"modification crud\" />\r\n    <MESSAGE value=\"modification\" />\r\n    <MESSAGE value=\"mise en place gestion relation client\" />\r\n    <MESSAGE value=\"mise en place système verrouillage de session\" />\r\n    <MESSAGE value=\"- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"463\" y=\"139\" key=\"FileChooserDialogImpl\" timestamp=\"1597903215692\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"768\" />\r\n    </state>\r\n    <state x=\"463\" y=\"139\" key=\"FileChooserDialogImpl/0.0.1366.768@0.0.1366.768\" timestamp=\"1597903215692\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision b913a29c88b3e9e3b53d54f043b78c1a3786fb90)
++++ .idea/workspace.xml	(date 1598260752173)
+@@ -1,46 +1,51 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture">
+-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/StartDelivery.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/DeliverManAccess.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/delivery_history.blade.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/movecore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movecore.iml" afterDir="false" />
++    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="-mise en place système">
++      <change afterPath="$PROJECT_DIR$/doc project/rappport insertion.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/MTN-Mobile-Money.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/cash.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/dOBnZ2XmGO.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/mtn.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/orange.jpg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/ArrondissementController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CityController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CountryController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/CustomerRelationController.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/GazController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/InvoiceController.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/PersonalController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/QuarterController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/RoleController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Arrondissement/ListArrondissement.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/City/ListCity.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Country/ListCountry.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Gaz/ListGaz.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Personal/ListPersonal.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Quarter/ListQuarter.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/Role/ListRole.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/app/helpers/stromae_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/stromae_helper.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/database/seeds/GazSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GazSeeder.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/doc project/move_core_DB.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/doc project/move_core_DB.mwb" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/doc project/move_core_DB.mwb.bak" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/doc project/move_core_DB.pdf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/doc project/movecore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc project/movecore.sql" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/lockscreen.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/arrondissement/list-arrondissement.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/city/list-city.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/country/list-country.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/gaz/list-gaz.blade.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/personal/list-personal.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/quarter/list-quarter.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/role/list-role.blade.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/customer_relation/index.blade.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -224,6 +229,7 @@
+       <workItem from="1597677535646" duration="1803000" />
+       <workItem from="1597752560430" duration="32816000" />
+       <workItem from="1597864695520" duration="1771000" />
++      <workItem from="1598012644700" duration="9006000" />
+     </task>
+     <task id="LOCAL-00001" summary="debut et fin crud personnel&#10;mise en place authentification">
+       <created>1596996865944</created>
+@@ -301,5 +307,13 @@
+       <screen x="0" y="0" width="1366" height="768" />
+     </state>
+     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1597903215692" />
++    <state x="492" y="298" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598260722999">
++      <screen x="0" y="0" width="1366" height="768" />
++    </state>
++    <state x="492" y="298" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1598260722999" />
++    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1598152684274">
++      <screen x="0" y="0" width="1366" height="768" />
++    </state>
++    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1598152684274" />
+   </component>
+ </project>
+\ No newline at end of file
