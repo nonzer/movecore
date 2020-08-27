@@ -7,6 +7,15 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <div class="container-fluid" id="print_btn">
+                    <div class="row">
+                    <p class="">
+                        <button onclick="share()" class="btn btn-outline-danger btn-sm">
+                           <i class="fas fa-file-pdf"></i> Exporter en PDF
+                        </button>
+                    </p>
+                    </div>
+                </div>
                 <div class="card ">
                     <div class="card-header">
                         <h3 class="card-title">Nombre de Commandes par Types de Bouteilles</h3>
@@ -19,13 +28,12 @@
                                 <i class="fas fa-times"></i>
                             </button>
                         </div>
-
                     </div>
 
                     <div class="card-body">
                         <div class="col-xs-12 col-md-12 boxchart">
                             <canvas id="barChart" width="500" height="250"></canvas>
-{{--                            <p class="text-center "><a href="#" class="btn  btn-xs">Partager</a></p>--}}
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -47,9 +55,16 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" id="print">
                         <div class="col-xs-12 col-md-12 boxchart" >
                             <canvas id="dougnuthChart" width="500" height="250" ></canvas>
+                            <br>
+{{--                            <p class="text-center "><a href="{{route('sharepdf')}}"  class="btn btn-outline-dark btn-xs">Exporter en PDF</a></p>--}}
+{{--                            <p class="text-center ">--}}
+{{--                                <button onclick="share()" class="btn btn-outline-dark btn-xs">--}}
+{{--                                    Exporter en PDF 2--}}
+{{--                                </button>--}}
+{{--                            </p>--}}
                         </div>
                     </div>
                     <!-- /.card-body -->
@@ -78,9 +93,10 @@
 
                             <div class="col-xs-12 col-md-10 boxchart">
                                 <canvas id="lineChart" width="500" height="250"></canvas>
+                                <br>
                             </div>
 
-                            <div class="col-sm-12 col-md-2">
+                            <div class="col-sm-12 col-md-2" id="print">
                                 <br>
                                 <h3 class="">Configurations</h3> <br>
                                 <p>
@@ -193,8 +209,24 @@
             //     'Diagramme de Gaz',
             //     'dougnuthChart'
             // );
+            function share(){
+                var print_btn = document.getElementById('print_btn');
+                var print = document.getElementById('print');
+                // var printClass = document.getElementsByClassName('print');
+
+                window.onbeforeprint= function (e) {
+                    print_btn.style.display = 'none';
+                    print.style.display = 'none';
+                    // printClass.each(function(item){
+                    //     item.style.display = 'none'
+                    // });
+                };
+
+                window.print();
+            }
 
         </script>
+
     @endpush
 </div>
 

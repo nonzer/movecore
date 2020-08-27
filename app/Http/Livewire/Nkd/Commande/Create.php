@@ -6,7 +6,6 @@ use App\Customer;
 use App\Gaz;
 use App\Order;
 use App\service\nkd\ClientService;
-use App\service\nkd\GazServices;
 use App\User;
 use Livewire\Component;
 
@@ -31,13 +30,21 @@ class Create extends Component
     }
 
     /**
-     *  give order Price
+     *  give total order Price
      */
     private function calculatePriceOrder()
     {
         if(!empty($this->typegaz)){
             $_gaz = Gaz::find($this->typegaz);
-            $this->cmdcount= (!empty($_gaz->price ))?$_gaz->price*$this->quantity:0;
+            $_order = new Order();
+
+            $_order->quantity = $this->quantity;
+            $_order->gaz_id = $this->typegaz;
+            $_order->type_order = $this->type_order;
+            ($this->type_order==='L')?
+                ($this->cmdcount= (!empty($_gaz->price ))? $_gaz->price*$this->quantity + sales_benefit($_order):0) :
+                ($this->cmdcount= (!empty($_gaz->price ))? $_gaz->price_buy*$this->quantity + sales_benefit($_order):0);
+
         }
     }
 
@@ -47,8 +54,11 @@ class Create extends Component
 
     public function updatedQuantity(){
         $this->calculatePriceOrder();
-
     }
+    public function updatedTypeOrder(){
+        $this->calculatePriceOrder();
+    }
+
 
     /**
      * @return \Illuminate\Http\RedirectResponse
@@ -76,7 +86,6 @@ class Create extends Component
         $cmd->type_order= $this->type_order;
         $cmd->save();
         ClientService::initRelauche($cmd);
-//        GazServices::updateStock($cmd->gaz_id, $cmd->quantity);
 
         return redirect()->route('invoice-print', $cmd->id);
     }

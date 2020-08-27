@@ -21,13 +21,13 @@ class OrderImport implements ToModel, WithHeadingRow
 
             'time_order'=>        $row['time_order'] ?? '',
             'date_order'=>        $row['date_order'] ?? '',
-            'ime_deliver'=>       $row['ime_deliver'],
+            'ime_deliver'=>       $row['time_deliver'],
             'status_order'=>      $row['status_order'],
             'deliver_delay'=>     $row['deliver_delay'],
             'quantity'=>          $row['quantity'],
             'type_order'=>        $row['type_order'],
 
-            'personals_id'=>      mapModelBy('personal',[ 'name'=> $row['gaz'], 'login'=> $row['login'] ]),
+            'personals_id'=>      mapModelBy('personal', [ 'name'=> $row['gaz'], 'login'=> $row['login'] ]),
         ]);
     }
 

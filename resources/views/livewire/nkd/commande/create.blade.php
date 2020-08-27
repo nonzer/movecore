@@ -95,9 +95,9 @@
                             @endforelse
                         </select>
                         @error('delivery_man')
-                        <div class="text-danger">
-                            <p>{{$message}}</p>
-                        </div>
+                            <div class="text-danger">
+                                <p>{{$message}}</p>
+                            </div>
                         @enderror
                     </div>
 
@@ -107,8 +107,8 @@
 
             <div class="row">
 
-                <div class="col-4">
-                    <h3>Montant :<strong class=""> {{$cmdcount}} FCFA</strong>
+                <div class="col-12">
+                    <h3>Montant total :<strong class=""> {{$cmdcount}} FCFA</strong>
                     </h3>
                 </div>
             </div>

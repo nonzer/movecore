@@ -62,7 +62,7 @@
                                 <td>{{$o->customer->tel}}</td>
                                 <td>{{$o->time_order}}</td>
                                 <td>{{$o->time_deliver }}</td>
-                                <td>{{$o->deliver_delay}}</td>
+                                <td>{{($o->deliver_delay)?$o->deliver_delay.' min': ''}} </td>
                                 <td>{!!  $o->delivery_man->name ?? '<span class=\'text-secondary\'>Inconnu</span>' !!}</td>
                                 <td>{{$o->quantity}}</td>
                                 <td>

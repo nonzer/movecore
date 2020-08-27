@@ -8,6 +8,7 @@ namespace App\Http\Controllers\Nkd;
 use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Imports\CustomerImport;
+use App\Order;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -23,11 +24,6 @@ class ClientController extends Controller
         return view('nkd.client.clients',compact(['clients']));
     }
 
-//    public function importExcel(Request $request){
-//
-//        Excel::import(new CustomerImport, redirect()->file('myfile')) ;
-//        return redirect()->back();
-//    }
     /**
      * Show the form for creating a new resource.
      *
@@ -53,11 +49,13 @@ class ClientController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function show($id)
     {
-        //
+        $client = Customer::find($id);
+        $orders = Order::where('customer_id', $client->id)->get();
+        return view('nkd.client.show', compact('client','orders'));
     }
 
     /**

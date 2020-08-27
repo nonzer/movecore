@@ -65,17 +65,18 @@
                         @forelse($clients as $c)
                         <tr>
                             <td><strong>{{$c->code}}</strong></td>
-                            <td> <span class="text-secondary">{{genre($c)}}</span> {{$c->name}}</td>
+                            <td> <span class="text-secondary">{{genre($c)}}</span> <a href="{{route('client.show', $c->id)}}" style="text-decoration: none">{{$c->name}}</a></td>
                             <td>{{$c->type_gaz}}</td>
-                            <td>{{$c->category->name}}</td>
+                            <td> {{$c->category->name}} </td>
                             <td>{{$c->tel}}</td>
                             <td>{{$c->quarter->name}}</td>
                             <td>{{$c->sector}}</td>
                             <td>{{$c->landmark}}</td>
                             <td>{{Str::limit($c->particular_landmark,50)}}</td>
                             <td>
-                                <a class="btn btn-primary btn-xs" href="{{route('client.edit',$c->id)}}"><i class="fas fa-user-edit"></i></a>
-                                <a class="btn btn-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $c->id }}"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-primary btn-xs" href="{{route('order.create',$c->id)}}"><i class="fas fa-plus-circle"></i>Commande</a>
+                                <a class="btn btn-outline-primary btn-xs" href="{{route('client.edit',$c->id)}}"><i class="fas fa-user-edit"></i></a>
+                                <a class="btn btn-outline-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $c->id }}"><i class="fas fa-trash"></i></a>
 
                                 @include('layouts.partials.delete_modal',
                                    [

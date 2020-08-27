@@ -27,6 +27,12 @@ Breadcrumbs::for('client', function ($trail) {
     $trail->push("Clients", route('client.index'));
 });
 
+// Home/Clients.show
+Breadcrumbs::for('client.show', function ($trail, $client) {
+    $trail->parent('client');
+    $trail->push(ucfirst($client->name), route('client.show',$client->id));
+});
+
 // Home/Clients/create
 Breadcrumbs::for('client_create', function ($trail) {
     $trail->parent('client');

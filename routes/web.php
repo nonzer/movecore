@@ -34,6 +34,8 @@ Route::namespace('Nkd')->middleware(['auth', 'lock'])->group(function(){
     Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy');
     Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy');
 
+    Route::get('/Client/{id}','ClientController@show')->name('client.show');
+
 });
 
 Route::layout('layouts.master')->middleware(['auth', 'lock'])->group(function(){
@@ -49,6 +51,7 @@ Route::layout('layouts.master')->middleware(['auth', 'lock'])->group(function(){
    Route::livewire('/Client/Editer-une-Categorie-de-client/{id}', 'nkd.category.edit')->name('category.edit');
 
    Route::livewire('/charger-fichier-Excel/', 'nkd.excel.create')->name('excel.client');
+
 
 });
 

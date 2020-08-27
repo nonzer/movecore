@@ -14,7 +14,9 @@ class ChartService
 
     /**
      * IMPORTANT : All dataTab MUST BE IN  ORDER by $key, $label_tab and $value_tab
-     * very important for Chart, delete all double proprely in the 2 tabs on Matching values
+     * thid function is very important for Chart, it deletes all double proprely in the 2 tabs on Matching values
+     *
+     * cette fonction supprime les doublons dans les 2 tableau et leurs  correspondances respectives
      * @param array $label_tab
      * @param array $value_tab
      * @return array
@@ -32,7 +34,7 @@ class ChartService
         // remove double
         $label_tab = array_unique($label_tab);
 
-        // tres important change les index et les met en ordre croissant <3 <3
+        // array_value : tres important change les index et les met en ordre croissant selon leur position dans le tab <3 <3
         $label_tab = array_values($label_tab);
         $value_tab = array_values($value_tab);
 
@@ -42,7 +44,8 @@ class ChartService
 
 
     /**
-     * @param array $data Order tab
+     * transform data tab on
+     * @param array $data Orders tab
      * @return array
      */
     public static function benefitForChart(array $data, Collection $objectCollections=null):array

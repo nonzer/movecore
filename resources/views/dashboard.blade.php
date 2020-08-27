@@ -23,7 +23,6 @@
 
     <section class="content">
 {{--        @livewire('nkd.commande.search')--}}
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-6">
