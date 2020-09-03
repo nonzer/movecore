@@ -42,9 +42,8 @@
                                 <address>
                                     <strong>{{ $order->customer->name }}</strong><br>
                                     {{ $order->customer->quarter->arrondissement->city->name }}, {{ $order->customer->quarter->arrondissement->slug }}<br>
-                                    {{ $order->customer->quarter->name }}, {{ $order->customer->quarter->sector }}<br>
-                                    {{ $order->customer->quarter->landmark }}<br>
-                                    {{ $order->customer->quarter->particular_landmark }}<br>
+                                    {{ $order->customer->quarter->name }}, {{ $order->customer->sector }}<br>
+                                    {{ $order->customer->landmark }}, {{ $order->customer->particular_landmark }}<br>
                                     Téléphone: (237) {{ $order->customer->tel }}<br>
                                 </address>
                             </div>
@@ -53,7 +52,6 @@
                                 <b>Code Maison {{ $order->customer->code }}</b><br>
                                 <b>ID Commande :</b> {{ '#'.addZero($order->id) }}<br>
                                 <b>Date Paiement :</b> {{ DateTime::createFromFormat('Y-m-d', $order->date_order)->format('d/m/Y') }}<br>
-                                <b>Code Maison :</b> {{ $order->customer->code }}
                             </div>
                             <!-- /.col -->
                         </div>

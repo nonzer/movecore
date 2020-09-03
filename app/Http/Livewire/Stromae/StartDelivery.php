@@ -9,7 +9,7 @@ use Livewire\Component;
 class StartDelivery extends Component
 {
     public $order;
-    public $signature;
+/*    public $signature;*/
     public $error;
     public $status = false;
 
@@ -33,9 +33,9 @@ class StartDelivery extends Component
 
     public function validate_order(){
 
-        $this->validate([
+        /*$this->validate([
             'signature' => 'required'
-        ]);
+        ]);*/
 
         $this->order->time_deliver = Carbon::now()->isoFormat('H:mm:s');
         $this->order->deliver_delay = calculate_delay($this->order);
