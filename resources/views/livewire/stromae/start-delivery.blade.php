@@ -1,6 +1,6 @@
 <div>
     @if($order->status_order === "passed")
-        <button wire:click="start_delivery" wire:loading.remove class="shadow-sm btn btn-md bg-lime">
+        <button wire:click="start_delivery" wire:loading.remove class="shadow-sm btn btn-block bg-success">
             <b>Démarrer la livraison</b>
             <i class="fas fa-truck"></i>
         </button>
@@ -12,7 +12,7 @@
     @elseif($order->status_order === "in pending")
         <div class="text-center @if($status) d-none @endif">
             <i class="text-lime fas fa-2x fa-refresh fa-spin"></i><br>
-            <span class="text-lime">Livraison Démarrée</span> <br>
+            <span class="text-success">Livraison Démarrée</span> <br>
             Excellente livraison à vous...
         </div>
         <div class="mt-2">
@@ -25,12 +25,14 @@
                     @enderror
                 </div>--}}
                 <div class="form-group">
-                    <button wire:click="$set('status', false)" class="btn btn-sm bg-gray-dark">Annuler</button>
-                    <button wire:click="validate_order"  class="btn btn-sm bg-lime shadow-sm">Valider</button>
+{{--
+                    <button wire:click="$set('status', false)" class="btn btn-block bg-gray-dark">Annuler</button>
+--}}
+                    <button wire:click="validate_order"  class="btn btn-block bg-success shadow-sm">C'est OK <i class="fas fa-check"></i></button>
                 </div>
             @else
-                <button data-toggle="modal" data-target="#modal" class="btn btn-sm bg-warning shadow-sm"><i class="fas fa-times"></i> Décliné</button>
-                <button wire:click="$set('status', true)" class="ml-2 btn btn-sm bg-lime shadow-sm">livré <i class="fas fa-check"></i></button>
+                <button data-toggle="modal" data-target="#modal" class="btn btn-block bg-warning shadow-sm"><i class="fas fa-times"></i> Décliné</button>
+                <button wire:click="$set('status', true)" class="ml-2 btn btn-block bg-success shadow-sm">livré <i class="fas fa-check"></i></button>
 
                 <div class="modal fade" id="modal">
                     <div class="modal-dialog">
@@ -45,8 +47,8 @@
                                 <p>Etes-vous sûr de vouloir décliné cette livraison ?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-sm btn-dark shadow-sm" data-dismiss="modal">Non</button>
-                                <button wire:click="decline_order" class="btn btn-sm bg-warning shadow-sm">Décliné</button>
+                                <button type="button" class="btn btn-block btn-dark shadow-sm" data-dismiss="modal">Non</button>
+                                <button wire:click="decline_order" class="btn btn-block bg-warning shadow-sm">Décliné</button>
                             </div>
                         </div>
                         <!-- /.modal-content -->

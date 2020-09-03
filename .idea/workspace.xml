@@ -19,21 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess...">
-      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/MTN-Mobile-Money.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/cash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/dOBnZ2XmGO.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/mtn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/master/dist/img/credit/orange.jpg" afterDir="false" />
+    <list default="true" id="bb74cfdf-a3e0-494e-95f8-a2dad0d1174e" name="Default" comment="integration favicon, logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stromae/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/AvatarProfileUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Stromae/AdminAccess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/stromae_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/stromae_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/GazSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GazSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/QuarterSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/avatar-profile-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Stromae/StartDelivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Stromae/StartDelivery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stromae/start-delivery.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/invoices/invoice.blade.php" afterDir="false" />
@@ -195,17 +183,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/stage-MOVe GLOBAL/APPS/movecore/resources/views/livewire/stromae/country/list-country.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/BrainFacilitator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\stage-MOVe GLOBAL\APPS\movecore\resources\views\stromae\error_page" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\stage-MOVe GLOBAL\APPS\movecore\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\stage-MOVe GLOBAL\APPS\movecore\public" />
+      <recent name="D:\stage-MOVe GLOBAL\APPS\movecore\resources\views\stromae\error_page" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -293,7 +282,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598265115364</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess...">
+      <created>1598270431986</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598270431986</updated>
+    </task>
+    <task id="LOCAL-00011" summary="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess...">
+      <created>1598273365455</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598273365455</updated>
+    </task>
+    <task id="LOCAL-00012" summary="integration favicon, logo">
+      <created>1598278365794</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598278365964</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +331,8 @@
     <MESSAGE value="mise en place système verrouillage de session" />
     <MESSAGE value="- mise en place des middleware, des gates&#10;- customiser les pages d'erreurs&#10;- mise en place facture" />
     <MESSAGE value="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess..." />
-    <option name="LAST_COMMIT_MESSAGE" value="-modification seeder&#10;-modification facture&#10;-intégration modification avatar personnel&#10;-modification middleware AdminAccess..." />
+    <MESSAGE value="integration favicon, logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="integration favicon, logo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1182" height="584" key="DiffContextDialog" timestamp="1598264420580">
@@ -340,18 +351,18 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="470" y="100" key="VCS.ChangeListViewerDialog/0.0.1366.768@0.0.1366.768" timestamp="1598264030857" />
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1598265151241">
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1598278389860">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1598265151241" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1598278389859" />
     <state x="97" y="97" width="1182" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598269438854">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="97" y="97" width="1182" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1598269438854" />
-    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598270152874">
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598280625346">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1598270152874" />
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1598280625346" />
     <state x="492" y="298" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598264084525">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
