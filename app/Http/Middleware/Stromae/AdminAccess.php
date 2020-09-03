@@ -15,7 +15,7 @@ class AdminAccess
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->user()->hasRole('Admin')){
+        if (!$request->user()->hasRole('Admin') && !$request->user()->hasRole('Chef_unite')){
             return redirect()->route('error-503');
         }
         return $next($request);

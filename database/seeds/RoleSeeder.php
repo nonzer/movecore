@@ -27,7 +27,11 @@ class RoleSeeder extends Seeder
             [
                 'name' => 'GRC',
                 'description' => 'Gestionnaire Relation Client'
-            ]
+            ],
+            [
+                'name' => 'Livreur',
+                'description' => 'Personne  chargée d\'acheminer les colis aux clients'
+            ],
         ]);
     }
 }

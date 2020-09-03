@@ -117,8 +117,33 @@ if(!function_exists('subtotal')){
     }
 }
 
+if (!function_exists('delivery_cost')){
+    function delivery_cost(Order $order):int {
+        return $order->quantity * 500;
+    }
+}
+
 if (!function_exists('total')){
     function total(Order $order):int {
-        return $total = subtotal($order) + 500;
+        return $total = subtotal($order) + delivery_cost($order);
+    }
+}
+
+if(!function_exists('addZero')){
+    function addZero($number){
+
+        switch (strlen($number)){
+            case 1:
+                $number = "000".$number;
+                break;
+            case 2:
+                $number = "00".$number;
+                break;
+            case 3:
+                $number = "0".$number;
+                break;
+        }
+
+        return $number;
     }
 }

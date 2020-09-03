@@ -14,7 +14,7 @@ class DeliveryController extends Controller
     }
 
     public function order_summary(){
-        $order = Auth::user()->orders->whereIn('status_order', ['passed', 'in pending'])->last();
+        $order = Auth::user()->orders->whereIn('status_order', ['passed', 'in pending'])->first();
         return view('stromae.delivery.order_summary', compact('order'));
     }
 

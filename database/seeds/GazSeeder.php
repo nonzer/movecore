@@ -15,12 +15,16 @@ class GazSeeder extends Seeder
             [
                 'name' => 'Total',
                 'weight' => 12.5,
-                'price' => 3500
+                'price' => 6500,
+                'price_buy' => 6100,
+                'qty_stock' => 15
             ],
             [
                 'name' => 'Tradex',
                 'weight' => 21.4,
-                'price' => 6500
+                'price' => 6500,
+                'price_buy' => 6100,
+                'qty_stock' => 15
             ]
         ]);
     }

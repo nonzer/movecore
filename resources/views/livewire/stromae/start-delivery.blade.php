@@ -17,13 +17,13 @@
         </div>
         <div class="mt-2">
             @if($status)
-                <div class="form-group">
+                {{--<div class="form-group">
                     <label for="signature">Espace réservé au client <br><small>(Le client doit signé dans le champ ci-dessous)</small></label>
                     <input type="text" wire:model="signature" id="signature" class="@error('signature') is-invalid @enderror col-5 mb-2 mx-auto form-control" style="height: 125px">
                     @error('signature')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
-                </div>
+                </div>--}}
                 <div class="form-group">
                     <button wire:click="$set('status', false)" class="btn btn-sm bg-gray-dark">Annuler</button>
                     <button wire:click="validate_order"  class="btn btn-sm bg-lime shadow-sm">Valider</button>
