@@ -65,7 +65,7 @@
                         @forelse($clients as $c)
                         <tr>
                             <td><strong>{{$c->code}}</strong></td>
-                            <td> <span class="text-secondary">{{genre($c)}}</span> <a href="{{route('client.show', $c->id)}}" style="text-decoration: none">{{$c->name}}</a></td>
+                            <td> <span class="text-secondary">{{genre($c)}}</span> <a href="{{route('customer.show', $c->id)}}" style="text-decoration: none">{{$c->name}}</a></td>
                             <td>{{$c->type_gaz}}</td>
                             <td> {{$c->category->name}} </td>
                             <td>{{$c->tel}}</td>

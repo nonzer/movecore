@@ -28,9 +28,9 @@ Breadcrumbs::for('client', function ($trail) {
 });
 
 // Home/Clients.show
-Breadcrumbs::for('client.show', function ($trail, $client) {
+Breadcrumbs::for('customer.show', function ($trail, $client) {
     $trail->parent('client');
-    $trail->push(ucfirst($client->name), route('client.show',$client->id));
+    $trail->push(ucfirst($client->name), route('customer.show',$client->id));
 });
 
 // Home/Clients/create

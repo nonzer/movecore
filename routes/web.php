@@ -34,14 +34,14 @@ Route::namespace('Nkd')->middleware(['auth', 'lock'])->group(function(){
     Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy');
     Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy');
 
-    Route::get('/Client/{id}','ClientController@show')->name('client.show');
+    Route::get('/Montrer-Client/{id}','ClientController@show')->name('customer.show');
 
 });
 
 Route::layout('layouts.master')->middleware(['auth', 'lock'])->group(function(){
 
-   Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create');
    Route::livewire('/Client/Editer-un-client/{id}', 'nkd.client.edit')->name('client.edit');
+   Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create');
 
    Route::livewire('/Commandes/Ajouter-une-commande', 'nkd.commande.search')->name('order.search');
    Route::livewire('/Commandes/Ajouter-une-commande/{id}', 'nkd.commande.create')->name('order.create');

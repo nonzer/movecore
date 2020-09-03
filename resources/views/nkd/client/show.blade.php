@@ -15,7 +15,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
 
-                        {{ Breadcrumbs::render('client.show',$client) }}
+                        {{ Breadcrumbs::render('customer.show',$client) }}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

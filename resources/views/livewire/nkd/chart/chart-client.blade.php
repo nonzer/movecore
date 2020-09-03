@@ -55,7 +55,7 @@
                         </div>
                     </div>
 
-                    <div class="card-body" id="print">
+                    <div class="card-body" id="">
                         <div class="col-xs-12 col-md-12 boxchart" >
                             <canvas id="dougnuthChart" width="500" height="250" ></canvas>
                             <br>
@@ -107,7 +107,6 @@
                                     <input type="date" name="datebegin" wire:model.lazy="datebegin" id="" class="form-control">
                                     <span class="p-2"> à </span>
                                     <input type="date" name="dateend" wire:model.lazy="dateend" id="" class="form-control">
-
                                 </div>
                                 <div class="d-inline">
                                     <button class="btn btn-primary btn-sm" wire:click="reload" >
