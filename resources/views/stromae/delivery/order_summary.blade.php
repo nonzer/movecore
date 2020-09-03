@@ -61,8 +61,6 @@
                                         <tr>
                                             <th>Qte</th>
                                             <th>Gaz</th>
-                                            <th>Repere</th>
-                                            <th>Repere particulier</th>
                                             <th>poids</th>
                                             <th>Sous-total</th>
                                         </tr>
@@ -71,8 +69,7 @@
                                         <tr>
                                             <td>{{ $order->quantity }}</td>
                                             <td>{{ $order->gaz->name }}</td>
-                                            <td>{{ $order->customer->landmark }}</td>
-                                            <td>{{ $order->customer->particular_landmark }}</td>
+
                                             <td>{{ number_format($order->gaz->weight, 1).' Kg' }}</td>
                                             <td>{{ number_format(subtotal($order),  0, '.', ' ').' FCFA' }}</td>
                                         </tr>

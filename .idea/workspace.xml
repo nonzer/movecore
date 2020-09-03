@@ -21,12 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd1ce8ab-fb66-4df6-98f9-d702c6d2ecff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nkd/chart/chart-client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/client/clients.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nkd/client/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nkd/client/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stromae/delivery/order_summary.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +231,7 @@
       <workItem from="1597947210361" duration="393000" />
       <workItem from="1598426309114" duration="18222000" />
       <workItem from="1598705096042" duration="2525000" />
-      <workItem from="1599118348679" duration="230000" />
+      <workItem from="1599118348679" duration="3109000" />
     </task>
     <task id="LOCAL-00001" summary="last work excel, search-bar, after last problem">
       <created>1597931025855</created>
@@ -273,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598530509383</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finish View of history client orders and rapport files">
+      <created>1599122183000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599122183000</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +397,8 @@
     <MESSAGE value="additionnal work orders" />
     <MESSAGE value="modifications after presentations" />
     <MESSAGE value="View of history client orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="View of history client orders" />
+    <MESSAGE value="finish View of history client orders and rapport files" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish View of history client orders and rapport files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="725" y="79" width="812" height="576" key="#Notifications" timestamp="1597928720957">
@@ -406,10 +409,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598021468852" />
-    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2" timestamp="1598530505158">
+    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2" timestamp="1599122177068">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1598530505158" />
+    <state x="104" y="64" width="1187" height="878" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1599122177068" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1597930684598">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -418,10 +421,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="57" y="1" width="1623" height="992" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597931222968" />
-    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog" timestamp="1597931223009">
+    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog" timestamp="1599139070005">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597931223009" />
+    <state x="349" y="213" width="759" height="438" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599139070005" />
+    <state x="399" y="294" key="MultipleFileMergeDialog/0.23.1680.971@0.23.1680.971" timestamp="1599122972260" />
     <state x="525" y="258" key="NewPhpClassDialog" timestamp="1598018934856">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -434,6 +438,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="582" y="252" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597927553642" />
+    <state x="601" y="248" key="VCS.ChangeListViewerDialog" timestamp="1599122820589">
+      <screen x="0" y="23" width="1680" height="971" />
+    </state>
+    <state x="601" y="248" key="VCS.ChangeListViewerDialog/0.23.1680.971@0.23.1680.971" timestamp="1599122820589" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597940158547">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -450,15 +458,15 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597929787868" />
-    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597931077204">
+    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599139022655">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597931077204" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1598714777449">
+    <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1599139022655" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1599139216627">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/1680.0.1024.768@0.0.1680.1050" timestamp="1598024525424" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1598714777449" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1599139216627" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.971@0.23.1680.971" timestamp="1598458635286" />
   </component>
   <component name="XDebuggerManager">
