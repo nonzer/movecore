@@ -18,13 +18,11 @@ class Search extends Component
     }
     public function updatedSearchbycode()
     {
-//        dd($this->searchbycode, $this->searchbytel);
         $this->searchbytel= null;
     }
 
     public function updatedSearchbytel()
     {
-//        dd($this->searchbycode, $this->searchbytel);
         $this->searchbycode= null;
     }
 

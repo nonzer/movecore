@@ -18,6 +18,21 @@ class ClientService
     {
         return
             [
+                'name'=> 'required|string|min:3|unique:customers',
+                'code'=> 'required|string|unique:customers',
+                'tel'=> 'required|numeric|min:9|unique:customers',
+                'birthday'=> 'string|min:3',
+
+                'quater_id'=> 'required',
+                'sector'=> 'required|string|min:3',
+                'landmark'=> 'required|string|min:3',
+                'particular_landmark'=> 'string|min:5',
+            ];
+    }
+    public static function ClientValidateUpdate():array
+    {
+        return
+            [
                 'name'=> 'required|string|min:3',
                 'code'=> 'required|string',
                 'tel'=> 'required|numeric|min:9',
@@ -30,6 +45,7 @@ class ClientService
             ];
     }
 
+
     /**
      * @param $slugCity
      * @param $quater_id
@@ -39,8 +55,8 @@ class ClientService
     {
         if($slugCity!== null && $quater_id!== null){
 
-            $lastClient= Customer::where('quaters_id', $quater_id)->get()->last();
-            $lastClientId= !empty($lastClient)?$lastClient->id+1 : 1;
+            $numberClient= Customer::where('quaters_id', $quater_id)->count();
+            $lastClientId= !empty($numberClient)?$numberClient+1 : 1;
             $code= strtoupper($slugCity).$quater_id.$lastClientId;
         }else{
             return null;
@@ -62,7 +78,6 @@ class ClientService
             $relauche->date_reminder = ClientService::addMounthToDate($order->date_order, $period,3);
             $relauche->save();
 //            $d =date('Y-m-d',( abs( strtotime($order->date_order) + $period*30*24*60*60 - 5*24*60*60) ));
-//            dd($relauche);
         }
     }
 
@@ -74,9 +89,9 @@ class ClientService
      */
     public static function addMounthToDate($date, $mouth_add, $dayToSoustract=0){
         return date('Y-m-d',(
-            abs(
-                strtotime($date) + $mouth_add*30*24*60*60 - $dayToSoustract*24*60*60)
-            )
+                    abs(
+                        strtotime($date) + $mouth_add*30*24*60*60 - $dayToSoustract*24*60*60)
+                    )
         );
     }
 

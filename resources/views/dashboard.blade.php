@@ -25,22 +25,29 @@
 {{--        @livewire('nkd.commande.search')--}}
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-md-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
                             <h3> {{total_orders(false)}}</h3>
                             <h4>Commandes au total</h4>
-                            <p class="">Aujourd'hui: <strong>{{total_orders()}}</strong></p>
-                        </div>
+                            <h6>Aujourd'hui :</h6>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-xs"> Validées : <strong>{{total_orders(true, 'validated')}}</strong></span>
+                                <span class="text-xs"> Passées : <strong>{{total_orders(true, 'passed')}}</strong></span>
+                                <br>
+                                <span class="text-xs"> En cours : <strong>{{total_orders(true, 'in pending')}}</strong></span>
+                                <span class="text-xs"> Annulées :  <strong>{{total_orders(true, 'declined')}}</strong></span>
+
+                            </div>
+                                                   </div>
                         <div class="icon">
                             <i class="fas fa-shopping-bag"></i>
                         </div>
-{{--                        <a href="{{route('order.index')}}" class="small-box-footer">Voir les commandes<i class="fas fa-arrow-circle-right"></i></a>--}}
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-md-6">
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
@@ -56,7 +63,7 @@
                 </div>
                 <!-- ./col -->
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-md-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
@@ -69,7 +76,7 @@
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-md-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
@@ -81,7 +88,6 @@
                         <div class="icon">
                             <i class="fas fa-users"></i>
                         </div>
-{{--                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>--}}
                     </div>
                 </div>
                 <!-- ./col -->

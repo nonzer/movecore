@@ -54,7 +54,7 @@ class Client extends Component
 
     public function generate()
     {
-        if($this->quater_id!==null){
+        if(!empty($this->quater_id)){
             $quat= Quarter::find($this->quater_id);
             $this->code = ClientService::generateCode($quat->slug, $this->quater_id);
         }

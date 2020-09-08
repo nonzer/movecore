@@ -9,12 +9,23 @@ if(!function_exists('genre')){
 }
 
 if(!function_exists('total_orders')){
-    function total_orders($today=true)
+    function total_orders($today=true, $type=null)
     {
-        return (!$today)?
-            $o = \App\Order::count():
-            $o = \App\Order::where('date_order', date('Y-m-d'))->count()
-        ;
+        $count=0;
+        if(!is_null($type)){
+            (!$today)?
+                $count = \App\Order::where('status_order', $type)->count():
+                $count = \App\Order::where('date_order', date('Y-m-d'))->where('status_order', $type)->count()
+            ;
+        }else{
+            (!$today)?
+                $count = \App\Order::count():
+                $count = \App\Order::where('date_order', date('Y-m-d'))->count()
+            ;
+        }
+
+
+        return $count;
     }
 }
 
@@ -96,6 +107,20 @@ if(!function_exists('calculate_delay')){
     }
 }
 
+
+if(!function_exists('deliver_man_order_count')){
+    /**
+     * @param \App\User|null $personal
+     * @return string
+     */
+    function deliver_man_order_count(\App\User $deliver_man ):string
+    {
+            $count = $deliver_man->orders()
+                        ->whereIn('status_order',['in pending','passed'])
+                        ->count();
+            return $count;
+    }
+}
 
 if(!function_exists('delayAvg')){
     /**

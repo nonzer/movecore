@@ -43,7 +43,7 @@
                             <th>Gaz</th>
                             <th>Quartier</th>
                             <th>Tel</th>
-                            <th>Heure commande </th>
+                            <th>Date et Heure </th>
                             <th>Heure livraison</th>
                             <th>Délai</th>
                             <th>Livreur</th>
@@ -60,7 +60,7 @@
                                 <td>{{$o->gaz->name}}<span class="text-secondary"> {{$o->gaz->weight}}Kg</span></td>
                                 <td>{{$o->customer->quarter->name}}</td>
                                 <td>{{$o->customer->tel}}</td>
-                                <td>{{$o->time_order}}</td>
+                                <td>{{ date('d M  Y',strtotime($o->date_order)) }} {{"à $o->time_order" ?? ' '}}</td>
                                 <td>{{$o->time_deliver }}</td>
                                 <td>{{($o->deliver_delay)?$o->deliver_delay.' min': ''}} </td>
                                 <td>{!!  $o->delivery_man->name ?? '<span class=\'text-secondary\'>Inconnu</span>' !!}</td>
@@ -87,11 +87,11 @@
                     </table>
                 @else
                     <div class="error-content text-center">
-                        <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Données non disponible.</h3>
+                        <h3><i class="fas fa-exclamation-triangle text-warning"></i> Aucune commande Aujourd'hui !</h3>
 
                         <p>
                             Vous ne disposez pas d'information dans votre tableau.
-                            Ajouter un client en cliquant ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('order.search') }}">ajouter une Commande</a>.
+                            Ajouter une commande en cliquant ici <i class="ml-2 mr-2 fas fa-arrow-right"></i> <a href="{{ route('order.search') }}">ajouter une Commande</a>.
                         </p>
                     </div>
                 @endif

@@ -9,6 +9,7 @@ use App\Customer;
 use App\Gaz;
 use App\Quarter;
 use App\service\nkd\ClientService;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Edit extends Component
@@ -112,7 +113,7 @@ class Edit extends Component
 
     public function update()
     {
-        $data = $this->validate(ClientService::ClientValidate());
+        $data = $this->validate(ClientService::ClientValidateUpdate());
         try{
             $_client = $this->refreshClientUpdate($this->client);
             $_client->update();
@@ -122,6 +123,7 @@ class Edit extends Component
             return redirect()->back();
         }
 
+        if(!Auth()->user()->hasRole('Admin'))
         return redirect()->route('client.index');
 
     }

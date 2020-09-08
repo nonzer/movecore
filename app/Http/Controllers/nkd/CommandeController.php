@@ -9,13 +9,15 @@ use Illuminate\Http\Request;
 class CommandeController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        $orders = Order::all();
+
+        if(auth()->user()->hasRole('Chef_unite')){
+            $orders = Order::where('date_order', date('Y-m-d'))->get();
+        }else
+            $orders = Order::all();
         return view('nkd.order.index',compact(['orders']));
     }
 
@@ -80,7 +82,7 @@ class CommandeController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return 
      */
     public function destroy($id)
     {

@@ -89,7 +89,7 @@
                         <select name="type_gaz" wire:model="deliver_id" id="" class="form-control">
                             <option >Choisir...</option>
                             @forelse($delivery_man as $d)
-                                <option value="{{$d->id}}"> Mr {{$d->name}}</option>
+                                <option value="{{$d->id}}"> Mr {{$d->name}}  <span class="italic">( {{ deliver_man_order_count($d) }} livraisons actuellement</span> )</option>
                             @empty
                                 <option> Aucun livreur disponible.</option>
                             @endforelse
