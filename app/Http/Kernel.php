@@ -67,6 +67,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'lock' => \App\Http\Middleware\Stromae\LockAccount::class,
         'admin' => \App\Http\Middleware\Stromae\AdminAccess::class,
+        'chef_unite' => \App\Http\Middleware\Stromae\ChefUniteAccess::class,
         'ceo' => \App\Http\Middleware\Stromae\CEOAccess::class,
         'grc' => \App\Http\Middleware\Stromae\CustomerRelationAccess::class,
         'livreur' => \App\Http\Middleware\Stromae\DeliverManAccess::class,

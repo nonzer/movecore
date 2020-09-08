@@ -4,7 +4,7 @@ namespace App\Http\Middleware\Stromae;
 
 use Closure;
 
-class AdminAccess
+class ChefUniteAccess
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class AdminAccess
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->user()->hasRole('Admin')){
+        if (!$request->user()->hasRole('Chef_unite') && !$request->user()->hasRole('Admin')){
             return redirect()->route('error-503');
         }
         return $next($request);

@@ -20,7 +20,7 @@
         </div>
 
         <!-- SidebarSearch Form -->
-        <div class="form-inline">
+        {{--<div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Recherche" aria-label="Recherche">
                 <div class="input-group-append">
@@ -29,7 +29,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -83,11 +83,13 @@
                     </a>
 
                     <ul class="nav nav-treeview">
+                        @if(Gate::allows('view-configAndPersonal'))
                         <li class="nav-item">
                             <a href="{{ route('category.index') }}" class="nav-link {{$category ?? ''}}">
                                 <p>Categories</p>
                             </a>
                         </li>
+                        @endif
 
                         <li class="nav-item">
                             <a href="{{ route('client.create') }}" class="nav-link">
@@ -95,12 +97,14 @@
                             </a>
                         </li>
 
+                        @if(Gate::allows('view-configAndPersonal'))
                         <div class="dropdown-divider"></div>
                         <li class="nav-item">
                             <a href="{{ route('client.index') }}" class="nav-link {{$client_list ?? ''}}">
                                 <p>Tous les Clients</p>
                             </a>
                         </li>
+                        @endif
 
                     </ul>
 
@@ -189,8 +193,8 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('delivery.order_summary') }}" class="nav-link {{$order_summary ?? ''}}">
-                                <p>Livraison en cours</p>
+                            <a href="{{ route('delivery.deliveries') }}" class="nav-link {{$deliveries ?? ''}}">
+                                <p>Livraisons</p>
                             </a>
                         </li>
                         <div class="dropdown-divider"></div>

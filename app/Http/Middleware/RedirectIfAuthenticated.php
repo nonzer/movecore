@@ -30,7 +30,7 @@ class RedirectIfAuthenticated
             }elseif ($user->hasRole('GRC')){
                 return redirect()->route('customer_relation');
             }elseif ($user->hasRole('Livreur')){
-                return redirect()->route('delivery.order_summary');
+                return redirect()->route('delivery.deliveries');
             }else{
                 return redirect()->route('error-503');
             }
