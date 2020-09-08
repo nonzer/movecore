@@ -143,7 +143,7 @@
                         <div class="col-sm-12 col-lg-4">
                             <div class="form-group">
                                 <label>Ville</label>
-                                <select class="form-control  @error('city') is-invalid @enderror" name="city" style="width: 100%;" wire:model.lazy="city">
+                                <select disabled class="form-control  @error('city') is-invalid @enderror" name="city" style="width: 100%;" wire:model.lazy="city">
                                     <option >choisir...</option>
 
                                     @forelse($list_cities as $l)
@@ -163,7 +163,7 @@
                         <div class="col-sm-12 col-lg-4">
                             <div class="form-group">
                                 <label>Arrondissement</label>
-                                <select class="form-control @error('arrond') is-invalid @enderror" name="city" style="width: 100%;" wire:model.lazy="arrond">
+                                <select disabled class="form-control @error('arrond') is-invalid @enderror" name="city" style="width: 100%;" wire:model.lazy="arrond">
                                     <option >choisir...</option>
 
                                     @forelse($list_arrond as $l)
@@ -183,7 +183,7 @@
                         <div class="col-sm-12 col-lg-4">
                             <div class="form-group">
                                 <label>Quartier</label>
-                                <select class="form-control  @error('quater_id') is-invalid @enderror" name="quater" style="width: 100%;" wire:model.lazy="quater_id">
+                                <select disabled class="form-control   @error('quater_id') is-invalid @enderror" name="quater" style="width: 100%;" wire:model.lazy="quater_id">
                                     <option >choisir...</option>
                                     @forelse($list_quater as $l)
                                         <option value="{{$l->id}}">{{$l->name}}</option>
@@ -244,9 +244,9 @@
                             <div class="">
                                 <label for="exampleInputEmail1">CODE Maison</label>
                                 <div class="input-group">
-                                    <input type="text" wire:model.lazy="code"  class="form-control @error('code') is-invalid @else is-warning @enderror @if($code) is-valid @endif" placeholder="Code" value="{{old('code')}}">
+                                    <input type="text" wire:model.lazy="code" disabled class=" form-control @error('code') is-invalid @else is-warning @enderror @if($code) is-valid @endif " placeholder="Code" value="{{old('code')}}">
                                     <span class="input-group-append">
-                                            <button class="btn btn-warning " wire:click="generate" type="button"><i class="fas fa-cogs"> </i> Générer un code</button>
+                                            <button class="btn btn-warning disabled" disabled wire:click="generate" type="button"><i class="fas fa-cogs"> </i> Générer un code</button>
                                         </span>
                                 </div>
 
@@ -269,7 +269,7 @@
                         <i class="fas fa-download" wire:loading.class="fas fa-spinner fa-spin" wire:target="name"></i>
                         Enregistrer les modifications
                     </button>
-                    <button type="reset" class="btn btn-secondary "><i class="fas fa-recycle"></i> </button>
+{{--                    <button type="reset" class="btn btn-secondary "><i class="fas fa-recycle"></i> </button>--}}
                 </div>
             </form>
 

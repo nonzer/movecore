@@ -113,7 +113,7 @@ if(!function_exists('deliver_man_order_count')){
      * @param \App\User|null $personal
      * @return string
      */
-    function deliver_man_order_count(\App\User $deliver_man ):string
+    function deliver_man_order_count( $deliver_man ):string
     {
             $count = $deliver_man->orders()
                         ->whereIn('status_order',['in pending','passed'])
@@ -122,6 +122,11 @@ if(!function_exists('deliver_man_order_count')){
     }
 }
 
+if(!function_exists('get_role_id')){
+    function get_role_id($label){
+        return \App\Role::where('name', $label)->first();
+    }
+}
 if(!function_exists('delayAvg')){
     /**
      * @param \App\User|null $personal

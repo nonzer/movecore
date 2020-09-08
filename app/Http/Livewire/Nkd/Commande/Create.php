@@ -26,9 +26,8 @@ class Create extends Component
     public function mount($id){
         $this->client = Customer::find($id);
         $this->gaz = Gaz::all();
-        $this->delivery_man = User::where('roles_id',9)->get();
+        $this->delivery_man = User::where('roles_id', get_role_id('Livreur')->id)->get();
     }
-
     /**
      *  give total order Price
      */

@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="">
                 <h3>
-                    Modifier la commande.
+                    Modifier la commande de {{ ucfirst($client->name)}}
                 </h3>
                 <div class="row">
                     <div class="col-4">
@@ -30,7 +30,7 @@
     <div class="container mt-5">
         <form wire:submit.prevent="update">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="type_gaz">Type de Gaz</label>
 
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div class="form-group ">
                         <label for="date_order">Quantite de bouteille </label>
                         <input type="number" name="quantity" id="" class="form-control" wire:model="quantity">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="form-group">
                         <label for="type_order">Type de Commande(A/L, L, AAU)</label>
 
@@ -79,27 +79,34 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
+
                     <div class="form-group">
-                        <label for="status_order">Status de la Livraison</label>
-                        <select name="status_order" wire:model="status_order" id="" class="form-control @if($status_order ==='validate') is-valid @else is-warning @endif">
-                            <option value="passed">Commande passée</option>
-                            <option value="in pending">En cours de livraison</option>
-                            <option value="validated">Livré</option>
-                            <option value="declined">Commande Annulé</option>
+                        <label for="type_gaz">Livreur</label>
+
+                        <select name="type_gaz" wire:model="deliver_id" id="" class="form-control">
+                            <option >Choisir...</option>
+                            @forelse($delivery_man as $d)
+                                <option value="{{$d->id}}"> Mr {{$d->name}}  <span class="italic">( {{ deliver_man_order_count($d) }} livraisons actuellement</span> )</option>
+                            @empty
+                                <option> Aucun livreur disponible.</option>
+                            @endforelse
                         </select>
-                        @error('status_order')
+                        @error('delivery_man')
                         <div class="text-danger">
                             <p>{{$message}}</p>
                         </div>
                         @enderror
                     </div>
+
                 </div>
-                <div class="col-4">
-                    <h3>
-                        Montant :<strong class=""> {{$cmdcount}} FCFA</strong>
-                    </h3>
-                </div>
+
+
+{{--                <div class="col-4">--}}
+{{--                    <h3>--}}
+{{--                        Montant :<strong class=""> {{$cmdcount}} FCFA</strong>--}}
+{{--                    </h3>--}}
+{{--                </div>--}}
 
             </div>
 
