@@ -70,12 +70,6 @@ Breadcrumbs::for('city', function ($trail) {
     $trail->parent('home');
     $trail->push('Villes', route('city.index'));
 });
-
-Breadcrumbs::for('history', function ($trail) {
-    $trail->parent('home');
-    $trail->push('Historique livraison', route('delivery.history_delivery'));
-});
-
 Breadcrumbs::for('add-city', function ($trail) {
     $trail->parent('city');
     $trail->push('Ajout ville');
@@ -176,4 +170,15 @@ Breadcrumbs::for('customer_info', function ($trail) {
 Breadcrumbs::for('invoice', function ($trail) {
     $trail->parent('home');
     $trail->push('Facture');
+});
+
+//Livraisons
+Breadcrumbs::for('history', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Historique livraison', route('delivery.history_delivery'));
+});
+
+Breadcrumbs::for('deliveries', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Livraisons', route('delivery.deliveries'));
 });

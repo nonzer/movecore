@@ -21,14 +21,14 @@ class StartDelivery extends Component
         $this->order->status_order = "in pending";
         $this->order->save();
 
-        return redirect()->route('delivery.order_summary');
+        return redirect()->route('delivery.order_summary', $this->order->id);
     }
 
     public function decline_order(){
         $this->order->status_order = "declined";
         $this->order->save();
 
-        return redirect()->route('delivery.order_summary');
+        return redirect()->route('delivery.deliveries');
     }
 
     public function validate_order(){
@@ -42,7 +42,7 @@ class StartDelivery extends Component
         $this->order->status_order = "validated";
         $this->order->save();
 
-        return redirect()->route('delivery.order_summary');
+        return redirect()->route('delivery.deliveries');
     }
 
     public function render()

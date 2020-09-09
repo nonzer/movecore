@@ -26,32 +26,31 @@ Auth::routes(['register' => false]);
  */
 
 Route::namespace('Nkd')->middleware(['auth', 'lock'])->group(function(){
-    Route::get('/client/liste-des-clients', 'ClientController@index')->name('client.index');
-    Route::get('/commande/liste-des-commandes', 'CommandeController@index')->name('order.index');
-    Route::get('/category/category-des-clients', 'CategoryController@index')->name('category.index');
+    Route::get('/client/liste-des-clients', 'ClientController@index')->name('client.index')->middleware('admin');
+    Route::get('/commande/liste-des-commandes', 'CommandeController@index')->name('order.index')->middleware('chef_unite');
+    Route::get('/category/category-des-clients', 'CategoryController@index')->name('category.index')->middleware('admin');
 
-    Route::delete('/client/Supprimer-un-clients/{id}', 'ClientController@destroy')->name('client.destroy');
-    Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy');
-    Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy');
+    Route::delete('/client/Supprimer-un-clients/{id}', 'ClientController@destroy')->name('client.destroy')->middleware('admin');
+    Route::delete('/commandes/Supprimer-un-clients/{id}', 'CommandeController@destroy')->name('order.destroy')->middleware('admin');
+    Route::delete('/category/Supprimer-categorie-clients{id}', 'CategoryController@destroy')->name('category.destroy')->middleware('admin');
 
-    Route::get('/Montrer-Client/{id}','ClientController@show')->name('customer.show');
+    Route::get('/Montrer-Client/{id}','ClientController@show')->name('customer.show')->middleware('admin');
 
 });
 
 Route::layout('layouts.master')->middleware(['auth', 'lock'])->group(function(){
 
-   Route::livewire('/Client/Editer-un-client/{id}', 'nkd.client.edit')->name('client.edit');
-   Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create');
+   Route::livewire('/Client/Ajouter-un-client', 'nkd.client.client')->name('client.create')->middleware('chef_unite');
+   Route::livewire('/Client/Editer-un-client/{id}', 'nkd.client.edit')->name('client.edit')->middleware('admin');
 
-   Route::livewire('/Commandes/Ajouter-une-commande', 'nkd.commande.search')->name('order.search');
-   Route::livewire('/Commandes/Ajouter-une-commande/{id}', 'nkd.commande.create')->name('order.create');
-   Route::livewire('/Commandes/Editer-une-commande/{id}', 'nkd.commande.edit')->name('order.edit');
+   Route::livewire('/Commandes/Ajouter-une-commande', 'nkd.commande.search')->name('order.search')->middleware('chef_unite');
+   Route::livewire('/Commandes/Ajouter-une-commande/{id}', 'nkd.commande.create')->name('order.create')->middleware('chef_unite');
+   Route::livewire('/Commandes/Editer-une-commande/{id}', 'nkd.commande.edit')->name('order.edit')->middleware('chef_unite');
 
-   Route::livewire('/Client/Ajouter-une-Categorie-de-client', 'nkd.category.create')->name('category.create');
-   Route::livewire('/Client/Editer-une-Categorie-de-client/{id}', 'nkd.category.edit')->name('category.edit');
+   Route::livewire('/Client/Ajouter-une-Categorie-de-client', 'nkd.category.create')->name('category.create')->middleware('admin');
+   Route::livewire('/Client/Editer-une-Categorie-de-client/{id}', 'nkd.category.edit')->name('category.edit')->middleware('admin');
 
-   Route::livewire('/charger-fichier-Excel/', 'nkd.excel.create')->name('excel.client');
-
+   Route::livewire('/charger-fichier-Excel/', 'nkd.excel.create')->name('excel.client')->middleware('admin');
 
 });
 
@@ -78,8 +77,9 @@ Route::middleware(['auth', 'lock'])->group(function (){
         return view('dashboard');
     })->name('dashboard');
 
+    Route::get('/invoice-print/{id}', 'Stromae\InvoiceController@printInvoice')->name('invoice-print')->middleware('chef_unite');
+
     Route::middleware('admin')->group(function (){
-        Route::get('/invoice-print/{id}', 'Stromae\InvoiceController@printInvoice')->name('invoice-print');
 
         Route::layout('layouts.master')->group(function () {
             /*Country*/
@@ -124,7 +124,8 @@ Route::middleware(['auth', 'lock'])->group(function (){
 
     //livraison
     Route::prefix('delivery')->group(function (){
-        Route::get('/order-summary', 'Stromae\DeliveryController@order_summary')->name('delivery.order_summary');
+        Route::get('/orders', 'Stromae\DeliveryController@index')->name('delivery.deliveries');
+        Route::get('/orders/{id}/order-summary', 'Stromae\DeliveryController@order_summary')->name('delivery.order_summary');
         Route::get('/history-delivery', 'Stromae\DeliveryController@history_delivery')->name('delivery.history_delivery');
     });
 });
